@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO PHÚ QUỐC SIÊU TIẾT KIỆM </div>
+    <div class="detail-top">
+    <img src="https://images.unsplash.com/photo-1587772495731-909d40b30851?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Combo Phú Quốc">
+    <div class="detail-info">
+        <h3>Hành trình: Grand World – Sông Venice – Show Tinh Hoa Việt Nam – Bãi Dài – Làng chài Hàm Ninh – Dinh Cậu – Chợ đêm Phú Quốc.</h3>
+        <p><b>Thời gian:</b> 4 ngày 3 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Thành phố Hồ Chính Minh</p>
+        <p class="price">Giá từ: 3.900.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Tham quan Grand World Phú Quốc – thành phố không ngủ rực rỡ sắc màu, check-in Sông Venice phiên bản Việt.</li>
+        <li>Thưởng thức show Tinh Hoa Việt Nam – chương trình nghệ thuật ánh sáng và âm thanh hoành tráng.</li>
+        <li>Dạo biển Bãi Dài, tắm biển và chụp ảnh giữa khung cảnh thiên nhiên trong lành.</li>
+        <li>Tham quan Làng chài Hàm Ninh, tìm hiểu đời sống ngư dân và thưởng thức hải sản tươi ngon.</li>
+        <li>Ghé Dinh Cậu – biểu tượng linh thiêng của đảo ngọc, và Chợ đêm Phú Quốc nhộn nhịp về đêm.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Check-in Grand World lung linh ánh đèn về đêm, chụp ảnh cực chill bên Sông Venice.</li>
+        <li>Xem show Tinh Hoa Việt Nam, thưởng thức nghệ thuật truyền thống kết hợp hiện đại.</li>
+        <li>Tắm biển, ngắm hoàng hôn và thư giãn tại Bãi Dài – top bãi biển đẹp nhất đảo.</li>
+        <li>Thưởng thức hải sản Hàm Ninh giá rẻ: ghẹ hấp, mực nướng, gỏi cá trích.</li>
+        <li>Dạo chợ đêm và khu mua sắm Myeongdong, săn mỹ phẩm, thời trang nội địa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>

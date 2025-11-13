@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="/style.css/css/bootstrap.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth; 
+    }
+    body {
+      background-color: #f1f5f9;
+    }
+    .header-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 0 0 12px 12px;
+    }
+    a {
+      text-decoration: none !important;
+    }
+    .menubot {
+      position: sticky;
+      top: 20px; 
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+    .menubot h5 {
+      text-align: center;
+      font-weight: 600;
+      margin: 0;
+      padding: 15px;
+      border-bottom: 1px solid #dee2e6;
+      color: #0d6efd;
+      background-color: #f8f9fa;
+    }
+    .menubot a {
+      display: block;
+      padding: 12px 18px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #dee2e6;
+      transition: all 0.3s ease;
+    }
+    .menubot a:last-child {
+      border-bottom: none;
+    }
+    .menubot a:hover {
+      background-color: #e9f2ff;
+      color: #0d6efd;
+      padding-left: 25px;
+    }
+    .text {
+      color: deepskyblue;
+      border-bottom: 2px solid deepskyblue;
+      padding-bottom: 4px;
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+    .tour-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .tour-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .tour-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .tour-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 16px 18px;
+    }
+    .tour-content h5 {
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+    .tour-content p {
+      margin: 0;
+      color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+    .tour-duration {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 8px;
+    }
+    .tour-duration i {
+      margin-right: 5px;
+    }
+    .tour-price {
+      color: #e11d48;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-top: auto; 
+    }
+  </style>
+</head>
+<body>
+  <script src="/script.js/bootstrap.js"></script>
+  <header>
+    <img src="/Images/tourTN.jpg" alt="Header Tour" class="header-img">
+  </header>
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="menubot">
+          <h5>Danh mục Tour</h5>
+          <a href="#mienbac">Miền Bắc</a>
+          <a href="#mientrung">Miền Trung</a>
+          <a href="#miennam">Miền Nam</a>
+          <a href="#biendao">Biển Đảo</a>
+          <a href="#taynguyen">Tây Nguyên</a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <h1 id="mienbac" class="text">Miền Bắc</h1>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/HN.html">
+                <img src="/Images/HoHoanKiem.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Hà Nội – Hồ Gươm – Phố Cổ - Tour khám phá trái tim Thủ đô</h5>
+                <p><i><b>Hành trình:</b></i> Hồ Gươm – Đền Ngọc Sơn – Cầu Thê Húc – Phố Cổ – Văn Miếu – Chợ đêm Đồng Xuân</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>2 ngày 1 đêm</div>
+                <div class="tour-price">2.490.000đ – 3.290.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/HaLong.html" >
+                <img src="/Images/VinhHL.webp">
+              <div class="tour-content">
+                <h5>Du lịch Hạ Long – Kỳ quan thiên nhiên thế giới - Tour khám phá vịnh biển và hang động kỳ vĩ</h5>
+                <p><i><b>Hành trình:</b></i>Hạ Long – Vịnh Hạ Long – Đảo Ti Tốp – Hang Sửng Sốt – Làng chài Cửa Vạn – Bãi Cháy</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">3.890.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/Sapa.html" >
+                <img src="/Images/sapa.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Sapa – Núi rừng Tây Bắc mùa mây trắng - Tour chinh phục Fansipan – Trải nghiệm văn hóa bản làng</h5>
+                <p><i><b>Hành trình:</b></i>Sapa – Bản Cát Cát – Núi Hàm Rồng – Đỉnh Fansipan – Thác Bạc – Chợ Tình Sapa</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">3.590.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/NinhBinh.html"  >
+                <img src="/Images/ninhbinh.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Ninh Bình - Tour khám phá danh thắng Tràng An, Bái Đính, Tam Cốc</h5>
+                <p><i><b>Hành trình:</b></i> Ninh Bình – Khu du lịch Tràng An – Chùa Bái Đính – Tam Cốc – Hang Múa – Cố đô Hoa Lư</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>2 ngày 1 đêm</div>
+                <div class="tour-price">2.190.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/HaGiang.html">
+                <img src="/Images/ha-giang.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Hà Giang - Cao Nguyên đá - Tour khám phá cực Bắc Tổ quốc – hành trình của tuổi trẻ</h5>
+                <p><i><b>Hành trình:</b></i> Hà Giang – Đồng Văn – Mèo Vạc – Cột cờ Lũng Cú – Dinh Vua Mèo – Đèo Mã Pí Lèng</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>4 ngày 3 đêm</div>
+                <div class="tour-price">4.490.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1 id="mientrung" class="text">Miền Trung</h1>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/DaNang.html">
+                <img src="/Images/TourDN-H.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Đà Nẵng - Hội An - Huế - Tour di sản miền Trung - Hành trình qua ba miền văn hóa</h5>
+                <p><i><b>Hành trình:</b></i> Đà Nẵng – Bà Nà Hills – Biển Mỹ Khê – Phố cổ Hội An – Cố đô Huế – Sông Hương – Chùa Thiên Mụ</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>6 ngày 5 đêm</div>
+                <div class="tour-price">5.590.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/QuyNhon.html">
+                <img src="/Images/quy-nhon-phu-yen-4-ngay-3-dem-5e8c450874b3b.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Quy Nhơn – Phú Yên - Tour khám phá “Maldives Việt Nam” với biển xanh cát trắng</h5>
+                <p><i><b>Hành trình:</b></i> Quy Nhơn – Kỳ Co – Eo Gió – Ghềnh Ráng – Phú Yên – Gành Đá Dĩa – Nhà thờ Mằng Lăng</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>4 ngày 3 đêm</div>
+                <div class="tour-price">4.790.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/QuangBinh.html">
+                <img src="/Images/QB.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Quảng Bình - Tour chinh phục Sơn Đoòng – Phong Nha – Thiên Đường</h5>
+                <p><i><b>Hành trình:</b></i>Quảng Bình – Động Phong Nha – Động Thiên Đường – Sông Chày – Hang Tối – Suối Nước Moọc</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">2.899.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1 id="miennam" class="text">Miền Nam</h1>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/TPHCM.html">
+                <img src="/Images/HCM.jpg">
+              <div class="tour-content">
+                <h5>Du lịch TP. Hồ Chí Minh - Tour khám phá trung tâm kinh tế và văn hóa lớn nhất Việt Nam</h5>
+                <p><i><b>Hành trình:</b></i> Dinh Độc Lập – Nhà thờ Đức Bà – Bưu điện Thành phố – Chợ Bến Thành – Phố đi bộ Nguyễn Huệ</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">2.899.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/PhuQuoc.html">
+                <img src="/Images/PQ.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Phú Quốc - Tour nghỉ dưỡng biển đảo – lặn ngắm san hô, check-in hoàng hôn</h5>
+                <p><i><b>Hành trình:</b></i>  Phú Quốc – VinWonders – Sunset Sanato – Làng chài Hàm Ninh – Cáp treo Hòn Thơm</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>4 ngày 3 đêm</div>
+                <div class="tour-price">5.690.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/VungTau.html">
+                <img src="/Images/VT.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Vũng Tàu - Tour nghỉ dưỡng ngắn ngày – thư giãn cuối tuần</h5>
+                <p><i><b>Hành trình:</b></i>Vũng Tàu – Tượng Chúa Kitô – Ngọn Hải Đăng – Bãi Sau – Chợ Xóm Lưới</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>2 ngày 1 đêm</div>
+                <div class="tour-price">1.890.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/PhanThiet.html">
+                <img src="/Images/mui-ne.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Phan Thiết – Mũi Né - Tour trải nghiệm đồi cát bay và biển đẹp miền Trung Nam Bộ</h5>
+                <p><i><b>Hành trình:</b></i>Phan Thiết – Đồi Cát Hồng – Làng Chài Mũi Né – Bàu Trắng – Suối Tiên</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">2.990.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/CanTho.html">
+                <img src="/Images/Can_tho_1.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Cần Thơ - Tour chợ nổi, miệt vườn, và đờn ca tài tử Nam Bộ</h5>
+                <p><i><b>Hành trình:</b></i>Cần Thơ – Chợ nổi Cái Răng – Vườn trái cây – Nhà cổ Bình Thủy – Bến Ninh Kiều</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>2 ngày 1 đêm</div>
+                <div class="tour-price">2.390.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1 id="biendao" class="text">Biển Đảo</h1>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/Condao.html">
+                <img src="/Images/con-dao-1.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Côn Đảo - Tour khám phá đảo thiêng và bãi biển hoang sơ</h5>
+                <p><i><b>Hành trình:</b></i>Côn Đảo – Nghĩa trang Hàng Dương – Bãi Đầm Trầu – Chùa Núi Một – Cầu tàu 914</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">5.290.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/NamDu.html">
+                <img src="/Images/nam du.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Nam Du - Tour lặn ngắm san hô – check-in đảo Mấu, Hòn Ngang</h5>
+                <p><i><b>Hành trình:</b></i>Nam Du – Hòn Mấu – Hòn Ngang – Lặn ngắm san hô – Thưởng thức hải sản</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">3.190.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/LySon.html">
+                <img src="/Images/lyson.jpg">
+              <div class="tour-content">
+                <h5>Du lịch lý Sơn – Tour khám phá vẻ đẹp hoang sơ và hùng vĩ của đảo tiền tiêu Tổ quốc</h5>
+                <p><i><b>Hành trình:</b></i>Cảng Sa Kỳ – Đảo Lớn – Cổng Tò Vò – Núi Thới Lới – Hang Câu – Chùa Hang – Đảo Bé – Check-in cánh đồng tỏi Lý Sơn</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">3.190.000đ – 3.990.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1 id="taynguyen" class="text">Tây Nguyên</h1>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/Dalat.html">
+                <img src="/Images/dalat.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Đà Lạt - Tour nghỉ dưỡng cao nguyên – check-in đồi thông và thác nước</h5>
+                <p><i><b>Hành trình:</b></i>Đà Lạt – Hồ Xuân Hương – Thung lũng Tình Yêu – Langbiang – Vườn hoa thành phố – Đồi Chè Cầu Đất</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">3.290.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/Buongmathuoc.html">
+                <img src="/Images/buongmathuot.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Buôn Ma Thuột - Tour khám phá văn hóa cồng chiêng Tây Nguyên</h5>
+                <p><i><b>Hành trình:</b></i>Buôn Ma Thuột – Thác Dray Nur – Làng cà phê Trung Nguyên – Hồ Lắk – Bản người Ê Đê</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>2 ngày 1 đêm</div>
+                <div class="tour-price">2.490.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="tour-card h-100">
+              <a href="../Tourdulich/link/MangDen.html">
+                <img src="/Images/mangden.jpg">
+              <div class="tour-content">
+                <h5>Du lịch Măng đen - Tour khám phá thiên đường xanh giữa đại ngàn</h5>
+                <p><i><b>Hành trình:</b></i>Thác Pa Sỹ – Hồ Đắk Ke – Rừng thông Măng Đen – Tượng Đức Mẹ Măng Đen – Làng du lịch Kon Bring – Chợ Măng Đen</p>
+                <div class="tour-duration"><i class="bi bi-clock"></i>3 ngày 2 đêm</div>
+                <div class="tour-price">2.990.000đ – 3.790.000đ/người</div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</body>
+</html>

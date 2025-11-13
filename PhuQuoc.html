@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR NGHỈ DƯỠNG BIỂN ĐẢO – LẶN NGẮM SAN HÔ, CHECK-IN HOÀNG HÔN
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="../../Images/PQ.jpg" class="tour-img" alt="Du lịch Phú Quốc">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">
+              Du lịch Phú Quốc – VinWonders – Sunset Sanato – Làng chài Hàm Ninh – Cáp treo Hòn Thơm
+            </h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187642</li>
+              <li><b>Thời gian:</b> 4 ngày 3 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Xe du lịch</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>5.690.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🏝️ Phú Quốc – hòn đảo ngọc giữa vịnh Thái Lan – được thiên nhiên ưu ái ban tặng biển xanh, cát trắng, nắng vàng và những rặng san hô tuyệt đẹp. <br><br>
+        Buổi sáng, bạn có thể dạo bước trên bãi Trường dài bất tận, ngắm bình minh ló rạng trên biển, khi mặt nước nhuộm hồng bởi ánh nắng sớm. <br>
+        Những chuyến tàu ra đảo Hòn Thơm, Hòn Móng Tay hay Hòn Gầm Ghì mở ra một thế giới lung linh dưới đáy biển, nơi san hô và cá nhiều màu sắc tạo nên bức tranh sống động. <br><br>
+        Buổi chiều, cáp treo vượt biển dài nhất thế giới đưa bạn chiêm ngưỡng toàn cảnh Phú Quốc từ trên cao – xanh mênh mông và hùng vĩ. <br>
+        Khi hoàng hôn buông xuống, bãi biển nhuộm vàng trong ánh nắng cuối ngày, gió nhẹ khẽ đưa mùi biển mặn mà. <br>
+        Đêm đến, chợ đêm Dinh Cậu rộn ràng với hải sản tươi ngon, ánh đèn và tiếng cười hòa vào sóng biển. <br>
+        Phú Quốc không chỉ là điểm đến nghỉ dưỡng, mà còn là nơi lưu lại trong tim du khách cảm giác yên bình, thư thái và đầy cảm xúc.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>🏖️ Tắm biển, lặn ngắm san hô tại Hòn Thơm, Hòn Móng Tay, Hòn Gầm Ghì.</li>
+        <li>🚡 Trải nghiệm cáp treo vượt biển dài nhất thế giới An Thới – Hòn Thơm.</li>
+        <li>🐠 Tham quan vườn tiêu, xưởng nước mắm, trang trại ngọc trai Phú Quốc.</li>
+        <li>🌅 Ngắm hoàng hôn tại Sunset Sanato – điểm check-in nổi tiếng nhất đảo.</li>
+        <li>🍤 Thưởng thức hải sản tươi sống và đặc sản Phú Quốc tại chợ đêm Dinh Cậu.</li>
+        <li>🧘‍♀️ Nghỉ dưỡng tại resort cao cấp, tận hưởng dịch vụ spa và yoga bên biển.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🏖️ Cảm ơn bạn đã chọn tour nghỉ dưỡng Phú Quốc – đảo ngọc tuyệt đẹp! Nhân viên sẽ liên hệ tư vấn sớm nhất.');
+    });
+  </script>
+</body>
+</html>

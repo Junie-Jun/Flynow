@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CẨM NANG DU LỊCH</title>
+    <style>
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0; padding:0;
+  background:#f5f7fa;
+}
+.banner {
+  position: relative;
+  text-align: center;
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.banner img {
+  width: 100vw;
+  height: 100%;
+  object-fit: contain; 
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.blog-container {
+  max-width:1100px;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+  padding:0 20px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.blog-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blog-card:hover {
+  transform:translateY(-5px);
+}
+
+.blog-card img {
+  width:100%; height:200px; object-fit:cover;
+}
+
+.blog-card .content {
+  padding:20px;
+}
+
+.blog-card h3 {
+  color:#007bff;
+  margin-top:0;
+}
+
+.blog-card p {
+  color:#555;
+  line-height:1.5;
+}
+
+.blog-card a {
+  display:inline-block;
+  margin-top:10px;
+  color:#007bff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.blog-card a:hover {
+  text-decoration:underline;
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-content">
+        <img src="../../Images/CN.png">
+      </div>
+    </div>
+    <div class="blog-container">
+      <div class="blog-card">
+        <img src="https://images.pexels.com/photos/2131616/pexels-photo-2131616.jpeg" alt="Đà Lạt">
+        <div class="content">
+          <h3>Kinh nghiệm du lịch Đà Lạt tự túc</h3>
+          <p>Gợi ý lịch trình du lịch Đà Lạt 3N2Đ tự túc cho cặp đôi tiết kiệm nhất.</p>
+          <a href="../CN/da-lat.html">Xem chi tiết →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://images.pexels.com/photos/11105015/pexels-photo-11105015.jpeg" alt="Thái Lan">
+        <div class="content">
+          <h3>Tips du lịch Thái Lan tiết kiệm</h3>
+          <p>Từ chọn vé máy bay, đặt khách sạn đến ăn uống và tham quan, bài viết chia sẻ mọi bí kíp giúp bạn tiết kiệm chi phí.</p>
+          <a href="../CN/thai-lan.html">Xem chi tiết →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://images.pexels.com/photos/1850619/pexels-photo-1850619.jpeg" alt="Checklist">
+        <div class="content">
+          <h3>Checklist đồ dùng khi du lịch nước ngoài</h3>
+          <p>Đừng quên những vật dụng quan trọng giúp chuyến đi của bạn thuận lợi và an toàn hơn nhé!</p>
+          <a href="../CN/checklist.html">Xem chi tiết →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1716479852874-22742b84fef5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" alt="Đặc sản">
+        <div class="content">
+          <h3>Món ăn đặc sản tại xứ biển Phan Thiết</h3>
+          <p>Top các món ăn nên thử khi đến thăm Phan Thiết - Bình Thuận</p>
+          <a href="../CN/dac-san.html">Xem chi tiết →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://plus.unsplash.com/premium_photo-1724338542109-0e68d3e7097d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Japan">
+        <div class="content">
+          <h3>Bí kíp du lịch Nhật Bản</h3>
+          <p>Cẩm nang du lịch Nhật Bản theo mùa cho khách Du lịch Việt Nam</p>
+          <a href="../CN/10-dieu-cam.html">Xem chi tiết →</a>
+        </div>
+      </div>
+    </div>
+    <script>
+    window.addEventListener("scroll", () => 
+    {
+    const cards = document.querySelectorAll(".blog-card");
+    cards.forEach(card => 
+    {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) 
+    {
+      card.classList.add("show");
+    }
+  });
+  });
+  </script>
+  </body>
+  </html>

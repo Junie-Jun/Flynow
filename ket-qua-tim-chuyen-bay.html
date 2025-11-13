@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả tìm chuyến bay</title>
+    <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/ketquatimchuyenbay.css">
+  </head>
+  <body>
+
+    <div class="banner">
+    <div class="banner-nd">
+      <h1><b>ĐẶT VÉ MÁY BAY</b></h1>
+    </div>
+  </div>
+    
+    <div class="container">
+      <h2>KẾT QUẢ TÌM CHUYẾN BAY</h2>
+      
+      <div class="summary" id="summary"></div>
+      
+      <div class="filters">
+        <select id="airlineFilter">
+          <option value="">Tất cả hãng</option>
+          <option value="Vietnam Airlines">Vietnam Airlines</option>
+          <option value="Bamboo Airways">Bamboo Airways</option>
+          <option value="Vietjet Air">Vietjet Air</option>
+          <option value="Thai Airways">Thai Airways</option>
+          <option value="Singapore Airlines">Singapore Airlines</option>
+          <option value="Korean Air">Korean Air</option>
+          <option value="Japan Airlines">Japan Airlines (JAL)</option>
+          <option value="Emirates">Emirates</option>
+          <option value="American Airlines">American Airlines</option>
+        </select>
+
+        <select id="priceFilter">
+          <option value="">Giá: Tất cả</option>
+          <option value="low">Dưới 2,000,000đ</option>
+          <option value="mid">2,000,000đ - 3,500,000đ</option>
+          <option value="high">Trên 3,500,000đ</option>
+        </select>
+
+        <select id="timeFilter">
+          <option value="">Giờ bay: Tất cả</option>
+          <option value="morning">Sáng (05:00 - 11:59)</option>
+          <option value="afternoon">Chiều (12:00 - 17:59)</option>
+          <option value="evening">Tối (18:00 - 23:59)</option>
+        </select>
+
+        <button class="filter-btn" id="filterBtn">Lọc</button>
+      </div>
+
+      <form id="flightForm">
+        <div id="flights"></div>
+      </form>
+
+      <button class="pay-btn" id="continueBtn" disabled>Tiếp tục thanh toán</button>
+    </div>
+
+    <script>
+    const flights = 
+    [
+      { id: 1, airline: "Vietnam Airlines", from: "HAN", to: "SGN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 2, airline: "Bamboo Airways", from: "HAN", to: "SGN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 3, airline: "Vietjet Air", from: "HAN", to: "SGN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 4, airline: "Vietnam Airlines", from: "HAN", to: "DAD", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 5, airline: "Vietjet Air", from: "HAN", to: "DAD", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 6, airline: "Vietnam Airlines", from: "HAN", to: "DAD", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 7, airline: "Thai Airways", from: "HAN", to: "BKK", depart: "10:15", arrive: "14:20", price: 4900000 },
+      { id: 8, airline: "Thai Airways", from: "HAN", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 9, airline: "Vietnam Airlines", from: "HAN", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 10, airline: "Singapore Airlines", from: "HAN", to: "SIN", depart: "09:30", arrive: "11:15", price: 6200000 },
+      { id: 11, airline: "Vietjet Air", from: "HAN", to: "SIN", depart: "15:00", arrive: "16:45", price: 5000000 },
+      { id: 12, airline: "Vietnam Airlines", from: "HAN", to: "SIN", depart: "07:45", arrive: "10:35", price: 7100000 },
+      { id: 13, airline: "korean Air", from: "HAN", to: "ICN", depart: "12:10", arrive: "15:05", price: 8200000 },
+      { id: 14, airline: "Bamboo Airways", from: "HAN", to: "ICN", depart: "23:20", arrive: "05:30", price: 9300000 },
+      { id: 15, airline: "Korean Air", from: "HAN", to: "ICN", depart: "10:00", arrive: "16:05", price: 8900000 },
+      { id: 16, airline: "Vietjet Air", from: "HAN", to: "NRK", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 17, airline: "Japan Airlines", from: "HAN", to: "NRT", depart: "14:20", arrive: "17:25", price: 10200000 },
+      { id: 18, airline: "Japan Airlines", from: "HAN", to: "NRT", depart: "08:40", arrive: "11:15", price: 11500000 },
+      { id: 19, airline: "American Airlines", from: "HAN", to: "JFK", depart: "17:10", arrive: "19:50", price: 13000000 },
+      { id: 20, airline: "Emirates", from: "HAN", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 21, airline: "Vietnam Airlines", from: "HAN", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 22, airline: "Emirates", from: "HAN", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 23, airline: "American Airlines", from: "HAN", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 24, airline: "Emirates", from: "HAN", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 25, airline: "Vietnam Airlines", from: "SGN", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 26, airline: "Bamboo Airways", from: "SGN", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 27, airline: "Vietjet Air", from: "SGN", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 28, airline: "Vietnam Airlines", from: "SGN", to: "DAD", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 29, airline: "Vietjet Air", from: "SGN", to: "DAD", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 30, airline: "Vietnam Airlines", from: "SGN", to: "DAD", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 31, airline: "Thai Airways", from: "SGN", to: "BKK", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 32, airline: "Thai Airways", from: "SGN", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 33, airline: "Vietnam Airlines", from: "SGN", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 34, airline: "Singapore Airlines", from: "SGN", to: "SIN", depart: "09:30", arrive: "11:15", price: 5200000 },
+      { id: 35, airline: "Vietjet Air", from: "SGN", to: "SIN", depart: "15:00", arrive: "16:45", price: 5400000 },
+      { id: 36, airline: "Vietnam Airlines", from: "SGN", to: "SIN", depart: "07:45", arrive: "10:35", price: 4100000 },
+      { id: 37, airline: "Korean Air", from: "SGN", to: "ICN", depart: "12:10", arrive: "15:05", price: 8200000 },
+      { id: 38, airline: "Bamboo Airways", from: "SGN", to: "ICN", depart: "23:20", arrive: "05:30", price: 8500000 },
+      { id: 39, airline: "Korean Air", from: "SGN", to: "ICN", depart: "10:00", arrive: "16:05", price: 7900000 },
+      { id: 40, airline: "Vietjet Air", from: "SGN", to: "NRK", depart: "09:30", arrive: "12:30", price: 8800000 },
+      { id: 41, airline: "Japan Airlines", from: "SGN", to: "NRT", depart: "14:20", arrive: "17:25", price: 7200000 },
+      { id: 42, airline: "Japan Airlines", from: "SGN", to: "NRT", depart: "08:40", arrive: "11:15", price: 6500000 },
+      { id: 43, airline: "American Airlines", from: "SGN", to: "JFK", depart: "17:10", arrive: "19:50", price: 12200000 },
+      { id: 44, airline: "Emirates", from: "SGN", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 45, airline: "Vietnam Airlines", from: "SGN", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 46, airline: "Emirates", from: "SGN", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 47, airline: "American Airlines", from: "SGN", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 48, airline: "Emirates", from: "SGN", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 49, airline: "Vietnam Airlines", from: "DAD", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 50, airline: "Bamboo Airways", from: "DAD", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 51, airline: "Vietjet Air", from: "DAD", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 52, airline: "Vietnam Airlines", from: "DAD", to: "SGN", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 53, airline: "Vietjet Air", from: "DAD", to: "SGN", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 54, airline: "Vietnam Airlines", from: "DAD", to: "SGN", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 55, airline: "Thai Airways", from: "DAD", to: "BKK", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 56, airline: "Thai Airways", from: "DAD", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 57, airline: "Vietnam Airlines", from: "DAD", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 58, airline: "Singapore Airlines", from: "DAD", to: "SIN", depart: "09:30", arrive: "11:15", price: 4200000 },
+      { id: 59, airline: "Vietjet Air", from: "DAD", to: "SIN", depart: "15:00", arrive: "16:45", price: 4000000 },
+      { id: 60, airline: "Vietnam Airlines", from: "DAD", to: "SIN", depart: "07:45", arrive: "10:35", price: 3100000 },
+      { id: 61, airline: "Korean Air", from: "DAD", to: "ICN", depart: "12:10", arrive: "15:05", price: 5200000 },
+      { id: 62, airline: "Bamboo Airways", from: "DAD", to: "ICN", depart: "23:20", arrive: "05:30", price: 6500000 },
+      { id: 63, airline: "Korean Air", from: "DAD", to: "ICN", depart: "10:00", arrive: "16:05", price: 6900000 },
+      { id: 64, airline: "Vietjet Air", from: "DAD", to: "NRK", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 65, airline: "Japan Airlines", from: "DAD", to: "NRT", depart: "14:20", arrive: "17:25", price: 3200000 },
+      { id: 66, airline: "Japan Airlines", from: "DAD", to: "NRT", depart: "08:40", arrive: "11:15", price: 4500000 },
+      { id: 67, airline: "American Airlines", from: "DAD", to: "JFK", depart: "17:10", arrive: "19:50", price: 14200000 },
+      { id: 68, airline: "Emirates", from: "DAD", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 69, airline: "Vietnam Airlines", from: "DAD", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 70, airline: "Emirates", from: "DAD", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 71, airline: "American Airlines", from: "DAD", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 72, airline: "Emirates", from: "DAD", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 73, airline: "Vietnam Airlines", from: "BKK", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 74, airline: "Bamboo Airways", from: "BKK", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 75, airline: "Thai Airways", from: "BKK", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 76, airline: "Vietnam Airlines", from: "BKK", to: "SGN", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 77, airline: "Thai Airways", from: "BKK", to: "SGN", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 78, airline: "Vietnam Airlines", from: "BKK", to: "SGN", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 79, airline: "Thai Airways", from: "BKK", to: "DAD", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 80, airline: "Thai Airways", from: "BKK", to: "DAD", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 81, airline: "Vietnam Airlines", from: "BKK", to: "DAD", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 82, airline: "Singapore Airlines", from: "BKK", to: "SIN", depart: "09:30", arrive: "11:15", price: 4200000 },
+      { id: 83, airline: "Vietjet Air", from: "BKK", to: "SIN", depart: "15:00", arrive: "16:45", price: 4000000 },
+      { id: 84, airline: "Singapore Airlines", from: "BKK", to: "SIN", depart: "07:45", arrive: "10:35", price: 3100000 },
+      { id: 85, airline: "Korean Air", from: "BKK", to: "ICN", depart: "12:10", arrive: "15:05", price: 5200000 },
+      { id: 86, airline: "Korean Air", from: "BKK", to: "ICN", depart: "23:20", arrive: "05:30", price: 6500000 },
+      { id: 87, airline: "Korean Air", from: "BKK", to: "ICN", depart: "10:00", arrive: "16:05", price: 6900000 },
+      { id: 88, airline: "Thai Airways", from: "BKK", to: "NRK", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 89, airline: "Japan Airlines", from: "BKK", to: "NRT", depart: "14:20", arrive: "17:25", price: 3200000 },
+      { id: 90, airline: "Japan Airlines", from: "BKK", to: "NRT", depart: "08:40", arrive: "11:15", price: 4500000 },
+      { id: 91, airline: "American Airlines", from: "BKK", to: "JFK", depart: "17:10", arrive: "19:50", price: 15200000 },
+      { id: 92, airline: "Thai Airways", from: "BKK", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 93, airline: "American Airlines", from: "BKK", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 94, airline: "Emirates", from: "BKK", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 95, airline: "American Airlines", from: "BKK", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 96, airline: "Emirates", from: "BKK", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 97, airline: "Singapore Airlines", from: "SIN", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 98, airline: "Bamboo Airways", from: "SIN", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 99, airline: "Vietjet Air", from: "SIN", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 100, airline: "Singapore Airlines", from: "SIN", to: "SGN", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 101, airline: "Vietjet Air", from: "SIN", to: "SGN", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 102, airline: "Singapore Airlines", from: "SIN", to: "SGN", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 103, airline: "Thai Airways", from: "SIN", to: "BKK", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 104, airline: "Thai Airways", from: "SIN", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 105, airline: "Singapore Airlines", from: "SIN", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 106, airline: "Singapore Airlines", from: "SIN", to: "DAD", depart: "09:30", arrive: "11:15", price: 4200000 },
+      { id: 107, airline: "Vietjet Air", from: "SIN", to: "DAD", depart: "15:00", arrive: "16:45", price: 4000000 },
+      { id: 108, airline: "Vietnam Airlines", from: "SIN", to: "DAD", depart: "07:45", arrive: "10:35", price: 3100000 },
+      { id: 109, airline: "Korean Air", from: "SIN", to: "ICN", depart: "12:10", arrive: "15:05", price: 5200000 },
+      { id: 110, airline: "Singapore Airways", from: "SIN", to: "ICN", depart: "23:20", arrive: "05:30", price: 6500000 },
+      { id: 111, airline: "Korean Air", from: "SIN", to: "ICN", depart: "10:00", arrive: "16:05", price: 6900000 },
+      { id: 112, airline: "Singapore Airlines", from: "SIN", to: "NRK", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 113, airline: "Japan Airlines", from: "SIN", to: "NRT", depart: "14:20", arrive: "17:25", price: 3200000 },
+      { id: 114, airline: "Japan Airlines", from: "SIN", to: "NRT", depart: "08:40", arrive: "11:15", price: 4500000 },
+      { id: 115, airline: "American Airlines", from: "SIN", to: "JFK", depart: "17:10", arrive: "19:50", price: 13200000 },
+      { id: 116, airline: "Emirates", from: "SIN", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 117, airline: "Singapore Airlines", from: "SIN", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 118, airline: "Emirates", from: "SIN", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 119, airline: "American Airlines", from: "SIN", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 120, airline: "Emirates", from: "SIN", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 121, airline: "Vietnam Airlines", from: "ICN", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 122, airline: "Bamboo Airways", from: "ICN", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 123, airline: "Vietjet Air", from: "ICN", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 124, airline: "Vietnam Airlines", from: "ICN", to: "SGN", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 125, airline: "Vietjet Air", from: "ICN", to: "SGN", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 126, airline: "Vietnam Airlines", from: "ICN", to: "SGN", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 127, airline: "Thai Airways", from: "ICN", to: "BKK", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 128, airline: "Thai Airways", from: "ICN", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 129, airline: "Korean Airl", from: "ICN", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 130, airline: "Singapore Airlines", from: "ICN", to: "SIN", depart: "09:30", arrive: "11:15", price: 4200000 },
+      { id: 131, airline: "Korean Air", from: "ICN", to: "SIN", depart: "15:00", arrive: "16:45", price: 4000000 },
+      { id: 132, airline: "Singapore Airlines", from: "ICN", to: "SIN", depart: "07:45", arrive: "10:35", price: 3100000 },
+      { id: 133, airline: "Korean Air", from: "ICN", to: "DAD", depart: "12:10", arrive: "15:05", price: 5200000 },
+      { id: 134, airline: "Bamboo Airways", from: "ICN", to: "DAD", depart: "23:20", arrive: "05:30", price: 6500000 },
+      { id: 135, airline: "Korean Air", from: "ICN", to: "DAD", depart: "10:00", arrive: "16:05", price: 6900000 },
+      { id: 136, airline: "Korean Air", from: "ICN", to: "NRK", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 137, airline: "Japan Airlines", from: "ICN", to: "NRT", depart: "14:20", arrive: "17:25", price: 3200000 },
+      { id: 138, airline: "Japan Airlines", from: "ICN", to: "NRT", depart: "08:40", arrive: "11:15", price: 4500000 },
+      { id: 139, airline: "American Airlines", from: "ICN", to: "JFK", depart: "17:10", arrive: "19:50", price: 14000000 },
+      { id: 140, airline: "Emirates", from: "ICN", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 141, airline: "American Airlines", from: "ICN", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 142, airline: "Emirates", from: "ICN", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 143, airline: "American Airlines", from: "ICN", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 144, airline: "Emirates", from: "ICN", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 145, airline: "Vietnam Airlines", from: "NRT", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 146, airline: "Bamboo Airways", from: "NRT", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 147, airline: "Vietjet Air", from: "NRT", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 148, airline: "Vietnam Airlines", from: "NRT", to: "SGN", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 149, airline: "Vietjet Air", from: "NRT", to: "SGN", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 150, airline: "Vietnam Airlines", from: "NRT", to: "SGN", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 151, airline: "Thai Airways", from: "NRT", to: "BKK", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 152, airline: "Thai Airways", from: "NRT", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 153, airline: "Japan Airlines", from: "NRT", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 154, airline: "Singapore Airlines", from: "NRT", to: "SIN", depart: "09:30", arrive: "11:15", price: 4200000 },
+      { id: 155, airline: "Japan Airlines", from: "NRT", to: "SIN", depart: "15:00", arrive: "16:45", price: 4000000 },
+      { id: 156, airline: "Japan Airlines", from: "NRT", to: "SIN", depart: "07:45", arrive: "10:35", price: 3100000 },
+      { id: 157, airline: "Korean Air", from: "NRT", to: "ICN", depart: "12:10", arrive: "15:05", price: 5200000 },
+      { id: 158, airline: "Japan Airlines", from: "NRT", to: "ICN", depart: "23:20", arrive: "05:30", price: 6500000 },
+      { id: 159, airline: "Korean Air", from: "NRT", to: "ICN", depart: "10:00", arrive: "16:05", price: 6900000 },
+      { id: 160, airline: "Vietjet Air", from: "NRT", to: "DAD", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 161, airline: "Japan Airlines", from: "NRT", to: "DAD", depart: "14:20", arrive: "17:25", price: 3200000 },
+      { id: 162, airline: "Japan Airlines", from: "NRT", to: "DAD", depart: "08:40", arrive: "11:15", price: 4500000 },
+      { id: 163, airline: "American Airlines", from: "NRT", to: "JFK", depart: "17:10", arrive: "19:50", price: 12200000 },
+      { id: 164, airline: "Emirates", from: "NRT", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 165, airline: "American Airlines", from: "NRT", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 166, airline: "Emirates", from: "NRT", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 167, airline: "Japan Airlines", from: "NRT", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 168, airline: "Emirates", from: "NRT", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 169, airline: "American Airlines", from: "JFK", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 170, airline: "Emirates", from: "JFK", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 171, airline: "American Airlines", from: "JFK", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 172, airline: "American Airlines", from: "JFK", to: "SGN", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 173, airline: "Emirates", from: "JFK", to: "SGN", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 174, airline: "American Airlines", from: "JFK", to: "SGN", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 175, airline: "Thai Airways", from: "JFK", to: "BKK", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 176, airline: "Thai Airways", from: "JFK", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 177, airline: "American Airlines", from: "JFK", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 178, airline: "Singapore Airlines", from: "JFK", to: "SIN", depart: "09:30", arrive: "11:15", price: 4200000 },
+      { id: 179, airline: "Emirates", from: "JFK", to: "SIN", depart: "15:00", arrive: "16:45", price: 4000000 },
+      { id: 180, airline: "American Airlines", from: "JFK", to: "SIN", depart: "07:45", arrive: "10:35", price: 3100000 },
+      { id: 181, airline: "Korean Air", from: "JFK", to: "ICN", depart: "12:10", arrive: "15:05", price: 5200000 },
+      { id: 182, airline: "Emirates", from: "JFK", to: "ICN", depart: "23:20", arrive: "05:30", price: 6500000 },
+      { id: 183, airline: "Korean Air", from: "JFK", to: "ICN", depart: "10:00", arrive: "16:05", price: 6900000 },
+      { id: 184, airline: "Japan Airlines", from: "JFK", to: "NRK", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 185, airline: "Japan Airlines", from: "JFK", to: "NRT", depart: "14:20", arrive: "17:25", price: 3200000 },
+      { id: 186, airline: "Japan Airlines", from: "JFK", to: "NRT", depart: "08:40", arrive: "11:15", price: 4500000 },
+      { id: 187, airline: "American Airlines", from: "JFK", to: "DAD", depart: "17:10", arrive: "19:50", price: 5200000 },
+      { id: 188, airline: "Emirates", from: "JFK", to: "DAD", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 189, airline: "Vietnam Airlines", from: "JFK", to: "DAD", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 190, airline: "Emirates", from: "JFK", to: "SYD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 191, airline: "American Airlines", from: "JFK", to: "SYD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 192, airline: "Emirates", from: "JFK", to: "SYD", depart: "09:10", arrive: "19:40", price: 16000000 },
+      { id: 193, airline: "Vietnam Airlines", from: "SYD", to: "HAN", depart: "07:30", arrive: "09:35", price: 3200000 },
+      { id: 194, airline: "Emirates", from: "SYD", to: "HAN", depart: "10:15", arrive: "12:20", price: 2900000 },
+      { id: 195, airline: "Vietjet Air", from: "SYD", to: "HAN", depart: "13:00", arrive: "15:10", price: 1800000 },
+      { id: 196, airline: "Vietnam Airlines", from: "SYD", to: "SGN", depart: "18:30", arrive: "20:35", price: 3700000 },
+      { id: 197, airline: "Emirates", from: "SYD", to: "SGN", depart: "21:00", arrive: "23:10", price: 2000000 },
+      { id: 198, airline: "Vietnam Airlines", from: "SYD", to: "SGN", depart: "08:45", arrive: "10:35", price: 4500000 },
+      { id: 199, airline: "Thai Airways", from: "SYD", to: "BKK", depart: "10:15", arrive: "14:20", price: 3900000 },
+      { id: 200, airline: "Thai Airways", from: "SYD", to: "BKK", depart: "09:20", arrive: "12:10", price: 5800000 },
+      { id: 201, airline: "American Airlines", from: "SYD", to: "BKK", depart: "23:30", arrive: "06:30", price: 6500000 },
+      { id: 202, airline: "Singapore Airlines", from: "SYD", to: "SIN", depart: "09:30", arrive: "11:15", price: 4200000 },
+      { id: 203, airline: "American Airlines", from: "SYD", to: "SIN", depart: "15:00", arrive: "16:45", price: 4000000 },
+      { id: 204, airline: "Singapore Airlines", from: "SYD", to: "SIN", depart: "07:45", arrive: "10:35", price: 3100000 },
+      { id: 205, airline: "Korean Air", from: "SYD", to: "ICN", depart: "12:10", arrive: "15:05", price: 5200000 },
+      { id: 206, airline: "Emirates", from: "SYD", to: "ICN", depart: "23:20", arrive: "05:30", price: 6500000 },
+      { id: 207, airline: "Korean Air", from: "SYD", to: "ICN", depart: "10:00", arrive: "16:05", price: 6900000 },
+      { id: 208, airline: "Emirates", from: "SYD", to: "NRK", depart: "09:30", arrive: "12:30", price: 2800000 },
+      { id: 209, airline: "Japan Airlines", from: "SYD", to: "NRT", depart: "14:20", arrive: "17:25", price: 3200000 },
+      { id: 210, airline: "Japan Airlines", from: "SYD", to: "NRT", depart: "08:40", arrive: "11:15", price: 4500000 },
+      { id: 211, airline: "American Airlines", from: "SYD", to: "JFK", depart: "17:10", arrive: "19:50", price: 5200000 },
+      { id: 212, airline: "Emirates", from: "SYD", to: "JFK", depart: "23:45", arrive: "06:30", price: 14500000 },
+      { id: 213, airline: "American Airlines", from: "SYD", to: "JFK", depart: "14:00", arrive: "06:00", price: 15000000 },
+      { id: 214, airline: "Emirates", from: "SYD", to: "DAD", depart: "08:30", arrive: "18:50", price: 17000000 },
+      { id: 215, airline: "Vietnam Airlines", from: "SYD", to: "DAD", depart: "22:00", arrive: "05:45", price: 15500000 },
+      { id: 216, airline: "Emirates", from: "SYD", to: "DAD", depart: "09:10", arrive: "19:40", price: 16000000 },
+    ];
+    
+    function getAirportCode(str) 
+    {
+      const match = str.match(/\(([^)]+)\)/);
+      return match ? match[1] : str; 
+    }
+
+    const flightsContainer = document.getElementById('flights');
+    const continueBtn = document.getElementById('continueBtn');
+
+    function formatPrice(p) 
+    {
+      return p.toLocaleString("vi-VN") + "đ";
+    }
+
+    const search = JSON.parse(localStorage.getItem("flightSearch"));
+    let flightsToShow = flights;
+    
+    if (search) 
+    {
+      const fromCode = getAirportCode(search.from);
+      const toCode = getAirportCode(search.to);
+      
+      flightsToShow = flights.filter(f => f.from === fromCode && f.to === toCode);
+    }
+
+    if (search) 
+    {
+      function formatDateVN(dateStr) 
+      {
+        if (!dateStr) return "—";
+        const [y, m, d] = dateStr.split("-");
+        return `${d}/${m}/${y}`;
+      }
+
+    const totalGuests = search.adults + search.children + search.infants;
+    const summaryDiv = document.getElementById("summary");
+    summaryDiv.innerHTML = `
+    <p><strong>Tuyến:</strong> ${search.from} ➜ ${search.to}</p>
+    <p><strong>Ngày đi:</strong> ${formatDateVN(search.ngaydi)} ${
+      search.tripType === "round"
+        ? `| <strong>Ngày về:</strong> ${formatDateVN(search.ngayve)}`
+        : ""
+    }</p>
+    <p><strong>Số khách:</strong> ${totalGuests} người</p>`;
+    }
+
+    function renderFlights(list) 
+    {
+      flightsContainer.innerHTML = "";
+      if (list.length === 0) 
+      {
+        flightsContainer.innerHTML = `<p class="empty">Không tìm thấy chuyến bay phù hợp.</p>`;
+        return;
+      }
+
+      list.forEach(f => {
+        const card = document.createElement('label');
+        card.className = "flight-card";
+        card.innerHTML = `
+          <input type="radio" class="radio" name="flight" value="${f.id}">
+          <div class="flight-info">
+            <h4>${f.airline}</h4>
+            <p>Giờ bay: ${f.depart} - ${f.arrive}</p>
+          </div>
+          <div class="price">${formatPrice(f.price)}</div>
+        `;
+        flightsContainer.appendChild(card);
+      });
+    }
+    
+    document.addEventListener("change", (e) => 
+    {
+      if (e.target.name === "flight") {
+        continueBtn.disabled = false;
+      }
+    });
+
+
+    document.getElementById("filterBtn").addEventListener("click", () => 
+    {
+      const airline = document.getElementById("airlineFilter").value;
+      const price = document.getElementById("priceFilter").value;
+      const time = document.getElementById("timeFilter").value;
+
+      let filtered = flights;
+
+      if (airline) filtered = filtered.filter(f => f.airline === airline);
+      if (price === "low") filtered = filtered.filter(f => f.price < 2000000);
+      else if (price === "mid") filtered = filtered.filter(f => f.price >= 2000000 && f.price <= 3500000);
+      else if (price === "high") filtered = filtered.filter(f => f.price > 3500000);
+
+      if (time === "morning") filtered = filtered.filter(f => parseInt(f.depart.split(":")[0]) < 12);
+      else if (time === "afternoon") filtered = filtered.filter(f => parseInt(f.depart.split(":")[0]) >= 12 && parseInt(f.depart.split(":")[0]) < 18);
+      else if (time === "evening") filtered = filtered.filter(f => parseInt(f.depart.split(":")[0]) >= 18);
+
+      renderFlights(filtered);
+    });
+
+
+    continueBtn.addEventListener("click", () => 
+    {
+      const selected = document.querySelector('input[name="flight"]:checked');
+      if (selected) {
+        const flightId = selected.value;
+        const chosenFlight = flights.find(f => f.id == flightId);
+        localStorage.setItem("selectedFlight", JSON.stringify(chosenFlight));
+        window.location.href = "thanh-toan-ve.html";
+      }
+    });
+
+    renderFlights(flightsToShow);
+
+  </script>
+</body>
+</html>

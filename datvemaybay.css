@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgb(229, 243, 252);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.banner {
+    background: url('https://unitedairlines-vn.com/static/team/upload/images/van-phong-dat-ve-may-bay-united-airlines.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.banner-nd {
+    position: relative;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #7EC0EE;
+}
+
+.trip-type {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #0d6efd;
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+    display: none;
+}
+
+.counter-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f1f1f1;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+.counter button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.counter button:hover {
+    background-color: #004999;
+    transform: scale(1.1);
+}
+
+.counter span {
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+}
+
+.total-guests {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.warning {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+    display: none;
+}
+
+.submit-btn {
+    display: block;
+    margin: 25px auto 0;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #004999;
+    transform: scale(1.05);
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+    grid-template-columns: 1fr;
+    }
+}

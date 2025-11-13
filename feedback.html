@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góp ý – Phản hồi chi tiết</title>
+    <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/feedback.css">
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-content">
+
+        
+      </div>
+    </div>
+    
+    <div class="container">
+      <h2>Chúng tôi luôn lắng nghe bạn!</h2>
+      <p class="info">Gửi góp ý hoặc phản hồi về tour, vé máy bay, visa, team building hoặc các dịch vụ khác. Chúng tôi sẽ phản hồi sớm nhất!</p>
+      
+      <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Họ và tên" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Số điện thoại (không bắt buộc)">
+        
+        <select id="type">
+          <option value="">Chọn loại phản hồi</option>
+          <option value="tour">Tour</option>
+          <option value="ve">Vé máy bay</option>
+          <option value="team">Team building</option>
+          <option value="khac">Khác</option>
+        </select>
+        
+        <textarea id="message" placeholder="Nội dung góp ý/phản hồi" required></textarea>
+        <button type="submit" class="submitBtn">Gửi phản hồi</button>
+      </form>
+    </div>
+
+    <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(e)
+    {
+    e.preventDefault();
+    alert("Cảm ơn bạn! Phản hồi của bạn đã được gửi. Chúng tôi sẽ liên lạc trong thời gian sớm nhất.");
+    this.reset();
+  });
+    </script>
+    </body>
+    </html>

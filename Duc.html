@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR KHÁM PHÁ NHỮNG LÂU ĐÀI CỔ VÀ VĂN HÓA BIA ĐỨC
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="../../Images/duc.jpg" class="tour-img" alt="Tour Đức">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Du lịch Frankfurt – Munich – Heidelberg – Berlin – Lâu đài Neuschwanstein</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187672</li>
+              <li><b>Thời gian:</b> 7 ngày 6 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Máy bay</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>59.000.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🇩🇪 Đức – trái tim của châu Âu – là nơi giao hòa giữa lịch sử, văn hóa và công nghệ hiện đại. <br>
+        Đặt chân đến đất nước này, du khách sẽ cảm nhận được một không khí trang nghiêm nhưng không kém phần ấm áp – nơi mỗi công trình, con đường đều ẩn chứa những câu chuyện dài hàng trăm năm. <br><br>
+        🌆 Buổi sáng, hành trình bắt đầu tại Berlin – thủ đô sôi động và phóng khoáng. Ghé thăm Bức tường Berlin, Cổng Brandenburg và Nhà Quốc hội Reichstag – những biểu tượng lịch sử của nước Đức. <br><br>
+        🍺 Buổi trưa, thưởng thức xúc xích Đức nướng thơm lừng cùng cốc bia vàng sóng sánh tại quảng trường Alexanderplatz. <br><br>
+        🏰 Buổi chiều, di chuyển đến Munich – thành phố của lễ hội Oktoberfest trứ danh. Tại đây, bạn sẽ ngỡ như lạc vào thế giới cổ tích với những tòa lâu đài tráng lệ, đặc biệt là Neuschwanstein – cảm hứng cho phim “Công chúa ngủ trong rừng” của Disney. <br><br>
+        🌙 Buổi tối, dạo quanh những ngôi làng vùng Bavaria yên bình, ngắm nhìn khung cảnh thơ mộng dưới ánh đèn vàng. <br><br>
+        Đức không chỉ là quốc gia của sự chuẩn mực và kỷ luật, mà còn là nơi lưu giữ vẻ đẹp cổ điển hòa quyện cùng hơi thở hiện đại – một điểm đến đáng để trải nghiệm ít nhất một lần trong đời.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>🏰 Tham quan Lâu đài Neuschwanstein – biểu tượng cổ tích giữa núi rừng Bavaria.</li>
+        <li>🏙️ Dạo phố Berlin: Bức tường Berlin, Cổng Brandenburg, Nhà Quốc hội Reichstag.</li>
+        <li>🍺 Tham gia lễ hội bia Oktoberfest (nếu đúng mùa) tại Munich.</li>
+        <li>🏛️ Khám phá thành phố cổ Heidelberg và cây cầu Karl Theodor lãng mạn.</li>
+        <li>🚉 Trải nghiệm tàu điện ngầm hiện đại và đúng giờ bậc nhất thế giới.</li>
+        <li>🍖 Thưởng thức xúc xích Đức, bánh mì pretzel và bia tươi truyền thống.</li>
+        <li>🕍 Chiêm ngưỡng Nhà thờ Cologne và Nhà thờ Đức Bà Munich phong cách Gothic.</li>
+        <li>🏞️ Dạo thuyền trên sông Rhine, ngắm nhìn thị trấn trung cổ ven sông thơ mộng.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🍺 Cảm ơn bạn đã chọn tour Đức – hành trình khám phá những lâu đài cổ và văn hóa bia đặc sắc! Nhân viên sẽ liên hệ sớm nhất.');
+    });
+  </script>
+</body>
+</html>

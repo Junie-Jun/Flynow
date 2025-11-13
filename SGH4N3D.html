@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO SÀI GÒN - HUẾ 4 NGÀY 3 ĐÊM</div>
+    <div class="detail-top">
+      <img src="https://images.unsplash.com/photo-1664333039578-28ad613ee536?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" alt="Combo SG - HUẾ">
+      <div class="detail-info">
+        <h3>Hành trình: Thành phố Hồ Chí Minh – Đại Nội Huế – Chùa Thiên Mụ – Sông Hương – Lăng Khải Định – Đồi Thiên An – Chợ Đông Ba.</h3>
+        <p><b>Thời gian:</b> 3 ngày 2 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Thành phố Hồ Chí Minh</p>
+        <p class="price">Giá từ: 4.990.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Tham quan Đại Nội Huế – quần thể di tích triều Nguyễn, Di sản Văn hoá Thế giới được UNESCO công nhận.</li>
+        <li>Viếng Chùa Thiên Mụ – ngôi chùa cổ linh thiêng nằm bên bờ sông Hương.</li>
+        <li>Tham quan Lăng Khải Định – công trình kiến trúc giao thoa giữa Á – Âu độc đáo.</li>
+        <li>Dạo thuyền trên sông Hương, nghe ca Huế và ngắm thành phố lung linh về đêm.</li>
+        <li>Check-in Đồi Thiên An, Chợ Đông Ba, thưởng thức ẩm thực Huế đặc trưng.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Ngồi thuyền rồng trên sông Hương, nghe ca Huế truyền thống giữa đêm trăng.</li>
+        <li>Tham quan và chụp ảnh tại Đại Nội, Lăng Tự Đức, Lăng Khải Định – biểu tượng của kinh thành xưa.</li>
+        <li>Thưởng thức ẩm thực cung đình Huế: bún bò, cơm hến, bánh bèo, bánh lọc, chè Huế.</li>
+        <li>Dạo phố đêm Huế, ngắm cầu Tràng Tiền rực rỡ ánh đèn.</li>
+        <li>Cảm nhận sự bình yên, trầm mặc của cố đô bên dòng sông Hương thơ mộng.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>

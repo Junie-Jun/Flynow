@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tour theo tuần</title>
+  <link rel="stylesheet" href="/style.css/css/bootstrap.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #eafaff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .tour-title {
+      color: #0d6efd;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      background: #f6feff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+      background-color: #dff4ff;
+    }
+    .icon-box img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .text-muted {
+      color: #0d6efd !important;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<script src="/script.js/bootstrap.js"></script>
+  <div class="container text-center">
+    <h2 class="tour-title"><i class="bi bi-calendar3"></i> Lịch Tour Hàng Tuần</h2>
+
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4 d-flex">
+        <a href="../Tourdulich/t2-t4.html" class="text-decoration-none flex-fill">
+          <div class="card p-4 flex-fill d-flex flex-column justify-content-between">
+          <div>
+            <div class="icon-box">
+              <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" alt="city">
+            </div>
+            <h5 class="fw-bold text-primary">Thứ 2 – Thứ 4</h5>
+            <p class="text-dark">Tour nội địa ngắn ngày (Hà Nội, Ninh Bình, Đà Lạt)</p>
+          </div>
+          <p class="text-muted mt-3">👉 Phù hợp khách công tác, nghỉ dưỡng ngắn.</p>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-4 d-flex">
+        <a href="../Tourdulich/t5-cn.html" class="text-decoration-none flex-fill">
+          <div class="card p-4 flex-fill d-flex flex-column justify-content-between">
+          <div>
+            <div class="icon-box">
+              <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="beach">
+            </div>
+            <h5 class="fw-bold text-primary">Thứ 5 – Chủ nhật</h5>
+            <p class="text-dark">Tour dài ngày (Sapa, Hà Giang, Phú Quốc, Hạ Long)</p>
+          </div>
+          <p class="text-muted mt-3">👉 Thích hợp du lịch nhóm, gia đình cuối tuần.</p>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-4 d-flex">
+        <a href="../Tourdulich/quocte.html" class="text-decoration-none flex-fill">
+          <div class="card p-4 flex-fill d-flex flex-column justify-content-between">
+          <div>
+            <div class="icon-box">
+              <i class="bi bi-airplane-fill" style="font-size: 36px; color: #007bff;"></i>
+          </div>
+            <h5 class="fw-bold text-primary">Mỗi cuối tháng</h5>
+            <p class="text-dark">Tour quốc tế đặc biệt</p>
+          </div>
+          <p class="text-muted mt-3">👉 Thái Lan, Hàn Quốc, Nhật Bản, Singapore – có hướng dẫn viên đi kèm.</p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

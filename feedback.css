@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f0f2f5;
+  margin:0; padding:0;
+  text-align: center;
+}
+.banner {
+  background: url('https://socialmarketing.vn/wp-content/uploads/2022/11/SHO_BLOG_EEFGuideance_210908-01.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.container {
+  max-width:700px;
+  margin:30px auto;
+  background: rgb(229, 243, 252);
+  border-radius:12px;
+  padding:30px;
+  box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align:center;
+  color:#0d6efd;
+  margin-bottom:25px;
+  font-size:22px;
+}
+
+p.info {
+  font-size:15px;
+  color:#555;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+form {
+  display:flex; 
+  flex-direction:column; 
+  gap:15px;
+}
+
+@media(min-width:600px)
+{
+  form {flex-direction:column;}
+}
+
+input, textarea, select {
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  width:100%;
+  box-sizing:border-box;
+}
+
+button.submitBtn {
+  padding:12px 20px;
+  border:none;
+  border-radius:8px;
+  background: rgb(36, 36, 255);
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+  transition:opacity 0.3s;
+}
+
+button.submitBtn:hover {
+  opacity:0.9;
+}
+
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+

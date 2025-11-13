@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận thanh toán</title>
+    <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/thanhtoan.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Thanh toán đặt vé</h2>
+
+      <div class="flight-info">
+        <h3>Thông tin chuyến bay</h3>
+        <p><strong>Chặng:</strong> <span id="route"></span></p>
+        <p><strong>Hãng:</strong> <span id="airline"></span></p>
+        <p><strong>Giờ khởi hành:</strong> <span id="time"></span></p>
+      </div>
+
+      <form id="paymentForm">
+        <div class="form-group">
+          <label>Họ và tên</label>
+          <input type="text" id="fullname" placeholder="Nhập họ tên đầy đủ...">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="Nhập email liên hệ...">
+        </div>
+        <div class="form-group">
+          <label>Số điện thoại</label>
+          <input type="tel" id="phone" placeholder="Nhập số điện thoại...">
+        </div>
+        <div class="form-group">
+          <label>Ghi chú</label>
+          <textarea id="note" placeholder="Ghi chú thêm (nếu có)..."></textarea>
+        </div>
+
+        <div class="total">
+          <p>Tổng tiền: <span id="totalPrice">—</span>
+          <button type="submit" class="btn">Xác nhận thanh toán</button></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h3>✅ Thanh toán thành công!</h3>
+        <p>Cảm ơn bạn đã đặt vé qua hệ thống của chúng tôi.<br>
+          Thông tin vé sẽ được gửi về email.<br>
+          Chúc bạn có chuyến bay an toàn và thuận lợi!</p>
+        <button class="close-btn" id="closePopup">Đóng</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-container">
+         <p>FLYNOW | Liên hệ: 0886 278 557</p>
+         <p>Email: flynow@travel.vn | Địa chỉ: 140 Lê Trọng Tấn, Tây Thạnh, TP. HCM</p>
+      </div>
+    </div>
+
+    <script>
+    const selectedFlight = JSON.parse(localStorage.getItem("selectedFlight"));
+    const search = JSON.parse(localStorage.getItem("flightSearch"));
+    
+    if (selectedFlight) 
+    {
+      const routeText = search && search.from && search.to
+      ? `${search.from} ➜ ${search.to}`
+      : `${selectedFlight.from} ➜ ${selectedFlight.to}`;
+      
+      document.getElementById("route").textContent = routeText;
+      document.getElementById("airline").textContent = selectedFlight.airline || "—";
+      document.getElementById("time").textContent = `${selectedFlight.depart} - ${selectedFlight.arrive}` || "—";
+      document.getElementById("totalPrice").textContent = (selectedFlight.price || 0).toLocaleString("vi-VN") + "đ";
+    }
+    
+    const form = document.getElementById('paymentForm');
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+    
+    form.addEventListener('submit', (e) => 
+    {
+      e.preventDefault();
+      const name = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      
+      if (!name || !email || !phone) 
+      {
+        alert("⚠️ Vui lòng nhập đầy đủ thông tin liên hệ!");
+        return;
+      }
+      
+      popup.style.display = "flex";
+    });
+    
+    closePopup.addEventListener('click', () => 
+    {
+      popup.style.display = "none";
+      localStorage.removeItem("selectedFlight"); 
+      localStorage.removeItem("flightSearch");
+      window.location.href = "dich-vu-mo-rong.html";
+      });
+      </script>
+      </body>
+      </html>

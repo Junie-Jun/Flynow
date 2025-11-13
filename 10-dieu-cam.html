@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CẨM NANG DU LỊCH</title>
+        <style>
+            body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  margin: 0; 
+  padding: 0;
+}
+.banner {
+    background: url('https://vietlandtravel.vn/upload/images/4-hoa-anh-dao-nhat-ban_1.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.container {
+  max-width: 1770px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+}
+
+.container img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2,h3,h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 28px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.hovered,
+.star.selected {
+  color: gold;
+}
+
+.rating-info {
+  font-size: 15px;
+  color: #555;
+}
+
+.icon-eye::before {
+  content: "👁️";
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <div class="banner-content">
+                <h1>BÍ KÍP DU LỊCH NHẬT BẢN</h1>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>10 điều cấm kỵ và phong tục cần biết khi đến Nhật Bản để không bị 'quê'</h2>
+            <div class="rating-section">
+                <span><strong>Đánh giá:</strong></span>
+                <div class="stars" id="stars">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+            <span class="rating-info" id="rating-info">0/5 trong 0 đánh giá</span>
+            <span class="icon-eye"></span> <span>7</span>
+        </div>
+        <div>
+            <p>Cẩm nang du lịch Nhật Bản theo mùa cho khách Du lịch Việt Nam mới đi lần đầu, bao gồm các điểm tham quan, ẩm thực và lời khuyên thiết thực.</p>
+            <hr>
+        </div>
+        <div>
+            <p>Nhật Bản, xứ sở Phù Tang, luôn là một điểm đến mơ ước với sự kết hợp hài hòa giữa truyền thống lâu đời và công nghệ hiện đại. Đối với du khách Việt Nam lần đầu đặt chân đến đất nước mặt trời mọc, việc lựa chọn thời điểm và lên kế hoạch phù hợp là vô cùng quan trọng để có một chuyến đi trọn vẹn. Cẩm nang này được thiết kế đặc biệt, cung cấp cái nhìn tổng quan về <b>Du lịch Nhật Bản</b> theo từng mùa, các điểm tham quan nổi bật, ẩm thực đặc sắc, và những lời khuyên thiết thực để bạn có một chuyến đi đáng nhớ và suôn sẻ. Từ mùa hoa anh đào rực rỡ đến mùa lá đỏ lãng mạn, Nhật Bản luôn có điều gì đó để khám phá, hứa hẹn mang lại trải nghiệm văn hóa sâu sắc và những kỷ niệm khó quên.</p>
+            <img src="https://images.unsplash.com/photo-1738103388307-28f9c57c16c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170">
+        </div>
+        <div>
+            <h2>⛩️ Lịch sử và văn hóa Nhật Bản: Những điều cần biết</h2>
+            <h3>Lịch sử tóm tắt</h3>
+            <p>Lịch sử Nhật Bản trải dài hàng ngàn năm, từ thời kỳ Jomon cổ đại với những dấu tích văn hóa sơ khai, đến thời kỳ Heian chứng kiến sự phát triển rực rỡ của văn hóa quý tộc, thời kỳ các Samurai thống trị với những câu chuyện hào hùng, và quá trình hiện đại hóa thần tốc dưới thời Minh Trị. Dù trải qua nhiều biến động, Nhật Bản vẫn giữ vững bản sắc văn hóa độc đáo và tinh hoa truyền thống của mình, tạo nên một đất nước vừa cổ kính vừa hiện đại.</p>
+            <h3>Chuẩn mực văn hóa và phong tục</h3>
+            <p>Khi đến Nhật Bản, việc hiểu và tôn trọng các chuẩn mực văn hóa địa phương sẽ giúp chuyến đi của bạn thêm phần thuận lợi và ý nghĩa:
+            <ul>
+                <li><b>Chào hỏi:</b> Người Nhật thường cúi đầu khi chào hỏi. Độ sâu của cúi đầu thể hiện sự tôn trọng. Du khách có thể cúi đầu nhẹ hoặc gật đầu để đáp lại.</li>
+                <li><b>Tháo giày:</b> Luôn tháo giày khi vào nhà riêng, đền chùa, ryokan (nhà trọ truyền thống), và một số nhà hàng. Thường có dép đi trong nhà được cung cấp để bạn sử dụng.</li>
+                <li><b>Ăn uống:</b> Không cắm đũa thẳng đứng vào bát cơm, vì đây là hành động tượng trưng cho tang lễ. Cũng không nên dùng đũa chuyền thức ăn cho người khác. Đặc biệt, húp mì tạo tiếng kêu được coi là thể hiện sự ngon miệng và tôn trọng người nấu.</li>
+                <li><b>Nhận/Tặng quà:</b> Luôn dùng hai tay khi nhận hoặc tặng quà, danh thiếp để thể hiện sự trang trọng và tôn trọng.</li>
+                <li><b>Trật tự và sạch sẽ:</b> Người Nhật rất coi trọng sự sạch sẽ và trật tự ở nơi công cộng. Hạn chế xả rác và luôn xếp hàng kiên nhẫn.</li>
+                <li><b>Tiền boa:</b> Không có văn hóa tiền boa ở Nhật Bản. Việc cho tiền boa có thể bị coi là thô lỗ, vì dịch vụ tốt được xem là điều hiển nhiên.</li>
+            </ul>
+            </p>
+            <h3>Các câu giao tiếp cơ bản</h3>
+            <p>Học một vài câu giao tiếp cơ bản sẽ giúp bạn dễ dàng hơn trong các tình huống hàng ngày:
+            <ul>
+                <li><b>Xin chào:</b> Konnichiwa (こんにちは)</li>
+                <li><b>Cảm ơn:</b> Arigato gozaimasu (ありがとうございます)</li>
+                <li><b>Xin lỗi:</b> Sumimasen (すみません) (cũng có nghĩa là 'xin phép' hoặc 'làm ơn')</li>
+                <li><b>Vâng/Không:</b> Hai (はい) / Iie (いいえ)</li>
+                <li><b>Tôi không hiểu:</b> Wakarimasen (わかりません)</li>
+                <li><b>Ngôn ngữ Việt Nam:</b> Betonamugo (ベトナム語)</li>
+            </ul>
+            </p>
+            <h2>⏰ Thời điểm lý tưởng để ghé thăm Nhật Bản theo mùa</h2>
+            <p>Lựa chọn thời điểm du lịch Nhật Bản phù hợp với sở thích cá nhân sẽ mang lại trải nghiệm tuyệt vời nhất. Hiện tại là tháng 10 năm 2025, tức là đang vào mùa thu, một trong những mùa đẹp nhất để khám phá xứ sở Phù Tang.</p>
+            <img src="https://plus.unsplash.com/premium_photo-1724593825200-39731dcdacf8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1025">
+            <h2>🌸 Mùa Xuân (Tháng 3 - Tháng 5)</h2>
+            <p>
+            <ul>
+                <li><b>Đặc điểm:</b> Thời tiết mát mẻ, dễ chịu, là mùa hoa anh đào (Sakura) nở rộ, tạo nên khung cảnh lãng mạn và thơ mộng.</li>
+                <li><b>Hoạt động:</b> Ngắm hoa anh đào tại các công viên và bờ sông, tham gia lễ hội Hanami truyền thống, dạo chơi dưới những tán cây hồng phấn.</li>
+                <li><b>Lưu ý:</b> Đây là mùa cao điểm du lịch, đặc biệt là vào cuối tháng 3 đến đầu tháng 4 năm 2026. Giá vé máy bay và khách sạn có thể cao hơn, bạn cần đặt dịch vụ sớm để đảm bảo có chỗ.</li>
+            </ul>
+            </p>
+            <h2>🌞 Mùa Hè (Tháng 6 - Tháng 8)</h2>
+            <p>
+            <ul>
+                <li><b>Đặc điểm:</b> Nóng và ẩm, đặc biệt vào tháng 7 và tháng 8 năm 2026. Tháng 6 thường là mùa mưa (Tsuyu).</li>
+                <li><b>Hoạt động:</b> Tham gia các lễ hội mùa hè (Matsuri) sôi động, ngắm pháo hoa rực rỡ, leo núi Phú Sĩ (tháng 7-8), hoặc tận hưởng các bãi biển.</li>
+                <li><b>Lưu ý:</b> Cần chuẩn bị quần áo thoáng mát, kem chống nắng và ô/dù để đối phó với nắng nóng và mưa bất chợt.</li>
+            </ul>
+            </p>
+            <h2>🍂 Mùa Thu (Tháng 9 - Tháng 11)</h2>
+            <p>
+            <ul>
+                <li><b>Đặc điểm:</b> Thời tiết mát mẻ, dễ chịu, là mùa lá đỏ (Momiji) tuyệt đẹp. Cảnh sắc thiên nhiên chuyển mình với những gam màu vàng, cam, đỏ rực rỡ.</li>
+                <li><b>Hoạt động:</b> Ngắm lá đỏ tại Kyoto, Nara hoặc các vùng núi, đi bộ đường dài để tận hưởng không khí trong lành, tham gia các lễ hội mùa thu.</li>
+                <li><b>Lưu ý:</b> Cũng là mùa cao điểm, đặc biệt vào tháng 10 và tháng 11 năm 2025. Bạn nên đặt trước vé và chỗ ở.</li>
+            </ul>
+            </p>
+            <h2>❄️ Mùa Đông (Tháng 12 - Tháng 2)</h2>
+            <p>
+            <ul>
+                <li><b>Đặc điểm:</b> Lạnh giá, có tuyết rơi ở nhiều vùng, đặc biệt là phía Bắc và các vùng núi.</li>
+                <li><b>Hoạt động:</b> Trượt tuyết, trượt ván tại Hokkaido hoặc Nagano, tắm Onsen (suối nước nóng) thư giãn, ngắm cảnh tuyết rơi lãng mạn, tham gia lễ hội tuyết Sapporo (tháng 2 năm 2026).</li>
+                <li><b>Lưu ý:</b> Cần chuẩn bị quần áo ấm đầy đủ. Một số điểm tham quan có thể đóng cửa hoặc có giờ hoạt động giới hạn.</li>
+            </ul>
+            </p>
+            <h2>🎎 Các điểm tham quan và hoạt động hàng đầu</h2>
+            <h3>Các điểm tham quan chính</h3>
+            <p>
+            <ul>
+                <li><b>Tokyo:</b>
+                    <ul>
+                        <li><b>Tháp Tokyo/Skytree:</b> Biểu tượng của thành phố, nơi bạn có thể ngắm toàn cảnh Tokyo hiện đại.</li>
+                        <li><b>Khu phố Shibuya/Shinjuku:</b> Trải nghiệm sự sầm uất, thời trang và giải trí về đêm không ngừng nghỉ.</li>
+                        <li><b>Đền Senso-ji (Asakusa):</b> Ngôi đền cổ nhất Tokyo, khám phá văn hóa truyền thống và mua sắm quà lưu niệm.</li>
+                        <li><b>Hoàng cung Tokyo:</b> Tham quan khu vườn phía Đông và chiêm ngưỡng kiến trúc lịch sử.</li>
+                        <li><b>Bảo tàng Ghibli (Mitaka):</b> Dành cho fan của Studio Ghibli (cần đặt vé trước rất lâu).</li>
+                    </ul>
+                <li><b>Kyoto:</b>
+                    <ul>
+                        <li><b>Chùa Vàng Kinkaku-ji:</b> Ngôi chùa dát vàng lấp lánh, biểu tượng của Kyoto.</li>
+                        <li><b>Chùa Thanh Thủy Kiyomizu-dera:</b> Ngôi chùa trên sườn núi với ban công gỗ độc đáo, mang đến tầm nhìn tuyệt đẹp.</li>
+                        <li><b>Rừng tre Arashiyama:</b> Đi dạo trong không gian xanh mát, huyền ảo và chụp những bức ảnh ấn tượng.</li>
+                        <li><b>Khu phố Gion:</b> Khám phá khu geisha truyền thống, có thể may mắn gặp geiko/maiko.</li>
+                        <li><b>Fushimi Inari Taisha:</b> Đền thờ với hàng ngàn cổng torii màu đỏ cam nổi tiếng, tạo nên con đường linh thiêng độc đáo.</li>
+                    </ul>
+                    <img src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg" alt="Tokyo">
+                <li><b>Osaka:</b>
+                    <ul>
+                        <li><b>Lâu đài Osaka:</b> Biểu tượng lịch sử của thành phố, với kiến trúc hùng vĩ và khu vườn rộng lớn.</li>
+                        <li><b>Dotonbori:</b> Khu phố ăn uống, giải trí sầm uất với biển hiệu neon rực rỡ, là nơi lý tưởng để thưởng thức ẩm thực đường phố.</li>
+                        <li><b>Universal Studios Japan:</b> Công viên giải trí nổi tiếng, đặc biệt có khu Harry Potter hấp dẫn.</li>
+                    </ul>
+                <li><b>Núi Phú Sĩ & Hakone:</b>
+                    <ul>
+                        <li><b>Núi Phú Sĩ:</b> Biểu tượng của Nhật Bản, có thể ngắm cảnh từ xa hoặc thử sức leo núi vào mùa hè.</li>
+                        <li><b>Hồ Ashi (Hakone):</b> Đi thuyền ngắm cảnh, tham quan đền Hakone Shrine linh thiêng.</li>
+                        <li><b>Thung lũng Owakudani:</b> Thưởng thức trứng đen luộc từ suối nước nóng, được cho là kéo dài tuổi thọ.</li>
+                    </ul>
+                </ul>
+            </p>
+            <h3>🎏 Các hoạt động theo thể loại</h3>
+            <p>
+            <ul>
+                <li><b>Văn hóa:</b> Tham gia trà đạo truyền thống, mặc kimono dạo phố, học làm sushi, hoặc xem các trận đấu vật Sumo (theo mùa).</li>
+                <li><b>Thiên nhiên:</b> Tắm Onsen (suối nước nóng) để thư giãn, đi bộ đường dài qua các cung đường tuyệt đẹp, ngắm hoa anh đào vào mùa xuân hoặc lá đỏ vào mùa thu.</li>
+                <li><b>Giải trí & Hiện đại:</b> Tham quan khu Akihabara (Tokyo) dành cho fan anime/manga, trải nghiệm các quán cà phê chủ đề độc đáo.</li>
+                <li><b>Gia đình:</b> Các công viên giải trí như Disneyland, Universal Studios, thủy cung hoặc sở thú là lựa chọn tuyệt vời cho các gia đình.</li>
+            </ul>
+            </p>
+            <h2>🍥 Ẩm thực Nhật Bản: Hương vị tinh tế</h2>
+            <h3>Tổng quan về ẩm thực địa phương</h3>
+            <p>Ẩm thực Nhật Bản nổi tiếng thế giới với sự tinh tế, chú trọng nguyên liệu tươi ngon và cách trình bày đẹp mắt. Các món ăn thường có hương vị thanh đạm, cân bằng, sử dụng nhiều hải sản, rau củ và gạo làm chủ đạo, phản ánh triết lý sống hài hòa với thiên nhiên của người Nhật.</p>
+            <h3>Các món ăn nhất định phải thử</h3>
+            <p>
+            <ul>
+                <li><b>Sushi & Sashimi:</b> Món ăn biểu tượng của Nhật Bản, thưởng thức hải sản tươi sống chất lượng cao.</li>
+                <li><b>Ramen:</b> Mì nước với nhiều loại nước dùng (tonkotsu, shoyu, miso) và topping đa dạng, mỗi vùng miền lại có một hương vị đặc trưng.</li>
+                <li><b>Udon & Soba:</b> Các loại mì khác với sợi dày (udon) hoặc sợi kiều mạch (soba), có thể ăn nóng hoặc lạnh tùy theo mùa và sở thích.</li>
+                <li><b>Tempura:</b> Hải sản và rau củ được tẩm bột chiên giòn, nhẹ nhàng mà vẫn giữ được hương vị tự nhiên.</li>
+                <img src="https://images.pexels.com/photos/884596/pexels-photo-884596.jpeg" alt="Tempura">
+                <li><b>Takoyaki:</b> Bánh bạch tuộc viên nướng, đặc sản nổi tiếng của Osaka, nóng hổi và thơm ngon.</li>
+                <li><b>Okonomiyaki:</b> Bánh xèo Nhật Bản, có nhiều biến thể tùy vùng, là món ăn đường phố được yêu thích.</li>
+                <li><b>Katsudon/Donburi:</b> Cơm bát với các loại topping như thịt heo chiên xù (katsu) hoặc hải sản, là bữa ăn no bụng và tiện lợi.</li>
+                <img src="https://images.pexels.com/photos/31264144/pexels-photo-31264144.jpeg" alt="Donburi">
+                <li><b>Matcha:</b> Trà xanh truyền thống, không chỉ là đồ uống mà còn có trong nhiều món tráng miệng hấp dẫn.</li>
+                <li><b>Sake:</b> Rượu gạo truyền thống của Nhật Bản, thường được thưởng thức trong các bữa ăn hoặc dịp đặc biệt.</li>
+            </ul>
+            </p>
+            <h3>✅ Gợi ý trải nghiệm ăn uống</h3>
+            <p>
+            <ul>
+                <li><b>Izakaya:</b> Quán nhậu kiểu Nhật, nơi bạn có thể thưởng thức nhiều món ăn nhỏ (tapas kiểu Nhật) và đồ uống trong không khí thân mật.</li>
+                <li><b>Quán ăn đường phố:</b> Đặc biệt ở Osaka (Dotonbori), bạn nhất định phải thử takoyaki, okonomiyaki, kushikatsu để cảm nhận nhịp sống ẩm thực địa phương.</li>
+                <li><b>Nhà hàng Sushi/Ramen:</b> Trải nghiệm các nhà hàng chuyên món, có thể ngồi tại quầy bar để xem đầu bếp chế biến trực tiếp.</li>
+                <li><b>Ryokan:</b> Nhiều ryokan cung cấp bữa tối Kaiseki truyền thống, một trải nghiệm ẩm thực cao cấp với nhiều món ăn nhỏ được chế biến tinh xảo.</li>
+            </ul>
+            </p>
+            <h2>‼️ Hướng dẫn hậu cần chi tiết</h2>
+            <h3>🚌 Di chuyển đến và đi lại</h3>
+            <p>
+            <ul>
+                <li><b>Đến Nhật Bản:</b>
+                    <ul><li><b>Máy bay:</b> Các sân bay quốc tế chính là Narita (NRT) và Haneda (HND) ở Tokyo, Kansai (KIX) ở Osaka. Hiện nay có nhiều chuyến bay thẳng từ Việt Nam đến các thành phố lớn của Nhật Bản.</li></ul>
+                </li>
+                <li><b>Đi lại trong Nhật Bản:</b>
+                <ul>
+                    <li><b>JR Pass (Japan Rail Pass):</b> Thẻ tàu hỏa dành cho du khách nước ngoài, cho phép đi lại không giới hạn trên hầu hết các tuyến tàu JR (bao gồm Shinkansen - tàu cao tốc) trong một khoảng thời gian nhất định (7, 14, 21 ngày). Bạn cần mua trước khi đến Nhật Bản để tiết kiệm chi phí.</li>
+                    <img src="https://images.pexels.com/photos/16775511/pexels-photo-16775511.jpeg" alt="Japan Rail Pass">
+                    <li><b>Tàu điện ngầm/Tàu hỏa:</b> Hệ thống giao thông công cộng ở các thành phố lớn rất hiệu quả và đúng giờ. Sử dụng thẻ IC (Suica, Pasmo) để thanh toán tiện lợi.</li>
+                    <li><b>Xe buýt:</b> Phù hợp cho các tuyến đường ngắn hoặc đến các khu vực không có tàu điện.</li>
+                    <li><b>Taxi:</b> Đắt đỏ, chỉ nên sử dụng khi cần thiết hoặc đi vào ban đêm.</li>
+                </ul>
+            </ul>
+            </p>
+            <h3>🏢 Chỗ ở</h3>
+            <p>
+            <ul>
+                <li><b>Khách sạn:</b> Đa dạng từ khách sạn kinh doanh (business hotels) tiện nghi, hiện đại đến các khách sạn sang trọng.</li>
+                <li><b>Ryokan:</b> Nhà trọ truyền thống Nhật Bản, mang đến trải nghiệm văn hóa độc đáo với phòng tatami, futon và bữa ăn truyền thống (thường có onsen).</li>
+                <li><b>Hostel/Guesthouse:</b> Lựa chọn tiết kiệm cho du khách ba lô, có phòng dorm hoặc phòng riêng nhỏ.</li>
+                <li><b>Khách sạn con nhộng (Capsule Hotel):</b> Trải nghiệm độc đáo, tiết kiệm chi phí, phù hợp cho một đêm nghỉ ngắn.</li>
+                <li><b>Khu vực nên ở:</b>
+                <ul>
+                    <li><b>Tokyo:</b> Shinjuku, Shibuya, Ginza (sang trọng), Asakusa (truyền thống).</li>
+                    <li><b>Kyoto:</b> Gion, Kawaramachi, Ga Kyoto.</li>
+                    <li><b>Osaka:</b> Namba, Umeda.</li>
+                </ul>
+            </ul>
+            </p>
+            <h3>💵 Ngân sách</h3>
+            <p>Các mức ngân sách dưới đây chưa bao gồm vé máy bay quốc tế:
+            <ul>
+                <li><b>Ngân sách tiết kiệm (khoảng 1.500.000 - 2.500.000 VNĐ/ngày):</b>
+                    <ul>
+                        <li><b>Chỗ ở:</b> Hostel, guesthouse, khách sạn con nhộng.</li>
+                        <li><b>Ăn uống:</b> Cửa hàng tiện lợi (combini), siêu thị, quán ăn bình dân, mì ramen, donburi.</li>
+                        <li><b>Di chuyển:</b> JR Pass (nếu đi nhiều thành phố), thẻ IC, đi bộ.</li>
+                        <li><b>Hoạt động:</b> Tham quan miễn phí, công viên, đền chùa.</li>
+                    </ul>
+                <li><b>Ngân sách tầm trung (khoảng 2.500.000 - 4.500.000 VNĐ/ngày):</b>
+                    <ul>
+                        <li><b>Chỗ ở:</b> Khách sạn 3-4 sao, ryokan vừa phải.</li>
+                        <li><b>Ăn uống:</b> Nhà hàng tầm trung, izakaya, trải nghiệm một vài bữa ăn đặc biệt.</li>
+                        <li><b>Di chuyển:</b> JR Pass, tàu điện, thỉnh thoảng taxi.</li>
+                        <li><b>Hoạt động:</b> Vé vào cửa các điểm tham quan, một số tour nhỏ.</li>
+                    </ul>
+                <li><b>Ngân sách cao cấp (từ 4.500.000 VNĐ/ngày trở lên):</b>
+                    <ul>
+                        <li><b>Chỗ ở:</b> Khách sạn 5 sao, ryokan sang trọng.</li>
+                        <li><b>Ăn uống:</b> Nhà hàng cao cấp, Michelin-starred, bữa ăn kaiseki.</li>
+                        <li><b>Di chuyển:</b> Taxi thường xuyên, thuê xe riêng (có tài xế).</li>
+                        <li><b>Hoạt động:</b> Tour riêng, trải nghiệm văn hóa độc đáo, mua sắm cao cấp.</li>
+                    </ul>
+                </ul>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+    const stars = document.querySelectorAll('.star');
+    const ratingInfo = document.getElementById('rating-info');
+    let rating = 0;
+    let totalRatings = 0;
+    let sumRatings = 0;
+    
+    stars.forEach(star => 
+    {
+        star.addEventListener('mouseover', () => 
+        {
+            resetStars();
+            for (let i = 0; i < star.dataset.value; i++) 
+            {
+            stars[i].classList.add('hovered');
+            }
+        });
+
+    star.addEventListener('mouseout', resetStars);
+
+    star.addEventListener('click', () => 
+    {
+        rating = parseInt(star.dataset.value);
+        sumRatings += rating;
+        totalRatings++;
+        updateRating();
+    });
+});
+
+    function resetStars() 
+    {
+    stars.forEach(s => s.classList.remove('hovered'));
+    }
+
+    function updateRating() 
+    {
+    stars.forEach((s, i) => {
+    s.classList.toggle('selected', i < rating);
+    });
+    const average = (sumRatings / totalRatings).toFixed(1);
+    ratingInfo.textContent = `${average}/5 trong ${totalRatings} đánh giá`;
+    }
+    </script>
+    </body>
+    </html>

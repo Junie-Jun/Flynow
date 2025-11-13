@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+  </head>
+  <body>
+    <div class="detail-container">
+      <div class="detail-title">COMBO QUY NHƠN - PHÚ YÊN 3 NGÀY 2 ĐÊM</div>
+      <div class="detail-top">
+        <img src="https://images.unsplash.com/photo-1679108230114-cacd55ca27da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1172" alt="Combo Quy Nhơn">
+        <div class="detail-info">
+          <h3>Hành trình: Quy Nhơn – Kỳ Co – Eo Gió – Ghềnh Ráng – Phú Yên – Gành Đá Dĩa – Nhà thờ Mằng Lăng.</h3>
+          <p><b>Thời gian:</b> 3 ngày 2 đêm</p>
+          <p><b>Di chuyển:</b> Máy bay</p>
+          <p><b>Xuất phát từ:</b> Thành phố Hồ Chí Minh hoặc Hà Nội</p>
+          <p class="price">Giá từ: 4.990.000đ/người</p>
+          <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h3>📌 Điểm nhấn hành trình</h3>
+        <ul>
+          <li>Khám phá Kỳ Co – Eo Gió, top những địa điểm du lịch biển đẹp nhất miền Trung, được ví như “Maldives của Việt Nam”.</li>
+          <li>Tham quan Ghềnh Ráng Tiên Sa – nơi an nghỉ của thi sĩ Hàn Mặc Tử, chiêm ngưỡng cảnh biển đá trứng độc đáo.</li>
+          <li>Trải nghiệm hành trình nối hai vùng biển xinh đẹp: Quy Nhơn – Phú Yên, chiêm ngưỡng vẻ đẹp hoang sơ của dải đất miền Trung.</li>
+          <li>Ghé thăm Gành Đá Dĩa – kỳ quan thiên nhiên độc nhất vô nhị với hàng ngàn cột đá xếp chồng như tổ ong khổng lồ.</li>
+          <li>Tham quan Nhà thờ Mằng Lăng – công trình cổ kính hơn 100 năm tuổi, lưu giữ cuốn sách chữ quốc ngữ đầu tiên của Việt Nam.</li>
+        </ul>
+      </div>
+        
+      <div class="section">
+        <h3>🎯 Trải nghiệm nổi bật</h3>
+        <ul>
+          <li>Tắm biển và lặn ngắm san hô tại bãi Kỳ Co trong xanh.</li>
+          <li>Check-in “huyền thoại sống ảo” Eo Gió với cung đường đá ven biển tuyệt đẹp.</li>
+          <li>Nghe sóng vỗ, dạo quanh Ghềnh Ráng Tiên Sa – nơi thơ và biển giao hòa.</li>
+          <li>Thưởng thức ẩm thực đặc trưng xứ Nẫu – xứ Hoa vàng cỏ xanh: bún chả cá, bánh hỏi lòng heo, sò nướng mỡ hành, mắt cá ngừ đại dương,...</li>
+          <li>Ngắm bình minh và hoàng hôn trên biển Quy Nhơn, cảm nhận trọn vẹn vẻ đẹp yên bình của miền Trung.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>ĐẶT TOUR</h2>
+        <form id="bookingForm">
+          <label>Họ và tên:</label>
+          <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+          <label>Số điện thoại:</label>
+          <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+          <label>Ghi chú:</label>
+          <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+          <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+        </form>
+      </div>
+    </div>
+    
+    <script>
+    const popup = document.getElementById("popup");
+    const openBtn = document.getElementById("openPopup");
+    const closeBtn = document.querySelector(".close-btn");
+    const form = document.getElementById("bookingForm");
+
+    openBtn.addEventListener("click", () => popup.style.display = "flex");
+    closeBtn.addEventListener("click", () => popup.style.display = "none");
+    window.addEventListener("click", (e) => 
+    { 
+      if (e.target === popup) popup.style.display = "none"; 
+    });
+
+    form.addEventListener("submit", (e) => 
+    {
+      e.preventDefault();
+      alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+      form.reset();
+      popup.style.display = "none";
+      window.location.href = "combo-du-lich.html";
+    });
+
+    window.addEventListener("pageshow", function() 
+    {
+      popup.style.display = "none";
+    });
+    </script>
+  </body>
+</html>

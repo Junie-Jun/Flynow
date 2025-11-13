@@ -1,0 +1,216 @@
+<!DOCTYPE html> 
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/datvemaybay.css">
+  <title>ĐẶT VÉ</title>
+</head>
+<body>
+
+  <div class="banner">
+    <div class="banner-nd">
+      <h1><b>ĐẶT VÉ MÁY BAY</b></h1>
+    </div>
+  </div>
+
+  <div class="booking-container">
+    <div class="trip-type">
+      <label><input type="radio" name="trip" value="round" checked> Khứ hồi</label>
+      <label><input type="radio" name="trip" value="oneway"> Một chiều</label>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="from">Điểm đi</label>
+        <input type="text" id="from" list="airports" placeholder="Nhập sân bay đi...">
+        <span class="error-text" id="fromError">⚠️ Vui lòng nhập điểm đi!</span>
+      </div>
+
+      <div class="form-group">
+        <label for="to">Điểm đến</label>
+        <input type="text" id="to" list="airports" placeholder="Nhập sân bay đến...">
+        <span class="error-text" id="toError">⚠️ Vui lòng nhập điểm đến!</span>
+      </div>
+
+      <div class="form-group">
+        <label for="depart">Ngày đi</label>
+        <input type="date" id="ngaydi">
+      </div>
+
+      <div class="form-group" id="return-group">
+        <label for="return">Ngày về</label>
+        <input type="date" id="ngayve">
+      </div>
+    </div>
+
+    <div class="counter-group">
+      <div>
+        <label>Người lớn</label>
+        <div class="counter">
+          <button type="button" class="minus">-</button>
+          <span id="adult-count">1</span>
+          <button type="button" class="plus">+</button>
+        </div>
+      </div>
+
+      <div>
+        <label>Trẻ em</label>
+        <div class="counter">
+          <button type="button" class="minus">-</button>
+          <span id="child-count">0</span>
+          <button type="button" class="plus">+</button>
+        </div>
+      </div>
+
+      <div>
+        <label>Em bé</label>
+        <div class="counter">
+          <button type="button" class="minus">-</button>
+          <span id="infant-count">0</span>
+          <button type="button" class="plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-guests" id="total-guests">Tổng: 1 khách</div>
+    <div class="warning" id="warning">⚠️ Tổng số khách không được vượt quá 7!</div>
+
+    <button class="submit-btn" id="submitBtn">Tìm chuyến bay</button>
+
+    <datalist id="airports">
+      <option value="Hà Nội (HAN)">
+      <option value="TP. Hồ Chí Minh (SGN)">
+      <option value="Đà Nẵng (DAD)">
+      <option value="Bangkok (BKK)">
+      <option value="Singapore (SIN)">
+      <option value="Seoul (ICN)">
+      <option value="Tokyo (NRT)">
+      <option value="New York (JFK)">
+      <option value="Sydney (SYD)">
+    </datalist>
+  </div>
+  <script>
+  const tripRadios = document.querySelectorAll('input[name="trip"]');
+  const returnGroup = document.getElementById('return-group');
+  
+  tripRadios.forEach(radio => 
+  {
+    radio.addEventListener('change', () => 
+    {
+      returnGroup.style.display = (radio.value === 'oneway') ? 'none' : 'flex';
+    });
+  });
+  
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("ngaydi").setAttribute("min", today);
+  document.getElementById("ngayve").setAttribute("min", today);
+
+  const ngaydi = document.getElementById("ngaydi");
+  const ngayve = document.getElementById("ngayve");
+
+  ngaydi.addEventListener("change", () => 
+  {
+    ngayve.min = ngaydi.value;
+  });
+  
+  const counters = document.querySelectorAll('.counter');
+  const warning = document.getElementById('warning');
+  const totalGuestsText = document.getElementById('total-guests');
+  
+  function totalGuests() 
+  {
+    return (
+      parseInt(document.getElementById('adult-count').textContent) +
+      parseInt(document.getElementById('child-count').textContent) +
+      parseInt(document.getElementById('infant-count').textContent)
+    );
+  }
+  
+  function updateTotalGuests() 
+  {
+    totalGuestsText.textContent = `Tổng: ${totalGuests()} khách`;
+  }
+  
+  counters.forEach(counter => 
+  {
+    const minus = counter.querySelector('.minus');
+    const plus = counter.querySelector('.plus');
+    const span = counter.querySelector('span');
+    
+    plus.addEventListener('click', () => 
+    {
+      let value = parseInt(span.textContent);
+      let total = totalGuests();
+      if (total >= 7) 
+      {
+        warning.style.display = 'block';
+      }
+      else 
+      {
+        span.textContent = value + 1;
+        warning.style.display = 'none';
+      }
+      
+      updateTotalGuests();
+    });
+    
+    minus.addEventListener('click', () => 
+    {
+      let value = parseInt(span.textContent);
+      if (value > 0) 
+      {
+        span.textContent = value - 1;
+        warning.style.display = 'none';
+      }
+      updateTotalGuests();
+    });
+  });
+  
+  document.getElementById("submitBtn").addEventListener("click", function(e) 
+  {
+    e.preventDefault();
+    const from = document.getElementById("from").value.trim();
+    const to = document.getElementById("to").value.trim();
+    const fromError = document.getElementById("fromError");
+    const toError = document.getElementById("toError");
+    let valid = true;
+    if (!from) 
+    {
+      fromError.style.display = "block";
+      valid = false;
+    } 
+    else 
+    {
+      fromError.style.display = "none";
+    }
+    if (!to) 
+    {
+      toError.style.display = "block";
+      valid = false;
+      
+    } 
+    else 
+    {
+      toError.style.display = "none";
+    }
+    if (!valid) return;
+    const info =
+    {
+      from,
+      to,
+      ngaydi:document.getElementById("ngaydi").value,
+      ngayve:document.getElementById("ngayve").value,
+      tripType:document.querySelector('input[name="trip"]:checked').value,
+      adults:parseInt(document.getElementById("adult-count").textContent),
+      children: parseInt(document.getElementById("child-count").textContent),
+      infants: parseInt(document.getElementById("infant-count").textContent)
+    };
+    localStorage.setItem("flightSearch",JSON.stringify(info));
+    window.location.href = "ket-qua-tim-chuyen-bay.html";
+  });
+  </script>
+</body>
+</html>

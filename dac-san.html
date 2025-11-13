@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặc sản</title>
+    <link rel="stylesheet" href="../CAM_NANG_CSS/dacsan.css">
+    <style>
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  margin: 0; 
+  padding: 0;
+}
+.banner {
+  position: relative;
+  text-align: center;
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.banner img {
+  width: 100vw;
+  height: 100%;
+  object-fit: contain; 
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.container {
+  max-width: 1770px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+}
+
+.container img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2,h3,h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 28px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.hovered,
+.star.selected {
+  color: gold;
+}
+
+.rating-info {
+  font-size: 15px;
+  color: #555;
+}
+
+.icon-eye::before {
+  content: "👁️";
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-content">
+        <img src="../../Images/ĐSPTBT.png">
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Top 5 đặc sản Phan Thiết nổi tiếng thơm ngon ai cũng thích</h2>
+      <div class="rating-section">
+      <span><strong>Đánh giá:</strong></span>
+      <div class="stars" id="stars">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+      <span class="rating-info" id="rating-info">0/5 trong 0 đánh giá</span>
+      <span class="icon-eye"></span> <span>7</span>
+    </div>
+    <div>
+    <p>Phan Thiết không những nổi tiếng với những hình ảnh hoàng hôn trải dài trên bãi cát vàng, những bờ biển đầy ắp ngư dân, những hòn đảo chênh vênh giữa lòng biển, là nơi giao nhau giữa hai dòng hải lưu nóng và lạnh, mà còn còn nổi danh với những món ngon đi vào lòng người, không chỉ thu hút khách du lịch mà người dân địa phương cũng khó mà cưỡng lại. Cùng “quẹo lựa” sơ sơ đặc sản Phan Thiết làm quà tặng cho ba mẹ, bạn bè nha!</p>
+  </div>
+  <div>
+    <h3>1. Chả cuốn cá trích - Món ngon Phan Thiết "healthy"</h3>
+    <img src="https://phanthietvn.com/wp-content/uploads/2023/01/cha-cuon-ca-trich-phan-thiet-mon-cuon-dac-san-mien-bien-2.jpg">
+    <p>Nói đến các món cuốn đặc sản Phan Thiết thì không thể bỏ qua cái tên chả cuốn cá trích Phan Thiết, món đặc sản trứ danh của người dân địa phương mà không phải du khách nào cũng biết.</p>
+    <p>Để ăn được món chả cuốn cá trích "chuẩn vị" nhất, thì cá phải tươi, mình dày và tốt nhất là được đánh bắt ngay trong ngày. Cái giòn tan, nóng hổi của chả cá trích kết hợp với vị béo của chả cá hấp, vị chua của nem, và sự tươi mát của rau thơm, cùng vị bùi của đậu phộng chắc chắn sẽ khiến bạn đã ăn là phải ghiền.</p>
+  </div>
+  <div>
+    <h3>2. Bánh quai vạc- Bánh bột lọc - Món ăn vặt ngon ở Phan Thiết</h3>
+    <img src="https://images.pexels.com/photos/29994637/pexels-photo-29994637.jpeg">
+    <p>Bánh quai vạc, hay còn được gọi là bánh bột lọc Phan Thiết, là một món ngon ăn chơi nổi tiếng của vùng đất Bình Thuận. Khi đến Phan Thiết, bạn dễ dàng tìm thấy quán bánh bột lọc "chuẩn bài" để thưởng thức. Hình ảnh các cô bán hàng rong với quang gánh bánh bột lọc đã trở thành một biểu tượng quen thuộc của địa phương này.</p>
+    <p>Một chiếc bánh bột lọc ngon phải có lớp vỏ trong suốt, dai mềm, bên trong chứa nhân tôm thơm ngon. Khi ăn, bạn có thể chấm kèm món ăn với nước mắm Phan Thiết truyền thống để tăng thêm hương vị. Đĩa bánh quai vạc đặc sản với những chiếc bánh ú nu được xếp đều, vừa nhìn thôi cũng nuốt nước miếng "ừng ực" rồi đấy.</p>
+  </div>
+  <div>
+    <h3>3. Bánh tráng nướng mắm ruốc - Đặc sản nên thử</h3>
+    <img src="https://cdn.tgdd.vn/Files/2020/03/05/1240199/2-cach-lam-banh-trang-mam-ruoc-don-gian-thom-ngon--8.jpg">
+    <p>Nhắc đến những món ăn vặt Phan Thiết ngon, hấp dẫn không thể bỏ quan bánh tráng mắm ruốc. Thành phố biển Phan Thiết "ghi điểm" những chiếc bụng không đáy của tín đồ ẩm thực đơn giản bằng món bánh tráng nướng mắm ruốc giòn tan, nóng hổi, ngập tràn cả hương lẫn vị.</p>
+    <p>Lớp bánh tráng giòn rụm, phết một cách tỉ mỉ với mắm ruốc vừa phải, kết hợp cùng một số topping đặc sắc như trứng cút luộc, nem chua, chả lụa, ruốc, tương ớt và một chút mỡ hành béo ngậy. Chắc chắn món ăn ngon đặc sản này sẽ làm siêu lòng bất cứ chiếc bụng đói nào đang cần bổ sung "vitamin ăn vặt" đấy.</p>
+  </div>
+  <div>
+    <h3>4. Mì quảng vịt - Món ăn ngon lạ miệng</h3>
+    <img src="https://phanri.plus/wp-content/uploads/2019/07/mi-quang-vit-phan-thiet.jpg">
+    <p>Mì Quảng vịt là một món đặc sản của Phan Thiết, mang trong mình hương vị thơm ngon và hấp dẫn, khiến nhiều du khách say mê. Đặc biệt, mì Quảng Phan Thiết khác biệt với mì Quảng ở những nơi khác bởi sự kết hợp độc đáo với nhiều loại nước lèo. Nước lèo được hầm từ xương và thịt vịt, tạo ra một hương vị ngọt ngào và đậm đà. Sợi mì được làm từ bột gạo, trứng và đặc biệt là hạt dành dành, tạo nên hương vị độc đáo.</p>
+    <p>Mì Quảng Phan Thiết thường được ăn kèm với rau sống và lạc rang. Món ăn đặc sản này mang hương vị cay nhẹ xen lẫn chút hương ngọt đặc trưng của nước dùng, khiến ai thưởng thức cũng không ngừng khen ngon.</p>
+  </div>
+  <div>
+    <h3>5. Bánh căn phiên bản Phan Thiết</h3>
+    <img src="https://static.vinwonders.com/production/banh-can-phan-thiet-06.jpg">
+    <p>Bánh căn Phan Thiết, một món ăn ngon dân dã độc đáo, làm say lòng du khách thập phương bởi hương vị đậm đà và đặc trưng của vùng biển. Món bánh căn này có nhân chủ yếu là hải sản, như mực tươi ngon hay tôm tươi, cùng với thịt và trứng tuỳ khẩu vị của từng người. Tuy nhiên, điều đặc biệt đó không chỉ là nhân mà còn chính là nước chấm đi kèm.</p>
+    <p>Thay vì xíu mại nước như ở những nơi khác, món đặc sản Phan Thiết được ăn cùng một tô nước chấm đặc trưng nấu từ cá kho. Màu vàng óng ánh của nước chấm, hương thơm tỏa nồng nàn làm nổi bật hương vị đặc biệt và đậm đà của món ăn này.</p>
+  </div>
+</div>
+<div class="footer">
+    <div class="footer-container">
+      <p>CÔNG TY TNHH FLYNOW | Liên hệ: 0123 456 789</p>
+      <p>Email: flynow@travel.vn | Địa chỉ: 123 Hoàng Hoa Thám, Q3, TPHCM</p>
+    </div>
+  </div>
+  
+  <script>
+  const stars = document.querySelectorAll('.star');
+  const ratingInfo = document.getElementById('rating-info');
+  let rating = 0;
+  let totalRatings = 0;
+  let sumRatings = 0;
+
+  stars.forEach(star => {
+  star.addEventListener('mouseover', () => 
+  {
+    resetStars();
+    for (let i = 0; i < star.dataset.value; i++) 
+    {
+      stars[i].classList.add('hovered');
+    }
+  });
+
+  star.addEventListener('mouseout', resetStars);
+
+  star.addEventListener('click', () => 
+  {
+    rating = parseInt(star.dataset.value);
+    sumRatings += rating;
+    totalRatings++;
+    updateRating();
+  });
+});
+
+function resetStars() 
+{
+  stars.forEach(s => s.classList.remove('hovered'));
+}
+
+function updateRating() 
+{
+  stars.forEach((s, i) => 
+  {
+    s.classList.toggle('selected', i < rating);
+  });
+  const average = (sumRatings / totalRatings).toFixed(1);
+  ratingInfo.textContent = `${average}/5 trong ${totalRatings} đánh giá`;
+}
+</script>
+</body>
+</html>

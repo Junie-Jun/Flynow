@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR NGHỈ DƯỠNG NGẮN NGÀY – THƯ GIÃN CUỐI TUẦN
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="../../Images/VT.jpg" class="tour-img" alt="Du lịch Vũng Tàu">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">
+              Du lịch Vũng Tàu – Bãi Sau – Hải đăng – Tượng Chúa Kitô – Bạch Dinh – Hòn Bà
+            </h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187642</li>
+              <li><b>Thời gian:</b> 2 ngày 1 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Xe du lịch</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>2.690.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🚗Vũng Tàu – thành phố biển gần Sài Gòn nhất – luôn là điểm đến lý tưởng cho những chuyến nghỉ ngắn ngày. <br><br>
+        Chỉ cách TP.HCM khoảng 2 giờ di chuyển, du khách có thể tận hưởng không khí biển mát lành, tiếng sóng vỗ rì rào và khung cảnh bình yên. <br><br>
+        Buổi sáng, tản bộ trên bãi Trước, bãi Sau, hay chinh phục tượng Chúa Kitô Vua trên núi Nhỏ để ngắm toàn cảnh thành phố. <br><br>
+        Buổi chiều, gió biển lộng thổi, ánh hoàng hôn đỏ rực buông xuống mặt nước tạo nên khung cảnh lãng mạn khó quên. <br><br>
+        Khi đêm buông xuống, Vũng Tàu lung linh trong ánh đèn rực rỡ, những hàng quán hải sản ven biển nhộn nhịp tiếng cười – tất cả tạo nên một thành phố biển vừa yên bình, vừa rộn ràng sức sống.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>🏖️ Tắm biển tại Bãi Sau, check-in ngọn Hải Đăng Vũng Tàu.</li>
+        <li>✝️ Tham quan tượng Chúa Kitô Vua, Bạch Dinh và Hòn Bà.</li>
+        <li>☕ Thưởng thức cà phê ven biển, ngắm hoàng hôn lãng mạn.</li>
+        <li>🍤 Thưởng thức hải sản tươi sống tại các quán ven biển.</li>
+        <li>🚶‍♀️ Dạo phố biển, tận hưởng không khí trong lành và bình yên.</li>
+        <li>🌃 Khám phá cuộc sống về đêm rực rỡ tại thành phố biển.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🏖️ Cảm ơn bạn đã chọn tour Vũng Tàu! Nhân viên sẽ liên hệ tư vấn trong thời gian sớm nhất.');
+    });
+  </script>
+</body>
+</html>

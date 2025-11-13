@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css/css/bootstrap.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+      font-family: "Segoe UI", sans-serif;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+<script src="/script.js/bootstrap.js"></script>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold text-uppercase">
+      TOUR KHÁM PHÁ ANGKOR WAT VÀ NHỮNG DI TÍCH HUYỀN BÍ
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="/../Images/campuchia.jpg" class="tour-img" alt="Du lịch Campuchia">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5>Du lịch Phnom Penh – Siem Reap – Quần thể Angkor Wat – Angkor Thom – Cung điện Hoàng gia – Chùa Bạc</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187655</li>
+              <li><b>Thời gian:</b> 4 ngày 3 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 &amp; 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Máy bay</li>
+              <li><b>Xuất phát:</b> Từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>9.290.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🚗 Campuchia – vùng đất của những ngôi đền huyền thoại, nơi lưu giữ nền văn minh rực rỡ của đế chế Khmer cổ đại. <br><br>
+        Hành trình bắt đầu tại Siem Reap – trung tâm du lịch nổi tiếng nhất Campuchia. <br><br>
+        Buổi sáng, chiêm ngưỡng kỳ quan thế giới Angkor Wat – công trình kiến trúc vĩ đại với những bức phù điêu tinh xảo kể lại sử thi Ramayana. <br><br>
+        Buổi trưa, tham quan Angkor Thom, đền Bayon với 54 tháp mặt cười bí ẩn, biểu tượng cho trí tuệ và quyền lực của vua Jayavarman VII. <br><br>
+        Buổi chiều, ghé Ta Prohm – ngôi đền rêu phong được bao phủ bởi rễ cây cổ thụ, tạo nên khung cảnh huyền ảo như trong phim “Tomb Raider”. <br><br>
+        Khi hoàng hôn buông xuống trên đỉnh Phnom Bakheng, ánh mặt trời nhuộm vàng cả bầu trời Angkor – một khoảnh khắc khó quên trong đời.
+      </p>
+    </div>
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>🏯 Tham quan quần thể Angkor Wat, Angkor Thom, Bayon và Ta Prohm.</li>
+        <li>🌅 Ngắm hoàng hôn huyền diệu trên đỉnh Phnom Bakheng.</li>
+        <li>🛶 Du ngoạn hồ Tonle Sap – hồ nước ngọt lớn nhất Đông Nam Á.</li>
+        <li>🍲 Thưởng thức ẩm thực Khmer truyền thống: amok cá, cơm chiên Angkor, cà ri đỏ.</li>
+        <li>🎭 Xem múa Apsara – điệu múa cổ truyền của cung đình Khmer.</li>
+        <li>🛍️ Mua sắm quà lưu niệm tại chợ đêm Siem Reap.</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🎉 Cảm ơn bạn đã chọn tour Campuchia – Angkor Wat! Nhân viên sẽ liên hệ tư vấn sớm nhất.');
+    });
+  </script>
+
+</body>
+</html>

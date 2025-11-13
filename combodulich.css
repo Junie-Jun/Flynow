@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, Helvetica, sans-serif; 
+  background:#f8f9fa; 
+  margin:0; 
+  padding:0;
+  text-align: center;
+}
+
+.banner {
+  background: url('https://pystravel.vn/_next/image?url=https%3A%2F%2Fobjectstorage.omzcloud.vn%2Fpys-object-storage%2Fweb%2Fuploads%2Fposts%2Falbums%2F5439%2F5a0d43aaa7a21c7b8fdbe45963cd87a0.jpg&w=1920&q=75') center/cover no-repeat;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.banner-nd {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  position: relative;
+  padding: 50px 20px;
+  z-index: 1;
+}
+
+h1{
+  color:#4876FF;
+}
+
+h2{
+  text-align: center;
+  color:#4876FF;
+}
+
+.container {
+  max-width:1000px; 
+  margin:30px auto; 
+  padding:0 20px;
+}
+
+.combo-item {
+  display: flex;
+  align-items: center;
+  background: rgb(229, 243, 252);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 900px;
+}
+
+.combo-item img {
+  width: 350px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.combo-nd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.combo-tt {
+  flex: 1;
+  text-align: left;
+}
+
+.combo-tt h3 {
+  margin: 0 0 8px;
+  color: #007bff;
+  font-size: 20px;
+}
+
+.combo-tt .chitiet {
+  color: #333;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.popup-content input,
+.popup-content textarea {
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-submit {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #ff8533;
+}
+
+.btn-book {
+  background: linear-gradient(45deg, #ff6600, #ff9500);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+}
+
+.btn-book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transition: all 0.6s ease;
+}
+
+.btn-book:hover::before {
+  left: 100%;
+}
+
+.btn-book:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.4);
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch Thái Lan</title>
+    <link rel="stylesheet" href="../CAM_NANG_CSS/thailan.css">
+    <style>
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  margin: 0; 
+  padding: 0;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.banner img {
+  width: 100vw;
+  height: 100%;
+  object-fit: contain; 
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.container {
+  max-width: 1770px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+}
+
+.container img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2,h3,h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 28px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.hovered,
+.star.selected {
+  color: gold;
+}
+
+.rating-info {
+  font-size: 15px;
+  color: #555;
+}
+
+.icon-eye::before {
+  content: "👁️";
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+  <div class="banner">
+      <div class="banner-content">
+        <img src="../../Images/DLTL.png">
+      </div>
+    </div>
+  <div class="container">
+  <h2>Kinh nghiệm đi du lịch Thái Lan tự túc chi tiết từ A - Z</h2>
+  <div class="rating-section">
+    <span><strong>Đánh giá:</strong></span>
+    <div class="stars" id="stars">
+      <span class="star" data-value="1">★</span>
+      <span class="star" data-value="2">★</span>
+      <span class="star" data-value="3">★</span>
+      <span class="star" data-value="4">★</span>
+      <span class="star" data-value="5">★</span>
+    </div>
+    <span class="rating-info" id="rating-info">0/5 trong 0 đánh giá</span>
+    <span class="icon-eye"></span><span>34</span>
+  </div>
+  <div>
+    <p>Bạn đang lên kế hoạch du lịch Thái Lan tự túc vào năm 2025? Bài viết này là cẩm nang chi tiết từ A đến Z, cung cấp mọi thông tin cần thiết từ cách lên kế hoạch, thời điểm lý tưởng, phương tiện di chuyển, chỗ ở, ẩm thực đặc sắc đến các địa điểm tham quan nổi bật và chi phí dự kiến. Hãy cùng khám phá những bí quyết để có một chuyến đi an toàn, thuận lợi và đầy ắp kỷ niệm tại Xứ sở Chùa Vàng.</p>
+    <hr>
+  </div>
+  <div>
+    <p>Bạn là người đam mê du lịch và luôn khao khát những chuyến đi tự do, không bị ràng buộc bởi lịch trình cố định? Bạn muốn tự mình lên kế hoạch, khám phá từng ngóc ngách và trải nghiệm văn hóa bản địa một cách chân thực nhất? Vậy thì một hành trình du lịch Thái Lan tự túc sẽ là lựa chọn hoàn hảo dành cho bạn. Đất nước Chùa Vàng, với sự pha trộn độc đáo giữa truyền thống và hiện đại, luôn chào đón du khách bằng vô vàn điều bất ngờ, từ những ngôi đền cổ kính dát vàng, bãi biển trong xanh như ngọc, đến nền ẩm thực đường phố sôi động và con người hiếu khách. Bài viết này sẽ là cẩm nang chi tiết từ A đến Z, giúp bạn tự tin chuẩn bị cho chuyến phiêu lưu đáng nhớ tại Thái Lan vào năm 2025.</p>
+    <h3>⁉️Du lịch Thái Lan tự túc từ A – Z bạn đã sẵn sàng chưa?</h3>
+    <p>Để có một chuyến đi không chỉ an toàn, thuận lợi mà còn đong đầy niềm vui và những kỷ niệm khó quên, việc chuẩn bị hành trang kiến thức thật đầy đủ là điều không thể thiếu. Từ việc lên kế hoạch chi tiết, lựa chọn thời điểm lý tưởng để khám phá, đến việc tìm hiểu sâu sắc về phương tiện di chuyển, các lựa chọn chỗ ở đa dạng, nền ẩm thực phong phú và những địa điểm tham quan nổi bật, tất cả đều góp phần tạo nên một trải nghiệm du lịch đáng nhớ. Hãy cùng chúng tôi đi sâu vào từng khía cạnh để biến chuyến đi đến Thái Lan của bạn trở nên hoàn hảo nhất, từ những mẹo nhỏ đến những lời khuyên hữu ích từ người bản địa.</p>
+  </div>
+  <div>
+    <h3>📝 Lên kế hoạch chi tiết cho chuyến đi: Nền tảng của một hành trình thành công </h3>
+    <img src="https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg" alt="plan">
+    <p>Việc tìm hiểu kỹ lưỡng về đất nước Thái Lan và lên kế hoạch chi tiết là bước khởi đầu quan trọng nhất cho mọi chuyến đi tự túc. Mỗi quốc gia đều sở hữu nền văn hóa, phong tục tập quán và quy tắc ứng xử riêng biệt. Việc nắm vững những thông tin này không chỉ giúp bạn tránh được những hiểu lầm không đáng có mà còn giúp bạn hòa nhập, tận hưởng trọn vẹn vẻ đẹp văn hóa bản địa. Thái Lan, với biệt danh "Xứ sở Chùa Vàng", nổi tiếng với sự hiếu khách, những ngôi đền linh thiêng và nền văn hóa Phật giáo sâu sắc. Du khách nên tìm hiểu về các quy tắc ứng xử cơ bản, chẳng hạn như không chạm vào đầu người khác, không chỉ chân vào tượng Phật, và luôn ăn mặc lịch sự, kín đáo khi ghé thăm các đền chùa hay những nơi linh thiêng.</p>
+    <p>Thái Lan nằm trong khu vực Đông Nam Á, do đó, về cơ bản, cách ăn uống, đi lại và sinh hoạt có nhiều điểm tương đồng với Việt Nam. Tuy nhiên, vẫn có những lưu ý nhỏ mà bạn cần nắm rõ. Ví dụ, việc trả giá khi mua sắm ở các khu chợ truyền thống là điều rất phổ biến và được khuyến khích, nhưng hãy luôn giữ thái độ lịch sự và vui vẻ. Về vấn đề tiền tệ, lời khuyên hữu ích là hãy đổi tiền USD ngay tại Việt Nam. Khi đến sân bay Thái Lan, bạn có thể dễ dàng đổi USD sang tiền Baht Thái tại các quầy đổi tiền uy tín với tỷ giá tốt hơn so với việc đổi trực tiếp từ VND. Ngoài ra, việc sử dụng thẻ tín dụng quốc tế hoặc các ứng dụng thanh toán điện tử phổ biến như TrueMoney Wallet hay Rabbit Line Pay cũng sẽ giúp việc chi tiêu trở nên tiện lợi và an toàn hơn. Đừng quên mua bảo hiểm du lịch để an tâm hơn trong mọi tình huống phát sinh không mong muốn, từ sự cố y tế đến mất mát hành lý.</p>
+    <p>Một phần quan trọng của việc lên kế hoạch là xác định rõ mục tiêu chuyến đi của bạn. Bạn muốn khám phá văn hóa lịch sử ở Bangkok và Chiang Mai, hay đắm mình trong làn nước biển xanh ngọc tại Phuket và Krabi? Bạn quan tâm đến ẩm thực đường phố hay trải nghiệm mua sắm đẳng cấp? Việc xác định rõ sẽ giúp bạn khoanh vùng các điểm đến, ước tính chi phí và thời gian cần thiết một cách hiệu quả.</p>
+  </div>
+  <div>
+    <h3>⏰ Thời điểm đẹp nhất để du lịch tại Thái Lan: Tận hưởng trọn vẹn vẻ đẹp xứ Chùa Vàng</h3>
+    <p>Thái Lan có khí hậu cận nhiệt đới gió mùa, với hai mùa rõ rệt: mùa khô mát và mùa mưa. Thời điểm lý tưởng nhất để ghé thăm Thái Lan là từ tháng 11 đến tháng 4 năm sau. Trong giai đoạn này, thời tiết khô ráo, nắng đẹp nhưng không quá gay gắt, tạo điều kiện hoàn hảo cho mọi hoạt động vui chơi, khám phá, đặc biệt là các hoạt động ngoài trời như tắm biển, lặn biển, tham quan các hòn đảo hay trekking qua những khu rừng nhiệt đới. Nhiệt độ trung bình dao động từ 25-32 độ C, mang lại cảm giác dễ chịu và thoải mái.</p>
+    <img src="https://images.pexels.com/photos/358229/pexels-photo-358229.jpeg">
+    <p>Đặc biệt, khoảng thời gian từ cuối tháng 10 đến tháng 4 cũng là mùa lễ hội sôi động nhất tại Thái Lan, thu hút hàng triệu du khách từ khắp nơi trên thế giới. Tiêu biểu phải kể đến Lễ hội Té nước Songkran (thường diễn ra vào nửa đầu tháng 4), lễ hội mừng năm mới truyền thống đầy màu sắc và vui nhộn, nơi mọi người cùng nhau té nước để rửa trôi những điều không may mắn và cầu chúc những điều tốt lành. Hay Lễ hội Loy Krathong và Yi Peng (thường vào tháng 11), khi hàng ngàn đèn lồng được thả lên trời và những chiếc thuyền hoa đăng lung linh trôi trên sông, tạo nên một khung cảnh huyền ảo, lãng mạn và vô cùng ấn tượng. Tham gia vào những lễ hội này không chỉ mang đến cho bạn những trải nghiệm văn hóa độc đáo mà còn là cơ hội để hòa mình vào không khí tưng bừng, náo nhiệt của người dân bản địa.</p>
+    <p>Nếu bạn muốn tránh đám đông và tiết kiệm chi phí, mùa mưa (từ tháng 5 đến tháng 10) cũng có những nét hấp dẫn riêng. Dù có mưa rào nhưng thường chỉ diễn ra trong thời gian ngắn vào buổi chiều, không ảnh hưởng quá nhiều đến lịch trình. Cảnh quan thiên nhiên trong mùa này xanh tươi hơn, và giá cả dịch vụ, khách sạn thường rẻ hơn đáng kể. Đây cũng là thời điểm tốt để khám phá các khu vực phía Bắc như Chiang Mai với khí hậu mát mẻ hơn.</p>
+  </div>
+  <div>
+    <h3>🛵 Phương tiện di chuyển tại Thái Lan: Khám phá mọi nẻo đường</h3>
+    <p>Đối với một chuyến du lịch Thái Lan tự túc trọn vẹn, việc lựa chọn phương tiện di chuyển phù hợp là yếu tố then chốt giúp du khách thoải mái ngắm nhìn cảnh vật và khám phá mọi ngóc ngách của đất nước này. Tại các thành phố lớn như Bangkok, bạn có rất nhiều lựa chọn đa dạng và tiện lợi. Hệ thống tàu điện trên cao (BTS Skytrain) và tàu điện ngầm (MRT) là cách nhanh nhất và hiệu quả nhất để tránh tắc đường, kết nối hầu hết các điểm du lịch chính, trung tâm mua sắm và khu vực giải trí. Bạn có thể mua vé lẻ cho từng chuyến đi hoặc cân nhắc mua thẻ One Day Pass (vé đi lại trong ngày) hoặc Rabbit Card để tiết kiệm chi phí và thời gian.</p>
+    <img src="https://images.pexels.com/photos/19374462/pexels-photo-19374462.jpeg">
+    <p>Ngoài ra, xe buýt công cộng cũng là một lựa chọn tiết kiệm, tuy nhiên có thể hơi phức tạp với du khách lần đầu đến vì hệ thống tuyến đường khá chằng chịt và thông báo bằng tiếng Thái. Đối với những trải nghiệm địa phương và đầy phiêu lưu hơn, xe tuk-tuk là biểu tượng không thể thiếu của Thái Lan. Tuy nhiên, hãy nhớ thương lượng giá trước khi lên xe để tránh bị "hớ" và luôn giữ thái độ vui vẻ. Taxi và các ứng dụng gọi xe như Grab cũng rất phổ biến và tiện lợi, đặc biệt khi di chuyển vào ban đêm hoặc đến những nơi xa trung tâm. Chi phí cho tàu điện trên cao hay xe tuk-tuk sẽ đắt hơn một chút so với xe buýt, chính vì thế các bạn hãy xác định điểm đến để có thể lựa chọn dịch vụ cho phù hợp nhé.</p>
+    <p>Đối với các chuyến đi liên tỉnh, Thái Lan có hệ thống giao thông phát triển. Xe buýt đường dài là lựa chọn kinh tế và phổ biến, kết nối hầu hết các tỉnh thành. Tàu hỏa mang đến trải nghiệm ngắm cảnh độc đáo, đặc biệt là các tuyến đường đi về phía Bắc hoặc Nam. Nếu muốn tiết kiệm thời gian, các chuyến bay nội địa từ Bangkok đến Chiang Mai, Phuket, Krabi hay Koh Samui là lựa chọn tối ưu, với nhiều hãng hàng không giá rẻ như AirAsia, Nok Air, Thai Lion Air. Để di chuyển giữa các đảo, phà và tàu cao tốc là phương tiện chính, bạn nên đặt vé trước, đặc biệt vào mùa cao điểm.</p>
+  </div>
+  <div>
+    <h3>🏢 Ở đâu tại Thái Lan? Lựa chọn lưu trú đa dạng</h3>
+    <p>Là một đất nước chú trọng rất lớn về du lịch, Thái Lan đầu tư mạnh vào hệ thống lưu trú đa dạng, từ những nhà nghỉ bình dân, hostel giá rẻ cho dân "phượt" đến các khách sạn, khu nghỉ dưỡng cao cấp và chất lượng đạt chuẩn quốc tế. Thông thường, chi phí lưu trú tại Bangkok sẽ đắt đỏ hơn do đây là thủ đô và trung tâm kinh tế, du lịch sầm uất, tập trung nhiều khách sạn cao cấp với dịch vụ cực kỳ chất lượng và tiện nghi. Trung bình, một khách sạn tầm trung ở Bangkok có giá khoảng 935.000 VNĐ/đêm. Nếu bạn tìm kiếm sự sang trọng và đẳng cấp, các khách sạn 5 sao dọc sông Chao Phraya hay khu Sukhumvit sẽ mang đến trải nghiệm tuyệt vời với hồ bơi vô cực, spa thư giãn, ẩm thực tinh tế và tầm nhìn ngoạn mục ra thành phố.</p>
+    <img src="https://images.pexels.com/photos/8299700/pexels-photo-8299700.jpeg">
+    <p>Ngược lại, nếu bạn đến Chiang Mai hay các vùng lân cận như Pai, Krabi, thì giá phòng nghỉ sẽ rẻ hơn đáng kể, giao động từ 200.000 đến 300.000 VNĐ/đêm cho các nhà nghỉ, homestay ấm cúng hoặc guesthouse thân thiện. Những khu vực này thường có không khí yên bình hơn, gần gũi với thiên nhiên và văn hóa địa phương, rất phù hợp cho những ai muốn tìm kiếm sự thư thái và trải nghiệm cuộc sống bản địa. Một số khách sạn bạn có thể tham khảo khi du lịch Thái Lan như The Berkeley Hotel Pratunam tại Bangkok (gần khu mua sắm sầm uất, thuận tiện di chuyển), Hilton Hotel Pattaya tại Pattaya (với view biển tuyệt đẹp và tiện ích cao cấp) hay The Empress Chiang Mai (mang đậm kiến trúc truyền thống Lanna và dịch vụ chu đáo). Để có giá tốt nhất và nhiều lựa chọn, bạn nên đặt phòng trước qua các ứng dụng hoặc trang web du lịch phổ biến như Booking.com, Agoda, hoặc Traveloka, đặc biệt là vào mùa cao điểm du lịch.</p>
+    <p>Ngoài ra, các khu nghỉ dưỡng sinh thái ở các tỉnh phía Bắc hoặc bungalow trên bãi biển ở các đảo phía Nam cũng là những lựa chọn độc đáo, mang đến trải nghiệm gần gũi với thiên nhiên. Dù phong cách du lịch của bạn là gì, Thái Lan luôn có một chỗ ở phù hợp để đáp ứng mọi nhu cầu và ngân sách.</p>
+  </div>
+  <div>
+    <h3>🍽️ Ăn gì tại Thái Lan? Thiên đường ẩm thực đường phố</h3>
+    <img src="https://images.unsplash.com/photo-1582801205465-c0d029e85a1c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" alt="xôi xoài">
+    <p>Chắc chắn rồi, đến Thái Lan mà không thưởng thức ẩm thực thì quả là một thiếu sót lớn! Nền ẩm thực Thái Lan nổi tiếng thế giới với sự kết hợp hài hòa giữa chua, cay, mặn, ngọt, cùng hương thơm quyến rũ từ các loại thảo mộc tươi như sả, riềng, lá chanh, ớt và ngò rí. Thái Lan là thiên đường của những món ăn đường phố hấp dẫn, không chỉ ngon miệng mà còn có giá thành rất phải chăng, phù hợp với mọi túi tiền.</p>
+    <p>Đầu tiên phải kể đến Tom Yum Goong, món canh tôm chua cay trứ danh với hương sả, riềng, lá chanh và ớt nồng nàn, kích thích mọi giác quan. Tiếp theo là Pad Thai, món mì xào truyền thống được yêu thích bởi cả người dân địa phương và du khách, với sự pha trộn tinh tế của mì gạo, tôm, đậu phụ, giá đỗ và lạc rang, tạo nên hương vị khó quên. Xôi xoài (Khao Niao Mamuang) là món tráng miệng không thể bỏ qua, với vị ngọt thanh của xoài chín mọng kết hợp cùng xôi nếp dẻo thơm và nước cốt dừa béo ngậy, là sự kết thúc hoàn hảo cho mọi bữa ăn. Ngoài ra, bạn còn có thể thưởng thức các món gỏi Som Tum (gỏi đu đủ xanh) giòn cay, cà ri xanh (Gaeng Keow Wan Gai) thơm lừng, trà sữa Thái mát lạnh và hàng loạt các món xiên nướng, hải sản tươi sống tại các khu chợ đêm sầm uất.</p>
+    <p>Nếu bạn lựa chọn các trung tâm thương mại để vừa shopping và ăn uống, giá sẽ dao động từ 200.000 đến 300.000 VNĐ cho một bữa ăn chất lượng tại các food court hoặc nhà hàng. Ngược lại, nếu khám phá ẩm thực tại các khu chợ đêm hay quán ăn đường phố, bạn chỉ cần từ 100.000 – 200.000 VNĐ là đã có thể thưởng thức no nê những món ngon tuyệt vời. Đừng ngại thử các món ăn vặt độc đáo như bánh kếp chuối (Roti), côn trùng chiên giòn (dành cho những ai dũng cảm) hay nước ép trái cây tươi mát được bán ở khắp mọi nơi. Để có trải nghiệm ẩm thực đích thực, hãy tìm đến các khu chợ đêm nổi tiếng như Chatuchak Night Market (Bangkok), Chiang Mai Night Bazaar hay Fisherman's Village Walking Street ở Koh Samui.</p>
+    <img src="https://images.pexels.com/photos/12111353/pexels-photo-12111353.jpeg">
+  </div>
+  <div>
+    <h3>🌆 Các địa điểm nên đến tại Thái Lan: Từ đô thị đến thiên đường biển đảo</h3>
+    <p>Thái Lan là một kho tàng của những địa điểm du lịch đa dạng, từ đô thị sầm uất, nhộn nhịp đến những hòn đảo thiên đường yên bình, mỗi nơi đều mang một vẻ đẹp và sức hấp dẫn riêng biệt.
+        <ul>
+            <li><b>Bangkok:</b> Thủ đô nhộn nhịp này là điểm khởi đầu lý tưởng cho mọi hành trình. Bạn không thể bỏ qua việc ghé thăm Cung điện Hoàng gia (Grand Palace) và Chùa Phật Ngọc (Wat Phra Kaeo) để chiêm ngưỡng kiến trúc tráng lệ và sự linh thiêng của Phật giáo. Du thuyền trên sông Chao Phraya sẽ mang đến một góc nhìn khác về thành phố, với những ngôi chùa cổ kính và tòa nhà hiện đại soi bóng xuống dòng sông. Viện bảo tàng Quốc gia Bangkok là nơi lưu giữ nhiều hiện vật quý giá, giúp bạn hiểu sâu hơn về lịch sử và văn hóa Thái Lan. Ngoài ra, đừng quên khám phá các khu chợ đêm sôi động như Chatuchak Weekend Market (chợ cuối tuần lớn nhất thế giới với mọi thứ bạn có thể tưởng tượng) hay Asiatique The Riverfront (kết hợp mua sắm, ăn uống và giải trí bên sông) để mua sắm và thưởng thức ẩm thực đường phố.</li>
+            <img src="https://images.pexels.com/photos/12735904/pexels-photo-12735904.jpeg">
+            <li><b>Chiang Mai:</b> Được mệnh danh là "Bông hồng phương Bắc" của Thái Lan, Chiang Mai nổi tiếng với không khí trong lành, những ngôi đền cổ kính mang đậm kiến trúc Lanna và văn hóa độc đáo. Hãy ghé thăm Wat Phra That Doi Suthep trên đỉnh núi, ngắm nhìn toàn cảnh thành phố từ trên cao. Trải nghiệm cưỡi voi, thăm các trại voi nhân đạo (như Elephant Nature Park) hoặc tham gia lớp học nấu ăn Thái để học cách chế biến những món ăn truyền thống cũng là những hoạt động thú vị và đáng nhớ.</li>
+            <li><b>Phuket:</b> Hòn đảo lớn nhất Thái Lan, là thiên đường biển với những bãi cát trắng mịn và làn nước trong xanh như ngọc. Các bãi biển Patong, Kata, Karon là những điểm đến không thể bỏ qua cho những ai yêu thích tắm nắng và các môn thể thao dưới nước. Từ Phuket, bạn có thể dễ dàng đi thuyền đến các đảo lân cận nổi tiếng như Koh Phi Phi (với Vịnh Maya thơ mộng), đảo James Bond (nổi tiếng với cảnh quan độc đáo trong phim 007) hay vịnh Phang Nga với những khối đá vôi hùng vĩ và hang động kỳ bí.</li>
+            <img src="https://images.pexels.com/photos/14896394/pexels-photo-14896394.jpeg">
+            <li><b>Pattaya:</b> Thành phố biển sôi động, cách Bangkok không xa, nổi tiếng với các hoạt động giải trí về đêm, các show diễn hoành tráng (như Alcazar Show) và bãi biển Jomtien yên bình hơn. Bạn có thể thăm Làng Voi Pattaya, Vườn Nhiệt đới Nong Nooch (một trong những khu vườn thực vật đẹp nhất thế giới) hoặc khám phá Chợ Nổi Bốn Miền để trải nghiệm văn hóa mua sắm trên sông.</li>
+            <li><b>Krabi:</b> Tỉnh miền Nam Thái Lan với những vách đá vôi ấn tượng, bãi biển Railay tuyệt đẹp chỉ có thể tiếp cận bằng thuyền, và các hòn đảo nhỏ xinh đẹp như Koh Lanta, Koh Poda. Đây là điểm đến lý tưởng cho những ai yêu thích leo núi, lặn biển, chèo thuyền kayak và thư giãn trong không gian yên bình, hoang sơ.</li>
+            <li><b>Koh Samui:</b> Một hòn đảo lớn khác với vẻ đẹp sang trọng hơn, nổi tiếng với những khu nghỉ dưỡng cao cấp, bãi biển Chaweng và Lamai sôi động, cùng với các điểm tham quan như Tượng Phật Lớn (Big Buddha) và đá Ông Bà (Hin Ta Hin Yai). Đây là lựa chọn tuyệt vời cho những cặp đôi hoặc gia đình tìm kiếm sự thoải mái và tiện nghi.</li>
+            <img src="https://images.pexels.com/photos/937465/pexels-photo-937465.jpeg">
+          </ul>
+        <p>Ngoài ra, rải rác trên đất nước Thái Lan là hàng ngàn ngôi chùa lớn nhỏ với kiến trúc độc đáo để bạn có thể khám phá, mỗi ngôi chùa đều mang một vẻ đẹp và câu chuyện riêng, phản ánh sâu sắc đời sống tâm linh của người dân.</p>
+    </p>
+  </div>
+  <div>
+    <h3>💵 Chi phí khi du lịch Thái Lan: Lập ngân sách thông minh</h3>
+    <p>Khám phá đất nước xinh đẹp Thái Lan chắc chắn là niềm háo hức của rất nhiều người, đặc biệt là những ai đang muốn tự trải nghiệm mà không cần bất kỳ tour hướng dẫn nào. Chi phí cho một chuyến du lịch Thái Lan tự túc sẽ phụ thuộc vào nhiều yếu tố như thời gian lưu trú, phong cách du lịch (sang trọng hay tiết kiệm), và các hoạt động bạn muốn tham gia.</p>
+    <p>Để có thể đến Thái vui chơi một cách thoải mái, an toàn, bạn cần chuẩn bị từ 10 – 12 triệu đồng cho một chuyến đi khoảng 5-7 ngày là có thể yên tâm khám phá mà không quá lo lắng về chi phí. Mức ngân sách này bao gồm vé máy bay khứ hồi (từ Việt Nam, khoảng 3-5 triệu tùy thời điểm), chi phí lưu trú ở khách sạn tầm trung (khoảng 500k-1 triệu/đêm), ăn uống tại các nhà hàng địa phương và chợ đêm (khoảng 300-500k/ngày), di chuyển bằng phương tiện công cộng và một số hoạt động tham quan cơ bản. Nếu bạn muốn trải nghiệm các dịch vụ cao cấp hơn, lưu trú tại resort sang trọng hoặc tham gia nhiều tour đảo, lặn biển, ngân sách có thể tăng lên khoảng 15-20 triệu đồng hoặc hơn.</p>
+    <p>Lưu ý quan trọng, hãy chuẩn bị thêm tiền mặt (đã đổi sang Baht Thái) và tiền trong các thẻ tín dụng quốc tế của bạn. Mặc dù không phải tất cả các địa điểm đều yêu cầu, nhưng một số quy định nhập cảnh có thể yêu cầu du khách phải chứng minh có đủ tài chính (khoảng 10.000 Baht/người hoặc 20.000 Baht/gia đình, tương đương khoảng 300-600 USD) trong người để đảm bảo khả năng chi trả cho chuyến đi. Điều này giúp bạn tránh được những rắc rối không đáng có tại cửa khẩu và đảm bảo hành trình suôn sẻ.</p>
+    <p>Ngoài ra, bạn cũng nên dành một khoản dự phòng cho các chi phí phát sinh hoặc mua sắm quà lưu niệm. Việc theo dõi chi tiêu hàng ngày thông qua các ứng dụng quản lý ngân sách cũng là một cách hiệu quả để kiểm soát tài chính trong suốt chuyến đi.</p>
+  </div>
+  <div>
+    <h3>❗️ Những lưu ý quan trọng khác cho chuyến đi tự túc</h3>
+    <p>
+        <ul>
+            <li><b>Ngôn ngữ:</b> Tiếng Thái là ngôn ngữ chính. Tuy nhiên, ở các khu du lịch lớn, tiếng Anh được sử dụng khá phổ biến. Bạn có thể cài đặt ứng dụng dịch thuật trên điện thoại hoặc học một vài câu giao tiếp cơ bản bằng tiếng Thái để dễ dàng hơn trong việc tương tác với người dân địa phương.</li>
+            <li><b>Sim điện thoại và Internet:</b> Mua sim du lịch tại sân bay hoặc các cửa hàng tiện lợi là điều cần thiết để duy trì kết nối Internet và liên lạc. Các gói sim du lịch thường có sẵn với dung lượng data lớn và giá cả phải chăng.</li>
+            <li><b>An toàn cá nhân:</b>Luôn giữ gìn tài sản cá nhân cẩn thận, đặc biệt ở những nơi đông người. Tránh đi một mình vào các con hẻm vắng vẻ vào ban đêm. Tìm hiểu về các số điện thoại khẩn cấp của địa phương.</li>
+            <li><b>Sức khỏe:</b> Mang theo các loại thuốc cơ bản như thuốc đau đầu, đau bụng, kem chống nắng, thuốc chống côn trùng. Uống đủ nước để tránh mất nước do thời tiết nóng ẩm.</li>
+            <li><b>Mua sắm:</b> Ngoài các khu chợ đêm, bạn có thể tìm thấy nhiều trung tâm thương mại lớn ở Bangkok như Siam Paragon, CentralWorld, MBK Center với đa dạng các mặt hàng từ thời trang đến đồ điện tử. Đừng quên mua quà lưu niệm như lụa Thái, đồ thủ công mỹ nghệ, các loại gia vị đặc trưng.</li>
+            <li><b>Thân thiện với môi trường:</b> Hãy là một du khách có trách nhiệm. Hạn chế sử dụng đồ nhựa dùng một lần, giữ gìn vệ sinh chung và tôn trọng thiên nhiên, đặc biệt khi tham quan các bãi biển và khu bảo tồn.</li>
+        </ul>
+        <p>Với những thông tin chi tiết và toàn diện mà chúng tôi đã cung cấp, hành trình khám phá "Xứ sở Chùa Vàng" tự túc của bạn vào năm 2025 chắc chắn sẽ không còn là ước mơ xa vời. Một kế hoạch cẩn thận, tỉ mỉ và đầy đủ thông tin sẽ là chìa khóa để bạn có một chuyến đi thật đáng nhớ, tràn đầy niềm vui và những trải nghiệm văn hóa độc đáo. Chúc bạn có một hành trình khám phá Thái Lan thật tuyệt vời!</p>
+    </p>
+  </div>
+</div>
+<div class="footer">
+    <div class="footer-container">
+      <p>CÔNG TY TNHH FLYNOW | Liên hệ: 0123 456 789</p>
+      <p>Email: flynow@travel.vn | Địa chỉ: 123 Hoàng Hoa Thám, Q3, TPHCM</p>
+    </div>
+  </div>
+
+  <script>
+  const stars = document.querySelectorAll('.star');
+  const ratingInfo = document.getElementById('rating-info');
+  let rating = 0;
+  let totalRatings = 0;
+  let sumRatings = 0;
+
+  stars.forEach(star => {
+  star.addEventListener('mouseover', () => 
+  {
+    resetStars();
+    for (let i = 0; i < star.dataset.value; i++) {
+      stars[i].classList.add('hovered');
+    }
+  });
+
+  star.addEventListener('mouseout', resetStars);
+
+  star.addEventListener('click', () => 
+  {
+    rating = parseInt(star.dataset.value);
+    sumRatings += rating;
+    totalRatings++;
+    updateRating();
+  });
+});
+
+  function resetStars() 
+  {
+  stars.forEach(s => s.classList.remove('hovered'));
+  }
+
+  function updateRating() 
+  {
+  stars.forEach((s, i) => {
+    s.classList.toggle('selected', i < rating);
+  });
+  const average = (sumRatings / totalRatings).toFixed(1);
+  ratingInfo.textContent = `${average}/5 trong ${totalRatings} đánh giá`;
+  }
+  </script>
+  </body>
+  </html>

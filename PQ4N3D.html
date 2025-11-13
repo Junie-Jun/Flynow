@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO PHÚ QUỐC 4 NGÀY 3 ĐÊM</div>
+    <div class="detail-top">
+      <img src="https://images.unsplash.com/photo-1676438859721-5508a3ca00db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" alt="Combo Phú Quốc">
+      <div class="detail-info">
+        <h3>Phú Quốc – VinWonders – Sunset Sanato – Làng chài Hàm Ninh – Cáp treo Hòn Thơm.</h3>
+        <p><b>Thời gian:</b> 4 ngày 3 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Thành phố Hồ Chí Minh hoặc Hà Nội</p>
+        <p class="price">Giá từ: 3.890.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Tham quan VinWonders Phú Quốc – khu vui chơi giải trí hiện đại bậc nhất Việt Nam với hàng trăm trò chơi cảm giác mạnh và công viên nước khổng lồ.</li>
+        <li>Check-in Sunset Sanato Beach Club – điểm ngắm hoàng hôn đẹp nhất đảo ngọc với biểu tượng “cổng trời” và “đàn voi dưới hoàng hôn” nổi tiếng.</li>
+        <li>Trải nghiệm Cáp treo Hòn Thơm – tuyến cáp treo vượt biển dài nhất thế giới, chiêm ngưỡng toàn cảnh Nam Đảo từ trên cao.</li>
+        <li>Ghé thăm Làng chài Hàm Ninh cổ kính – nơi lưu giữ nét mộc mạc, bình dị của người dân xứ đảo, thưởng thức hải sản tươi sống.</li>
+        <li>Nghỉ dưỡng tại resort ven biển sang trọng, hòa mình vào thiên nhiên và biển trời Phú Quốc.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Tận hưởng cảm giác “bay giữa biển trời” khi đi cáp treo Hòn Thơm.</li>
+        <li>Vui chơi thả ga tại VinWonders với hàng loạt khu trò chơi, công viên nước, biểu diễn 3D hoành tráng.</li>
+        <li>Check-in “cháy máy” tại Sunset Sanato, ngắm hoàng hôn đỏ rực trên biển cùng background nghệ thuật.</li>
+        <li>Thưởng thức hải sản tươi ngon ngay tại làng chài Hàm Ninh: ghẹ hấp, mực nướng, gỏi cá trích,..</li>
+        <li>Dạo biển đêm, tận hưởng không khí trong lành và vẻ đẹp lung linh của đảo ngọc về đêm.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+  </script>
+  </body>
+  </html>

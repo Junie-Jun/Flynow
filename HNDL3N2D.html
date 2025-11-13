@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO HÀ NỘI - ĐÀ LẠT 3 NGÀY 2 ĐÊM</div>
+    <div class="detail-top">
+      <img src="https://images.pexels.com/photos/2977432/pexels-photo-2977432.jpeg" alt="Combo HN - ĐL">
+      <div class="detail-info">
+        <h3>Hành trình: Hà Nội – Hồ Hoàn Kiếm – Văn Miếu – Đà Lạt – Hồ Xuân Hương – Langbiang – Thung lũng Tình Yêu – Chợ Đà Lạt.</h3>
+        <p><b>Thời gian:</b> 3 ngày 2 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Hà Nội</p>
+        <p class="price">Giá từ: 3.990.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Trải nghiệm trọn vẹn hai thành phố đặc trưng của Việt Nam: Hà Nội cổ kính – Đà Lạt mộng mơ.</li>
+        <li>Khám phá những điểm du lịch nổi tiếng: Lăng Bác – Văn Miếu – Hồ Gươm – Langbiang – Hồ Xuân Hương – Thung lũng Tình Yêu.</li>
+        <li>Kết hợp giữa văn hóa – thiên nhiên – nghỉ dưỡng, phù hợp cho gia đình, cặp đôi và nhóm bạn.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Check-in Hồ Hoàn Kiếm và Quảng trường Lâm Viên trong cùng một hành trình.</li>
+        <li>Dạo phố cổ Hà Nội, thưởng thức cà phê trứng – ẩm thực đặc trưng miền Bắc.</li>
+        <li>Săn mây, ngắm cảnh núi Langbiang và hồ Đa Thiện.</li>
+        <li>Thư giãn trong không khí se lạnh, lãng mạn của Đà Lạt.</li>
+        <li>Mua sắm đặc sản cả hai vùng: trà atiso, mứt Đà Lạt và bánh cốm Hà Nội.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>

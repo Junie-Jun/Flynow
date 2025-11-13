@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO BANGKOK 4 NGÀY 3 ĐÊM</div>
+    <div class="detail-top">
+    <img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" alt="Combo BangKok">
+      <div class="detail-info">
+        <h3>Hành trình: Hoàng Cung Thái Lan – Chùa Phật Ngọc (Wat Phra Kaew) – Chùa Bình Minh (Wat Arun) – Chợ nổi Damnoen Saduak – Trung tâm mua sắm MBK / Siam Paragon – Phố China Town – IconSiam – Asiatique Riverfront.</h3>
+        <p><b>Thời gian:</b> 4 ngày 3 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Thành phố Hồ Chính Minh</p>
+        <p class="price">Giá từ: 6.900.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Tham quan Hoàng Cung Thái Lan và Chùa Phật Ngọc – biểu tượng linh thiêng của Bangkok.</li>
+        <li>Check-in Chùa Bình Minh (Wat Arun) – công trình kiến trúc tuyệt đẹp bên sông Chao Phraya.</li>
+        <li>Trải nghiệm văn hoá độc đáo tại chợ nổi Damnoen Saduak, nơi buôn bán tấp nập trên sông.</li>
+        <li>Tự do mua sắm tại các trung tâm nổi tiếng: MBK, Siam Paragon, IconSiam.</li>
+        <li>Dạo bờ sông Chao Phraya và ngắm hoàng hôn lãng mạn tại Asiatique The Riverfront.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Đi thuyền dọc sông Chao Phraya, ngắm toàn cảnh Bangkok cổ và hiện đại.</li>
+        <li>Tham quan những ngôi chùa vàng tráng lệ, cảm nhận văn hoá Phật giáo Thái Lan.</li>
+        <li>Thưởng thức ẩm thực đường phố Bangkok: pad Thái, xôi xoài, trà sữa Thái, tom yum.</li>
+        <li>Mua sắm thả ga tại MBK, Platinum Mall, săn hàng nội địa chất lượng cao.</li>
+        <li>Dạo chợ đêm Asiatique, ngắm pháo hoa và chụp ảnh cùng vòng quay khổng lồ.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>

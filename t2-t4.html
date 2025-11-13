@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>T2-4</title>
+  <link rel="stylesheet" href="/style.css/css/bootstrap.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: #eafaff;
+    }
+    .card {
+      background: rgb(247, 253, 255);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+    .image-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px 10px 0 0;
+    }
+    .image-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .card:hover .image-box img {
+      transform: scale(1.05);
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #212529;
+    }
+    .price {
+      color: #dc3545;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 8px;
+    }
+    .info i {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+<script src="/script.js/bootstrap.js"></script>
+<div class="container py-4">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100">
+        <a href="../Tourdulich/link/HN.html" class="text-decoration-none text-dark">
+          <div class="image-box">
+            <img src="/Images/HoHoanKiem.jpg" alt="HHK">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Du lịch Hà Nội – Hồ Gươm – Phố Cổ - Tour khám phá trái tim Thủ đô</div>
+            <p class="mt-2 mb-1">
+              <span class="fw-semibold">Hành trình:</span>
+              Hồ Gươm – Đền Ngọc Sơn – Cầu Thê Húc – Phố Cổ – Văn Miếu – Chợ đêm Đồng Xuân
+            </p>
+            <div class="info mt-2">
+              <div><i class="bi bi-clock"></i> 2 ngày 1 đêm</div>
+            </div>
+            <div class="price">2.490.000đ – 3.290.000đ/người</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100">
+        <a href="../Tourdulich/link/NinhBinh.html" class="text-decoration-none text-dark">
+          <div class="image-box">
+            <img src="/Images/ninhbinh.jpg" alt="Ninh Bình">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Du lịch Ninh Bình - Tour khám phá danh thắng Tràng An, Bái Đính, Tam Cốc</div>
+            <p class="mt-2 mb-1">
+              <span class="fw-semibold">Hành trình:</span>
+              Ninh Bình – Khu du lịch Tràng An – Chùa Bái Đính – Tam Cốc – Hang Múa – Cố đô Hoa Lư
+            </p>
+            <div class="info mt-2">
+              <div><i class="bi bi-clock"></i> 2 ngày 1 đêm</div>
+            </div>
+            <div class="price">2.190.000đ/người</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100">
+        <a href="../Tourdulich/link/Dalat.html" class="text-decoration-none text-dark">
+          <div class="image-box">
+            <img src="/Images/dalat.jpg" alt="Đà Lạt">
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              Du lịch Đà Lạt - Tour nghỉ dưỡng cao nguyên – check-in đồi thông và thác nước
+            </div>
+            <p class="mt-2 mb-1">
+              <span class="fw-semibold">Hành trình:</span>
+              Đà Lạt – Hồ Xuân Hương – Thung lũng Tình Yêu – Langbiang – Vườn hoa thành phố – Đồi Chè Cầu Đất
+            </p>
+            <div class="info mt-2">
+              <div><i class="bi bi-clock"></i> 3 ngày 2 đêm</div>
+            </div>
+            <div class="price mt-2">3.290.000đ/người</div>
+          </div>
+        </a>
+      </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.cursor = 'pointer';
+    });
+  });
+</script>
+</body>
+</html>

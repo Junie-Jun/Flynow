@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINH NGHIỆM DU LỊCH</title>
+    <style>
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  margin: 0; 
+  padding: 0;
+}
+.banner {
+  position: relative;
+  text-align: center;
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.banner img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; 
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.container {
+  max-width: 1770px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+}
+
+.container img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2,h3,h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 28px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.hovered,
+.star.selected {
+  color: gold;
+}
+
+.rating-info {
+  font-size: 15px;
+  color: #555;
+}
+
+.icon-eye::before {
+  content: "👁️";
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-content">
+        <img src="../../Images/KNDL.png">
+      </div>
+    </div>
+  
+    <div class="container">
+    <h2>Checklist những món đồ cần có khi đi du lịch nước ngoài</h2>
+      <div class="rating-section">
+        <span><strong>Đánh giá:</strong></span>
+        <div class="stars" id="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <span class="rating-info" id="rating-info">0/5 trong 0 đánh giá</span>
+        <span class="icon-eye"></span> <span>43</span>
+      </div>
+  <div>
+    <p>Đi du lịch nước ngoài là một trải nghiệm thú vị, nhưng cũng dễ gây stress nếu bạn quên mang theo những vật dụng quan trọng. Khác với du lịch trong nước, việc mua sắm bổ sung ở nước ngoài có thể khó khăn hơn do rào cản ngôn ngữ, giá cả hoặc khác biệt văn hóa. Vì vậy, chuẩn bị hành lý thật kỹ là điều cần thiết để chuyến đi của bạn diễn ra suôn sẻ, thoải mái và tiết kiệm thời gian.</p>
+    <img src="https://images.pexels.com/photos/8830672/pexels-photo-8830672.jpeg" alt="checklist">
+  </div>
+  <div>
+    <h3>🪪 Giấy tờ & hồ sơ quan trọng</h3>
+    <p>
+        Đây là nhóm không được phép quên. Hãy chuẩn bị kỹ lưỡng và để ở một ngăn riêng trong balo cá nhân hoặc túi xách tay, dễ dàng lấy ra khi cần.
+        <ul>
+            <li><b>Hộ chiếu:</b> Kiểm tra hạn sử dụng còn ít nhất 6 tháng.</li>
+            <li><b>Visa (nếu có yêu cầu):</b> In sẵn bản cứng, kể cả khi đã được cấp online.</li>
+            <li><b>Vé máy bay</b> (in ra hoặc lưu bản điện tử rõ ràng).</li>
+            <li><b>Giấy tờ</b> đặt phòng khách sạn và thông tin liên hệ.</li>
+            <li><b>Lịch trình du lịch:</b> Ghi chú các điểm đến, giờ đi lại.</li>
+            <li><b>Bảo hiểm du lịch:</b> Một số nước yêu cầu bắt buộc.</li>
+            <li><b>Giấy tờ tùy thân (CMND/CCCD):</b> Cần thiết cho một số trường hợp phát sinh.</li>
+        </ul>
+        <p>Mẹo nhỏ: Scan hoặc chụp lại tất cả giấy tờ và lưu vào điện thoại + email để phòng trường hợp thất lạc.</p>
+    </p>
+  </div>
+  <div>
+    <h3>💵 Tiền tệ & phương tiện thanh toán</h3>
+    <img src="https://images.pexels.com/photos/32060712/pexels-photo-32060712.jpeg" alt="plan">
+    <p>
+        Bạn nên chuẩn bị nhiều hình thức thanh toán để chủ động trong mọi tình huống.
+        <ul>
+            <li><b>Tiền mặt ngoại tệ</b> (nên đổi ở Việt Nam trước khi đi).</li>
+            <li><b>Thẻ tín dụng/thẻ debit quốc tế:</b> Visa/Mastercard.</li>
+            <li><b>Ví điện tử</b> (nếu quốc gia đến có hỗ trợ).</li>
+            <li><b>Túi đeo bụng chống trộm:</b> Để cất tiền và giấy tờ khi đi ngoài đường.</li>
+        </ul>
+    </p>
+  </div>
+  <div>
+    <h3>👕 Trang phục & giày dép</h3>
+    <p>
+        Chọn trang phục tùy theo khí hậu nơi đến và độ dài chuyến đi. Ưu tiên các món dễ phối, dễ giặt, nhanh khô.
+        <ul>
+            <li><b>Quần áo thường ngày:</b> đủ số ngày + 1–2 bộ dự phòng.</li>
+            <li><b>1 bộ trang phục lịch sự:</b> dùng khi vào bảo tàng, nhà hàng sang trọng hoặc nơi tôn giáo.</li>
+            <li><b>Áo khoác nhẹ hoặc áo gió</b> (dù đi mùa hè).</li>
+            <li><b>Đồ lót, vớ, khăn tay</b> (nên mang dư 1–2 bộ).</li>
+            <li><b>Giày thể thao/giày đi bộ êm chân.</b></li>
+            <li>Gợi ý: Dùng túi hút chân không hoặc túi vải phân loại để tiết kiệm không gian và sắp xếp gọn gàng trong vali.</li>
+        </ul>
+    </p>
+  </div>
+  <div>
+    <h3>👤 Đồ dùng cá nhân</h3>
+    <p>Một số quốc gia không có sản phẩm chăm sóc cá nhân giống ở Việt Nam, hoặc giá khá cao. Vì vậy bạn cũng nên chuẩn bị theo để phòng trường hợp không thể tìm mua khi ở nước ngoài</p>
+        <ul>
+            <li>Bàn chải, kem đánh răng, xà phòng du lịch.</li>
+            <li>Lược, dây buộc tóc.</li>
+            <li>Dao cạo râu, đồ trang điểm, nước tẩy trang.</li>
+            <li>Khăn giấy, khăn ướt, bông tăm.</li>
+            <li>Dầu gội/sữa tắm loại chiết nhỏ (dưới 100ml nếu mang xách tay).</li>
+            <li> Kem chống nắng, dưỡng ẩm, son dưỡng.</li>
+            <li>Kính mát, nón/nón len tùy mùa.</li>
+        </ul>
+    </p>
+  </div>
+  <div>
+    <h3>💊 Thuốc & đồ y tế</h3>
+    <p>Đây là nhóm đồ bạn nên mang theo, vì thuốc tại nước ngoài có thể khó mua nếu không có toa của bác sĩ.</p>
+    <p>
+        <ul>
+            <li>Thuốc cảm, đau đầu, tiêu hóa, chống dị ứng, thuốc say tàu xe.</li>
+            <li>Thuốc cá nhân theo đơn (nên mang kèm đơn thuốc hoặc giấy xác nhận).</li>
+            <li>Miếng dán hạ sốt, băng cá nhân.</li>
+            <li>Gel sát khuẩn, khẩu trang.</li>
+        </ul>
+    </p>
+   </div>
+  <div>
+    <h3>📲 Thiết bị công nghệ</h3>
+    <p>Với cuộc sống hiện đại như hiện nay, việc mang theo các thiết bị điện tử, dụng cụ sạc là không thể thiếu. Mỗi quốc gia các sản phẩm sạc có thể khác nhau, vì vậy để đảm bảo cho các thiết bị của mình, bạn cần mang theo đầy đủ các thiết bị sạc phù hợp.</p>
+    <p>
+        <ul>
+            <li>Điện thoại + sạc dự phòng.</li>
+            <li>Adapter chuyển đổi ổ cắm (rất quan trọng vì mỗi nước dùng chuẩn khác nhau).</li>
+            <li>Tai nghe, sạc máy ảnh (nếu mang).</li>
+            <li>Dây sạc các thiết bị.</li>
+            <li>Ổ cứng mini/USB (lưu ảnh, tài liệu).</li>
+        </ul>
+    </p>
+    <h3>❗️Lưu ý khi sắp xếp vào vali</h3>
+    <p>
+        <ul>
+            <li>Những món quan trọng như giấy tờ, tiền, điện thoại… nên mang theo trong hành lý xách tay.</li>
+            <li>Đồ dễ vỡ hoặc có giá trị nên bọc kỹ và đặt ở giữa vali.</li>
+            <li>Đặt những món cần dùng sớm ở trên cùng (đồ ngủ, quần áo thay ra…).</li>
+            <li>Kiểm tra quy định hành lý của hãng bay: cân nặng, kích thước, vật cấm mang.</li>
+        </ul>
+    </p>
+    <p>Chuẩn bị vali đi du lịch nước ngoài không chỉ là việc sắp xếp đồ đạc mà còn là cách bạn chủ động ứng phó với mọi tình huống có thể xảy ra. Hy vọng checklist này sẽ giúp bạn tránh được những thiếu sót thường gặp, tiết kiệm thời gian và tận hưởng chuyến đi trọn vẹn hơn.</p>
+    <p>Chúc bạn có một hành trình thật thú vị và đầy trải nghiệm!</p>
+    </div>
+  </div>
+    
+    <script>
+    const stars = document.querySelectorAll('.star');
+    const ratingInfo = document.getElementById('rating-info');
+    let rating = 0;
+    let totalRatings = 0;
+    let sumRatings = 0;
+    
+    stars.forEach(star => {
+      star.addEventListener('mouseover', () => {
+        resetStars();
+        for (let i = 0; i < star.dataset.value; i++) 
+        {
+          stars[i].classList.add('hovered');
+        }
+      });
+      
+      star.addEventListener('mouseout', resetStars);
+      star.addEventListener('click', () => 
+      {
+        rating = parseInt(star.dataset.value);
+        sumRatings += rating;
+        totalRatings++;
+        updateRating();
+      });
+    });
+    
+    function resetStars() 
+    {
+      stars.forEach(s => s.classList.remove('hovered'));
+    }
+    
+    function updateRating() 
+    {
+      stars.forEach((s, i) => 
+      {
+        s.classList.toggle('selected', i < rating);
+      });
+      
+      const average = (sumRatings / totalRatings).toFixed(1);
+      ratingInfo.textContent = `${average}/5 trong ${totalRatings} đánh giá`;
+    }
+    </script>
+    </body>
+    </html>

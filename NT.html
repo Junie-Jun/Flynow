@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO NHA TRANG RESORT VIEW BIỂN </div>
+    <div class="detail-top">
+    <img src="https://images.unsplash.com/photo-1593152399172-9277bfd12c6e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332" alt="Combo Nha Trang">
+    <div class="detail-info">
+        <h3>Hành trình: Biển Trần Phú – Cáp treo Vinpearl Land – Đảo Hòn Mun – Hòn Tằm – Chùa Long Sơn – Tháp Bà Ponagar – Chợ Đầm.</h3>
+        <p><b>Thời gian:</b> 4 ngày 3 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Thành phố Hồ Chí Minh hoặc Hà Nội</p>
+        <p class="price">Giá từ: 2.890.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Nghỉ dưỡng tại resort 4⭐️ view biển Nha Trang, tận hưởng không gian sang trọng và yên bình.</li>
+        <li>Tham quan Tháp Bà Ponagar – công trình kiến trúc Chăm Pa cổ kính giữa lòng thành phố.</li>
+        <li>Trải nghiệm cáp treo vượt biển Vinpearl Land, ngắm toàn cảnh vịnh Nha Trang từ trên cao.</li>
+        <li>Dạo biển Trần Phú, ngắm hoàng hôn và cảm nhận không khí mát lành của thành phố biển</li>
+        <li>Mua sắm, thưởng thức đặc sản địa phương tại Chợ Đầm.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Tắm biển, thư giãn và chụp ảnh tại resort view biển sang trọng.</li>
+        <li>Đi cano tham quan các đảo đẹp: Hòn Mun, Hòn Tằm, lặn ngắm san hô rực rỡ.</li>
+        <li>Ngâm bùn khoáng nóng Tháp Bà, thư giãn và chăm sóc sức khỏe.</li>
+        <li>Check-in Cáp treo Vinpearl Land, ngắm vịnh biển trong xanh từ độ cao 100m.</li>
+        <li>Thưởng thức ẩm thực Nha Trang: nem nướng, bún sứa, hải sản tươi sống.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>

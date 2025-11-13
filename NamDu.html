@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR LẶN NGẮM SAN HÔ – CHECK-IN HÒN MẤU & HÒN NGANG – NAM DU
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="../../Images/nam du.jpg" class="tour-img" alt="Nam Du">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Du lịch Rạch Giá – Quần đảo Nam Du – Hòn Mấu – Hòn Ngang – Bãi Mến</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187650</li>
+              <li><b>Thời gian:</b> 3 ngày 2 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Xe du lịch</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>3.190.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🚗 Nam Du – quần đảo hoang sơ thuộc Kiên Giang – là bức tranh tuyệt đẹp giữa biển trời miền Nam. <br>
+        Từ Rạch Giá, chuyến tàu cao tốc đưa bạn vượt sóng ra đảo, cảm nhận hương vị mặn mòi của biển cả. <br><br>
+
+        🌅 Buổi sáng, ngắm bình minh trên Hòn Lớn – nơi mặt trời rọi xuống làn nước trong xanh như pha lê. <br>
+        🐚 Buổi trưa, lặn biển ngắm san hô, dạo thuyền quanh Hòn Mấu, Hòn Dầu – những hòn đảo nhỏ bình yên và thơ mộng. <br><br>
+
+        🐟 Buổi chiều, đi chợ cá, thưởng thức hải sản tươi ngon vừa đánh bắt, đậm đà hương vị biển. <br>
+        ✨ Đêm đến, ngồi bên bãi cát, ngắm trời sao phản chiếu trên mặt biển – khoảnh khắc khiến lòng người lặng đi vì quá đẹp.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>🚤 Du ngoạn Hòn Lớn, Hòn Mấu, Hòn Dầu – cụm đảo đẹp nhất Nam Du.</li>
+        <li>🐚 Lặn biển ngắm san hô, chụp ảnh dưới nước.</li>
+        <li>🐟 Thưởng thức hải sản tươi sống: cá xương xanh nướng, nhum biển, ghẹ hấp.</li>
+        <li>🌅 Cắm trại, ngắm bình minh và hoàng hôn trên biển Nam Du.</li>
+        <li>🎣 Tham quan làng chài cổ và tìm hiểu cuộc sống người dân biển đảo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🌊 Cảm ơn bạn đã chọn tour Nam Du – Hòn Mấu – Hòn Ngang! Nhân viên sẽ liên hệ tư vấn sớm nhất.');
+    });
+  </script>
+</body>
+</html>

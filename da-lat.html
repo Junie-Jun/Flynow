@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DU LỊCH ĐÀ LẠT</title>
+    <style>
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  margin: 0; 
+  padding: 0;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.banner img {
+  width: 100vw;
+  height: 100%;
+  object-fit: contain; 
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.container {
+  max-width: 1770px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+}
+
+.container img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2,h3,h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 28px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.hovered,
+.star.selected {
+  color: gold;
+}
+
+.rating-info {
+  font-size: 15px;
+  color: #555;
+}
+
+.icon-eye::before {
+  content: "👁️";
+}
+
+.footer {
+  background-color: #cfe2ff;
+  color: #0d6efd;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-content">
+        <img src="../../Images/DLDL.png">
+      </div>
+    </div>
+    
+    <div class="container">
+      <h2>Gợi ý lịch trình du lịch Đà Lạt 3N2Đ tự túc cho cặp đôi tiết kiệm nhất</h2>
+      <div class="rating-section">
+        <span><strong>Đánh giá:</strong></span>
+        <div class="stars" id="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <span class="rating-info" id="rating-info">0/5 trong 0 đánh giá</span>
+        <span class="icon-eye"></span> <span>7</span>
+      </div>
+      <div>
+        <p>Khám phá Đà Lạt 3 ngày 2 đêm tự túc là lựa chọn lý tưởng cho các cặp đôi muốn tận hưởng không khí lãng mạn và thiên nhiên tươi đẹp. Bài viết này cung cấp cẩm nang chi tiết về thời điểm du lịch, chi phí dự kiến, phương tiện di chuyển và lịch trình khám phá các điểm đến nổi bật, giúp bạn có một chuyến đi đáng nhớ và tiết kiệm.</p>
+        <hr>
+      </div>
+      <div>
+        <p>Đà Lạt, thành phố ngàn hoa, luôn là điểm đến lãng mạn và hấp dẫn, đặc biệt là với các cặp đôi. Một chuyến đi du lịch Đà Lạt tự túc 3 ngày 2 đêm sẽ là cơ hội tuyệt vời để hai bạn cùng nhau khám phá những cung đường thơ mộng, tận hưởng khí hậu ôn hòa và lưu giữ những khoảnh khắc đáng nhớ. Dù đã trở thành một điểm đến quen thuộc, Đà Lạt vẫn không ngừng làm say đắm lòng người với vẻ đẹp thiên nhiên tươi mới và những trải nghiệm độc đáo qua từng mùa. Để chuyến đi của các cặp đôi thêm phần trọn vẹn và tiết kiệm, việc lên kế hoạch chi tiết về lịch trình, chi phí và các điểm đến là vô cùng quan trọng. Hãy cùng khám phá những kinh nghiệm hữu ích và gợi ý lịch trình chi tiết dưới đây để biến chuyến đi Đà Lạt 2025 của bạn thành một kỷ niệm khó quên.</p>
+        <img src="https://images.pexels.com/photos/16492734/pexels-photo-16492734.jpeg" alt="Đà Lạt cho cặp đôi">
+      </div>
+      <div>
+        <h2>⭐️Kinh nghiệm du lịch Đà Lạt 3N2Đ tự túc cho cặp đôi tiết kiệm nhất</h2>
+        <h3>⏰Thời điểm lý tưởng để du lịch Đà Lạt</h3>
+        <p>Đà Lạt đẹp quanh năm, mỗi mùa mang một vẻ quyến rũ riêng. Tuy nhiên, thời điểm lý tưởng nhất để các cặp đôi tận hưởng trọn vẹn vẻ đẹp của thành phố này là từ tháng 11 đến tháng 6 năm sau. Đây là mùa khô ở Đà Lạt, với thời tiết mát mẻ, nắng dịu và ít mưa, rất thuận lợi cho các hoạt động tham quan, khám phá ngoài trời. Đặc biệt, vào khoảng tháng 10 đến tháng 12, Đà Lạt khoác lên mình sắc vàng rực rỡ của hoa dã quỳ, tạo nên những khung cảnh vô cùng lãng mạn. Từ tháng 1 đến tháng 3, thành phố lại ngập tràn trong sắc hồng của hoa mai anh đào, biến Đà Lạt thành một bức tranh cổ tích. Nếu bạn yêu thích sự trong lành và muốn tránh xa cái nóng gay gắt của mùa hè, thì khoảng thời gian này là lựa chọn hoàn hảo.</p>
+        <h3>💰 Chi phí dự kiến cho chuyến đi 3 ngày 2 đêm tại Đà Lạt</h3>
+        <p>Để có một chuyến <b>du lịch Đà Lạt</b> tự túc 3 ngày 2 đêm tiết kiệm, các cặp đôi cần lên kế hoạch chi phí cụ thể. Dự kiến, chi phí tối thiểu sẽ dao động từ 3.000.000 VND đến 4.000.000 VND cho hai người. Khoản này bao gồm chi phí di chuyển, lưu trú, ăn uống và vé tham quan.
+          <ul>
+            <li><b>Di chuyển:</b> Nếu đi máy bay từ Hà Nội hoặc TP.HCM, vé khứ hồi có thể từ 1.500.000 - 2.500.000 VND/người tùy thời điểm. Đi xe khách sẽ tiết kiệm hơn, khoảng 300.000 - 700.000 VND/người khứ hồi từ TP.HCM.</li>
+            <li><b>Lưu trú:</b> Các homestay, nhà nghỉ bình dân có giá từ 300.000 - 600.000 VND/đêm. Khách sạn 3-4 sao có thể từ 800.000 - 1.500.000 VND/đêm.</li>
+            <li><b>Ăn uống:</b> Chi phí ăn uống tại Đà Lạt khá phải chăng, khoảng 200.000 - 400.000 VND/người/ngày nếu ăn các món địa phương.</li>
+            <li><b>Tham quan:</b> Vé vào cửa các điểm du lịch thường từ 20.000 - 100.000 VND/người/điểm.</li>
+          </ul>
+        <p>Để tiết kiệm hơn, du khách có thể chọn các gói <b>Tour Đà Lạt</b> trọn gói từ các công ty du lịch, thường bao gồm cả vé máy bay/xe khách, khách sạn và một số bữa ăn, giúp kiểm soát chi phí hiệu quả hơn.</p>
+      </p>
+      <h3>🚌Phương tiện di chuyển đến Đà Lạt</h3>
+      <p>Đà Lạt cách Hà Nội khoảng 1.400 km và TP.HCM hơn 300 km. Tùy thuộc vào điểm xuất phát và ngân sách, có nhiều lựa chọn phương tiện di chuyển:
+        <ul>
+          <li><b>Máy bay:</b> Đây là phương tiện nhanh chóng và thuận tiện nhất cho du khách từ các tỉnh xa như Hà Nội. Các chuyến bay sẽ hạ cánh tại sân bay Liên Khương (DLI), cách trung tâm thành phố Đà Lạt khoảng 28 km. Từ sân bay, bạn có thể đi taxi, xe buýt sân bay hoặc xe dịch vụ để vào trung tâm. Giá vé máy bay thường cao hơn, đặc biệt vào mùa cao điểm, nên đặt sớm để có giá tốt.</li>
+          <li><b>Xe khách:</b> Đối với du khách từ TP.HCM hoặc các tỉnh lân cận, xe khách là lựa chọn phổ biến và tiết kiệm. Thời gian di chuyển khoảng 5-7 tiếng. Các nhà xe uy tín như Phương Trang, Thành Bưởi, Minh Trí Limousine cung cấp dịch vụ xe giường nằm hoặc Limousine cao cấp với giá vé dao động từ 150.000 VNĐ đến 350.000 VNĐ/người. Ưu điểm của xe khách là giá thành phải chăng và có nhiều chuyến trong ngày.</li>
+          <li><b>Xe ô tô cá nhân:</b> Nếu bạn muốn chủ động hơn về lịch trình và có thể dừng chân khám phá các điểm dọc đường, đi ô tô cá nhân là một lựa chọn lý tưởng. Tuy nhiên, cần đảm bảo xe có tình trạng tốt và người lái có kinh nghiệm đi đường đèo.</li>
+        </ul>
+      </p>
+      <h3>🚌Phương tiện di chuyển khi đến Đà Lạt</h3>
+      <p>Khi đã đến Đà Lạt, việc lựa chọn phương tiện di chuyển phù hợp sẽ giúp bạn khám phá thành phố một cách thuận tiện và tiết kiệm nhất.
+        <ul>
+            <li><b>Xe máy:</b> Đây là phương tiện được các cặp đôi ưa chuộng nhất khi du lịch Đà Lạt. Thuê xe máy giúp bạn linh hoạt di chuyển đến mọi ngóc ngách, khám phá những con đường đèo uốn lượn và các quán cà phê ẩn mình. Hầu hết các khách sạn, homestay đều cung cấp dịch vụ cho thuê xe máy với giá khoảng 100.000 - 150.000 VND/ngày. Bạn cũng có thể tìm thấy nhiều cửa hàng cho thuê xe máy trên các tuyến đường lớn như Phan Như Thạch, Bùi Thị Xuân, Nam Kỳ Khởi Nghĩa. Nên chọn xe số để dễ dàng di chuyển trên các con dốc của Đà Lạt.</li>
+            <li><b>Taxi/Grab:</b> Nếu không quen lái xe máy hoặc muốn di chuyển thoải mái hơn, taxi hoặc Grab là lựa chọn tiện lợi. Tuy nhiên, chi phí sẽ cao hơn đáng kể, đặc biệt khi di chuyển nhiều điểm.</li>
+            <li><b>Xe đạp đôi:</b> Đối với những cặp đôi muốn trải nghiệm sự lãng mạn và thong dong quanh Hồ Xuân Hương, thuê xe đạp đôi là một hoạt động thú vị. Giá thuê khá rẻ, khoảng 30.000 - 50.000 VND/giờ.</li>
+        </ul>
+      </p>
+      <h3>✅Gợi ý chi tiết lịch trình Đà Lạt 3N2Đ cho các cặp đôi</h3>
+      <img src="https://images.unsplash.com/photo-1626608017817-211d7c48177d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074">
+      <h4>Ngày 1: Khám phá trung tâm thành phố và những biểu tượng lãng mạn</h4>
+      <p>
+        <ul>
+            <li><b>Buổi sáng (6h00 - 11h00):</b> Bắt đầu ngày mới với bữa sáng ấm áp tại một quán ăn địa phương. Thưởng thức bánh mì xíu mại nóng hổi, bún bò hoặc mì quảng đậm đà hương vị Đà Lạt. Sau đó, hãy cùng nhau dạo bước quanh Hồ Xuân Hương, biểu tượng của thành phố. Thuê một chiếc xe đạp đôi để đạp vòng quanh hồ, tận hưởng không khí trong lành và ngắm nhìn cảnh quan thơ mộng. Đừng quên ghé vào một quán cà phê ven hồ để nhâm nhi ly cà phê nóng và chụp những bức ảnh check-in lãng mạn. Khoảng 9h00, khi nắng đã lên cao, di chuyển đến Vườn Hoa Thành Phố Đà Lạt để chiêm ngưỡng hàng ngàn loài hoa khoe sắc. Đây là nơi lý tưởng để các cặp đôi tản bộ, chụp ảnh và cảm nhận sự tươi mới của thiên nhiên.</li>
+            <img src="https://images.pexels.com/photos/5156620/pexels-photo-5156620.jpeg">
+            <li><b>Buổi trưa (11h00 - 14h00):</b> Ăn trưa tại một nhà hàng có view đẹp hoặc thử các món ăn đường phố tại chợ Đà Lạt. Sau đó, về khách sạn nghỉ ngơi một chút để lấy lại sức cho buổi chiều.</li>
+            <li><b>Buổi chiều (14h00 - 18h00):</b> Ghé thăm Nhà thờ Con Gà, một công trình kiến trúc Pháp cổ kính với lịch sử lâu đời, và Ga Đà Lạt, nhà ga cổ nhất Việt Nam với kiến trúc độc đáo. Đây là những địa điểm tuyệt vời để chụp ảnh kỷ niệm. Khoảng 17h00, các cặp đôi có thể đến Quảng trường Lâm Viên, nơi có biểu tượng Nụ Atiso và Bông Hoa Dã Quỳ khổng lồ, để hòa mình vào không khí sôi động của thành phố và thưởng thức các món ăn vặt hấp dẫn như bánh tráng nướng, sữa đậu nành nóng.</li>
+            <li><b>Buổi tối (18h00 trở đi):</b> Đà Lạt về đêm se lạnh là thời điểm lý tưởng để thưởng thức các món lẩu và nướng. Lẩu bò Ba Toa, lẩu gà lá é, hoặc các món nướng ngói thơm lừng là những gợi ý không thể bỏ qua. Sau bữa tối, hãy cùng nhau dạo chợ đêm Đà Lạt, khám phá thế giới ẩm thực đường phố phong phú và mua sắm những món quà lưu niệm độc đáo.</li>
+            <img src="https://images.unsplash.com/photo-1622919946352-8ee892a6cd00?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170">
+          </ul>
+      </p>
+      <h4>Ngày 2: Khám phá vẻ đẹp thiên nhiên và kiến trúc độc đáo</h4>
+      <p>
+        <ul>
+            <li><b>Buổi sáng (5h00 - 11h30):</b> Bắt đầu ngày thứ hai bằng việc đón bình minh tại Hồ Tuyền Lâm. Cảnh sắc mặt trời mọc trên mặt hồ tĩnh lặng, bao quanh bởi rừng thông xanh mướt sẽ là một trải nghiệm khó quên. Sau đó, di chuyển đến Thiền Viện Trúc Lâm, một ngôi chùa thanh tịnh với kiến trúc độc đáo và tầm nhìn tuyệt đẹp ra hồ Tuyền Lâm. Tiếp theo, khám phá Dinh Bảo Đại, nơi từng là biệt điện nghỉ dưỡng của vị vua cuối cùng triều Nguyễn, để tìm hiểu về lịch sử và kiến trúc Pháp cổ. Cuối cùng, ghé thăm Thác Datanla, một trong những thác nước đẹp nhất Đà Lạt với nhiều hoạt động mạo hiểm như trượt máng, đu dây (zipline) dành cho những cặp đôi yêu thích cảm giác mạnh.</li>
+            <li><b>Buổi trưa (11h30 - 14h00):</b> Ăn trưa tại khu vực gần thác Datanla hoặc trở về trung tâm thành phố để thưởng thức các món ăn đặc sản khác.</li>
+            <li><b>Buổi chiều (14h00 - 18h00):</b> Tiếp tục hành trình khám phá với Chùa Vạn Hạnh, một ngôi chùa lớn với tượng Phật Thích Ca Mâu Ni cao 24m. Sau đó, đến Thung lũng Tình Yêu, một địa điểm nổi tiếng với cảnh quan lãng mạn, hồ nước trong xanh và những con đường hoa. Cuối cùng, ghé thăm Làng Cù Lần, một ngôi làng nhỏ yên bình nằm giữa rừng thông, mang đến trải nghiệm văn hóa độc đáo và các hoạt động vui chơi giải trí thú vị như đi xe jeep địa hình.</li>
+            <li><b>Buổi tối (18h00 trở đi):</b> Khu chợ Âm Phủ (chợ đêm Đà Lạt) là điểm đến không thể bỏ qua vào buổi tối. Nơi đây sôi động với hàng trăm gian hàng ẩm thực và quà lưu niệm. Các món ngon như dâu lắc, bánh tráng nướng, kem bơ, sữa đậu nành nóng hổi sẽ làm ấm lòng các cặp đôi trong tiết trời se lạnh của Đà Lạt.</li>
+        </ul>
+      </p>
+      <h4>Ngày 3: Chinh phục đỉnh cao và thư giãn trong không gian xanh</h4>
+      <p>
+        <ul>
+            <li><b>Buổi sáng (7h00 - 12h00):</b> Bắt đầu ngày cuối cùng bằng việc chinh phục Núi LangBiang, đỉnh núi huyền thoại gắn liền với câu chuyện tình yêu lãng mạn. Bạn có thể đi xe jeep lên đỉnh hoặc thử thách bản thân bằng cách trekking. Từ đỉnh LangBiang, toàn cảnh Đà Lạt hiện ra hùng vĩ và thơ mộng. Sau đó, ghé qua Vườn hoa cẩm tú cầu gần đó để chụp những bức ảnh "sống ảo" tuyệt đẹp với những bông hoa khổng lồ đầy màu sắc.</li>
+            <li><b>Buổi trưa (12h00 - 14h00):</b> Ăn trưa tại nhà hàng trên đường xuống núi hoặc trở về trung tâm.</li>
+            <li><b>Buổi chiều (14h00 - 17h00):</b> Đà Lạt nổi tiếng với những vườn dâu tây tươi ngon. Hãy chọn một vườn dâu gần khách sạn để tham quan, tự tay hái dâu và thưởng thức tại chỗ. Đây sẽ là một trải nghiệm thú vị và đáng yêu cho các cặp đôi. Trước khi kết thúc chuyến đi và trở về, hãy dành thời gian ghé quán cà phê Cheo Veooo, một quán cà phê với view đồi núi tuyệt đẹp, nơi bạn có thể ngắm hoàng hôn lãng mạn và thư giãn trong không gian yên bình, nhâm nhi ly cà phê ấm nóng. Đây là cách hoàn hảo để khép lại chuyến đi đáng nhớ của hai bạn.</li>
+        </ul>
+      </p>
+      <h3>❗️Những lưu ý quan trọng khi du lịch tự túc ở Đà Lạt</h3>
+      <p>
+        <ul>
+            <li><b>Đặt trước dịch vụ:</b> Đặc biệt vào mùa cao điểm, lễ, Tết, việc đặt vé máy bay/xe khách và khách sạn trước ít nhất 1-2 tháng là rất cần thiết để đảm bảo có giá tốt và chỗ ở ưng ý.</li>
+            <li><b>Lên kế hoạch chi tiết:</b> Lên trước lịch trình và các địa điểm dự định tham quan để sắp xếp thời gian hiệu quả, tránh lãng phí thời gian di chuyển.</li>
+            <li><b>Phương tiện di chuyển nội thành:</b> Nên chọn thuê xe máy số thay vì xe tay ga để dễ dàng di chuyển trên các con dốc đặc trưng của Đà Lạt. Kiểm tra kỹ xe trước khi thuê.</li>
+            <li><b>Trang phục:</b> Đà Lạt có khí hậu se lạnh quanh năm, đặc biệt vào buổi tối và sáng sớm. Nên mang theo quần áo ấm, áo khoác, khăn choàng. Ban ngày có thể mặc đồ thoải mái hơn nhưng vẫn cần chuẩn bị thêm áo khoác nhẹ.</li>
+            <li><b>Giày dép thoải mái:</b> Bạn sẽ đi bộ và di chuyển khá nhiều, vì vậy hãy chọn những đôi giày thể thao hoặc giày bệt thoải mái.</li>
+            <li><b>Tiền mặt và thẻ:</b> Chuẩn bị đủ tiền mặt cho các chi tiêu nhỏ và mang theo thẻ ngân hàng để thanh toán tại các cửa hàng lớn hơn.</li>
+            <li><b>Bản đồ và ứng dụng:</b> Tải sẵn bản đồ ngoại tuyến hoặc sử dụng các ứng dụng chỉ đường như Google Maps để dễ dàng tìm đường.</li>
+            <li><b>Bảo vệ môi trường:</b> Hãy là những du khách có ý thức, giữ gìn vệ sinh chung và bảo vệ cảnh quan thiên nhiên của Đà Lạt.</li>
+        </ul>
+      </p>
+      <p><b>Chuyến du lịch Đà Lạt</b> 3 ngày 2 đêm tự túc sẽ là một hành trình đáng nhớ cho các cặp đôi, với vô vàn trải nghiệm lãng mạn và thú vị. Hy vọng những gợi ý chi tiết từ Du Lịch Việt sẽ giúp bạn có một kế hoạch hoàn hảo và tận hưởng trọn vẹn vẻ đẹp của thành phố sương mù. Chúc các bạn có một chuyến đi thật tuyệt vời và tràn đầy kỷ niệm ngọt ngào!</p>
+    </div>
+  </div>
+    
+  <script>
+  const stars = document.querySelectorAll('.star');
+  const ratingInfo = document.getElementById('rating-info');
+  let rating = 0;
+  let totalRatings = 0;
+  let sumRatings = 0;
+  
+  stars.forEach(star => 
+  {
+    star.addEventListener('mouseover', () => 
+    {
+    resetStars();
+    for (let i = 0; i < star.dataset.value; i++) 
+    {
+      stars[i].classList.add('hovered');
+    }
+  });
+
+  star.addEventListener('mouseout', resetStars);
+  star.addEventListener('click', () => 
+  {
+    rating = parseInt(star.dataset.value);
+    sumRatings += rating;
+    totalRatings++;
+    updateRating();
+  });
+});
+  function resetStars() 
+  {
+    stars.forEach(s => s.classList.remove('hovered'));
+  }
+
+  function updateRating() 
+  {
+    stars.forEach((s, i) => {
+      s.classList.toggle('selected', i < rating);
+    });
+    const average = (sumRatings / totalRatings).toFixed(1);
+    ratingInfo.textContent = `${average}/5 trong ${totalRatings} đánh giá`;
+  }
+  </script>
+  </body>
+  </html>

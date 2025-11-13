@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css/css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="/script.js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR KHÁM PHÁ VĂN HÓA CỒNG CHIÊNG TÂY NGUYÊN – BUÔN MA THUỘT
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="/../Images/buongmathuot.jpg" class="tour-img" alt="Buôn Ma Thuột">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Du lịch Buôn Ma Thuột – Thác Dray Nur – Hồ Lắk – Bản người Ê Đê – Lễ hội Cồng Chiêng</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187640</li>
+              <li><b>Thời gian:</b> 2 ngày 1 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Xe du lịch</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>2.490.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🌄Tây Nguyên – vùng đất đại ngàn hùng vĩ, nơi vang vọng tiếng cồng chiêng giữa đêm rừng và mùi cà phê nồng nàn trong gió. <br>
+        Buôn Ma Thuột không chỉ là thủ phủ cà phê của Việt Nam mà còn là nơi lưu giữ nét văn hóa nguyên sơ, đặc trưng của các dân tộc Tây Nguyên. <br><br>
+        Buổi sáng, du khách ghé thăm Làng cà phê Trung Nguyên, thưởng thức tách cà phê nguyên chất trong không gian đậm chất Tây Nguyên. <br>
+        Sau đó, tham quan Thác Dray Nur – “nàng tiên giữa đại ngàn” với dòng nước trắng xóa, hùng vĩ mà thơ mộng. <br><br>
+        Buổi trưa, đoàn di chuyển đến Hồ Lắk – hồ nước tự nhiên lớn nhất Tây Nguyên, nơi có thể đi thuyền độc mộc và khám phá buôn làng người M’nông. <br>
+        Buổi tối, tham gia đêm giao lưu văn hóa cồng chiêng – di sản phi vật thể của nhân loại. <br>
+        Giữa tiếng trống, tiếng chiêng và ánh lửa bập bùng, bạn sẽ thấy tâm hồn mình hòa vào nhịp điệu của núi rừng – giản dị mà sâu lắng.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>☕ Thưởng thức cà phê tại Làng cà phê Trung Nguyên – đặc sản Buôn Ma Thuột.</li>
+        <li>🌊 Chiêm ngưỡng Thác Dray Nur và Dray Sáp – hai ngọn thác nổi tiếng nhất Tây Nguyên.</li>
+        <li>🛶 Dạo thuyền trên Hồ Lắk, ngắm cảnh núi rừng và làng người M’nông ven hồ.</li>
+        <li>🏕️ Tham quan Buôn Đôn – cầu treo, nhà sàn, khu nuôi voi và văn hóa người Ê Đê.</li>
+        <li>🔥 Tham gia đêm hội Cồng Chiêng – uống rượu cần, xem múa xoang, đốt lửa trại.</li>
+        <li>🧺 Mua đặc sản địa phương: cà phê, mật ong rừng, tiêu đen, cơm lam và rượu cần.</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🎉 Cảm ơn bạn đã chọn tour Buôn Ma Thuột – Tây Nguyên! Nhân viên sẽ liên hệ tư vấn sớm nhất.');
+    });
+  </script>
+</body>
+</html>

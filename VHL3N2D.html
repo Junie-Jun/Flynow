@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO VỊNH HẠ LONG 3 NGÀY 2 ĐÊM</div>
+    <div class="detail-top">
+      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Combo Hạ Long">
+      <div class="detail-info">
+        <h3>Hành trình: Hạ Long – Vịnh Hạ Long – Đảo Ti Tốp – Hang Sửng Sốt – Làng chài Cửa Vạn – Bãi Cháy.</h3>
+        <p><b>Thời gian:</b> 3 ngày 2 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Thành phố Hồ Chí Minh hoặc Hà Nội</p>
+        <p class="price">Giá từ: 5.690.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Tham quan Vịnh Hạ Long – Di sản Thiên nhiên Thế giới được UNESCO công nhận với hàng ngàn đảo đá vôi hùng vĩ giữa làn nước xanh ngọc bích.</li>
+        <li>Khám phá Hang Sửng Sốt – một trong những hang động đẹp và rộng nhất của Hạ Long, với hệ thống thạch nhũ kỳ ảo lung linh.</li>
+        <li>Dừng chân tại Đảo Ti Tốp – nổi tiếng với bãi cát trắng mịn và điểm ngắm toàn cảnh vịnh Hạ Long từ trên cao.</li>
+        <li>Tham quan Làng chài Cửa Vạn – tìm hiểu đời sống ngư dân vùng vịnh, trải nghiệm chèo kayak giữa làng nổi yên bình.</li>
+        <li>Nghỉ dưỡng và dạo biển tại Bãi Cháy, khu du lịch sầm uất bậc nhất Hạ Long.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Du ngoạn bằng du thuyền trên Vịnh Hạ Long, ngắm cảnh mây trời non nước tuyệt đẹp.</li>
+        <li>Leo lên đỉnh Đảo Ti Tốp để chiêm ngưỡng toàn cảnh vịnh từ góc nhìn 360 độ.</li>
+        <li>Khám phá Hang Sửng Sốt rực rỡ ánh sáng, chụp ảnh giữa không gian kỳ bí của thiên nhiên.</li>
+        <li>Chèo kayak hoặc ngồi thuyền nan khám phá làng chài Cửa Vạn – trải nghiệm văn hóa bản địa độc đáo.</li>
+        <li>Tắm biển, thưởng thức hải sản tươi ngon và ngắm hoàng hôn tuyệt đẹp trên Bãi Cháy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>

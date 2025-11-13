@@ -1,0 +1,110 @@
+html {
+      scroll-behavior: smooth; 
+    }
+    body {
+      background-color: #f1f5f9;
+    }
+    .header-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 0 0 12px 12px;
+    }
+    a {
+      text-decoration: none !important;
+    }
+    .menubot {
+      position: sticky;
+      top: 20px; 
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+    .menubot h5 {
+      text-align: center;
+      font-weight: 600;
+      margin: 0;
+      padding: 15px;
+      border-bottom: 1px solid #dee2e6;
+      color: #0d6efd;
+      background-color: #f8f9fa;
+    }
+    .menubot a {
+      display: block;
+      padding: 12px 18px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #dee2e6;
+      transition: all 0.3s ease;
+    }
+    .menubot a:last-child {
+      border-bottom: none;
+    }
+    .menubot a:hover {
+      background-color: #e9f2ff;
+      color: #0d6efd;
+      padding-left: 25px;
+    }
+    .text {
+      color: deepskyblue;
+      border-bottom: 2px solid deepskyblue;
+      padding-bottom: 4px;
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+    .tour-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .tour-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .tour-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .tour-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 16px 18px;
+    }
+    .tour-content h5 {
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+    .tour-content p {
+      margin: 0;
+      color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+    .tour-duration {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 8px;
+    }
+    .tour-duration i {
+      margin-right: 5px;
+    }
+    .tour-price {
+      color: #e11d48;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-top: auto; 
+    }

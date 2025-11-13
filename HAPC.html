@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO HỘI AN ĐÊM PHỐ CỔ</div>
+    <div class="detail-top">
+    <img src="https://plus.unsplash.com/premium_photo-1690960644375-6f2399a08ebc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332" alt="Combo Hội An">
+      <div class="detail-info">
+        <h3>Hành trình: Phố cổ Hội An – Chùa Cầu – Nhà Cổ Tấn Ký – Hội quán Phúc Kiến – Sông Hoài – Chợ đêm Nguyễn Hoàng – Làng gốm Thanh Hà – Làng rau Trà Quế – Biển An Bàng.</h3>
+        <p><b>Thời gian:</b> 3 ngày 2 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Thành phố Hồ Chính Minh</p>
+        <p class="price">Giá từ: 5.300.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Dạo bước giữa phố cổ Hội An – Di sản văn hoá thế giới được UNESCO công nhận, lung linh ánh đèn lồng khi đêm về.</li>
+        <li>Tham quan các công trình cổ kính: Chùa Cầu Nhật Bản, Nhà cổ Tấn Ký, Hội quán Phúc Kiến.</li>
+        <li>Trải nghiệm thả hoa đăng trên sông Hoài, cầu may mắn – bình an.</li>
+        <li>Khám phá làng nghề truyền thống: làng gốm Thanh Hà, làng rau Trà Quế.</li>
+        <li>Nghỉ dưỡng gần biển An Bàng, hòa mình trong không khí yên bình miền Trung.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Check-in phố cổ rực rỡ đèn lồng về đêm.</li>
+        <li>Tham gia thả đèn hoa đăng trên sông Hoài, ngắm phố cổ phản chiếu ánh sáng huyền ảo.</li>
+        <li>Thưởng thức ẩm thực đặc trưng Hội An: cao lầu, mì Quảng, cơm gà, bánh bao – bánh vạc.</li>
+        <li>Ghé chợ đêm Nguyễn Hoàng, mua quà lưu niệm thủ công.</li>
+        <li>Đạp xe qua làng rau Trà Quế, học cách trồng rau và thưởng thức bữa ăn dân dã.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>

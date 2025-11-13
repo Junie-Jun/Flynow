@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR NGẮM HOA ANH ĐÀO, TẮM ONSEN VÀ KHÁM PHÁ VĂN HÓA TRUYỀN THỐNG NHẬT BẢN
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="../../Images/NB.jpg" class="tour-img" alt="Nhật Bản">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Du lịch Tokyo – Kyoto – Osaka – Núi Phú Sĩ – Làng cổ Shirakawa-go – Đền Kiyomizu</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187655</li>
+              <li><b>Thời gian:</b> 6 ngày 5 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Máy bay</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>32.900.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🚗 Nhật Bản – đất nước mặt trời mọc – khiến du khách say lòng bởi vẻ đẹp vừa cổ kính vừa hiện đại, nơi mỗi góc phố đều mang dấu ấn tinh tế của con người xứ Phù Tang. <br><br>
+        Mùa xuân, hoa anh đào nở rộ khắp Kyoto, Tokyo, Osaka – tạo nên bức tranh lãng mạn đầy mộng mị. <br>
+        Buổi sáng, chiêm ngưỡng Núi Phú Sĩ hùng vĩ – biểu tượng linh thiêng của Nhật Bản. <br>
+        Buổi trưa, thưởng thức ẩm thực truyền thống: sushi, sashimi, wagyu và ramen nóng hổi. <br>
+        Buổi chiều, dạo phố Shibuya – khu mua sắm và giải trí sầm uất nhất Tokyo. <br>
+        Khi đêm về, ánh đèn neon rực rỡ soi bóng xuống sông Sumida, hương hoa anh đào hòa cùng nhịp sống hiện đại mà bình yên. 
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌸 Trải nghiệm</h4>
+      <ul>
+        <li>🗻 Tham quan Núi Phú Sĩ và làng cổ Oshino Hakkai.</li>
+        <li>🌸 Ngắm hoa anh đào ở công viên Ueno, hoặc lá đỏ Momiji mùa thu.</li>
+        <li>🍣 Thưởng thức ẩm thực Nhật Bản – sushi, sashimi, wagyu, ramen.</li>
+        <li>🏯 Tham quan chùa Kinkakuji, đền Fushimi Inari với hàng nghìn cổng Torii đỏ.</li>
+        <li>🛍️ Dạo phố Shibuya, Akihabara, Ginza – trung tâm mua sắm sôi động.</li>
+        <li>🚅 Trải nghiệm tàu cao tốc Shinkansen – biểu tượng công nghệ Nhật Bản.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🎉 Cảm ơn bạn đã chọn tour Nhật Bản! Nhân viên sẽ liên hệ tư vấn sớm nhất.');
+    });
+  </script>
+</body>
+</html>

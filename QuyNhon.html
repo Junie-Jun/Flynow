@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR KHÁM PHÁ “MALDIVES VIỆT NAM” – QUY NHƠN – PHÚ YÊN
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="../../Images/QNPY43.webp" class="tour-img" alt="Du lịch Quy Nhơn – Phú Yên">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">
+              Du lịch Quy Nhơn – Kỳ Co – Eo Gió – Ghềnh Ráng – Phú Yên – Gành Đá Dĩa – Nhà thờ Mằng Lăng
+            </h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187637</li>
+              <li><b>Thời gian:</b> 4 ngày 3 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Xe du lịch</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>2.790.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🚗 Hành trình Quy Nhơn – Phú Yên là bức tranh tuyệt đẹp của miền Trung, nơi biển xanh ôm trọn dãy núi uốn lượn và nắng vàng chan hòa trên từng con sóng. <br><br>
+        Quy Nhơn đón du khách bằng vẻ hiền hòa và thanh bình. Bãi biển trải dài, làn nước trong veo, và con người mến khách khiến nơi đây trở thành điểm dừng chân lý tưởng. <br><br>
+        Từ thành phố biển, bạn đến Kỳ Co – “Maldives của Việt Nam” – nơi nước biển hai màu xanh biếc, cát trắng mịn và vách đá hùng vĩ. <br>
+        Eo Gió mang vẻ đẹp hoang sơ, nơi gió biển thổi tung mái tóc và sóng tung bọt trắng xóa. <br><br>
+        Rời Quy Nhơn, hành trình nối tiếp đến Phú Yên – mảnh đất “hoa vàng trên cỏ xanh”, nơi thiên nhiên và con người hòa quyện trong vẻ đẹp thuần khiết. <br>
+        Gành Đá Dĩa kỳ ảo với những cột đá xếp tầng như bàn tay tạo hóa vươn ra biển lớn. <br>
+        Bãi Xép dịu dàng, từng là bối cảnh phim nổi tiếng “Tôi thấy hoa vàng trên cỏ xanh”. <br><br>
+        Cả Quy Nhơn và Phú Yên đều mang nét chung – giản dị mà sâu lắng, khiến du khách đến rồi lưu luyến chẳng muốn rời.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>🏖️ Tắm biển, lặn ngắm san hô tại Kỳ Co – thiên đường biển đảo miền Trung.</li>
+        <li>🌊 Check-in Eo Gió – nơi ngắm hoàng hôn đẹp nhất Quy Nhơn.</li>
+        <li>🛕 Tham quan tháp Bánh Ít, tháp Đôi – di sản văn hóa Chăm Pa cổ kính.</li>
+        <li>🧭 Khám phá Gành Đá Dĩa – kỳ quan thiên nhiên độc đáo của Phú Yên.</li>
+        <li>🍤 Thưởng thức đặc sản miền biển: cua Huỳnh Đế, sò huyết đầm Ô Loan, mắt cá ngừ đại dương.</li>
+        <li>📸 Check-in Nhà thờ Mằng Lăng, cầu Thị Nại – những điểm đến không thể bỏ lỡ.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🌊 Cảm ơn bạn đã chọn tour Quy Nhơn – Phú Yên! Nhân viên sẽ liên hệ tư vấn chi tiết trong thời gian sớm nhất.');
+    });
+  </script>
+</body>
+</html>

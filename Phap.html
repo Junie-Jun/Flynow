@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dde7ea;
+    }
+    .tour-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .tour-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .tour-info {
+      background: #dceefc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tour-info h5 {
+      color: #01499b;
+      font-weight: 600;
+    }
+    .price-box {
+      background: #bde0fe;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .price-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .btn-tour {
+      background-color: #3ac4ea;
+      border: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn-tour:hover {
+      background-color: #31e1f8;
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #01499b;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .tour-desc, .tour-experience {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .tour-experience ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tour-experience li {
+      margin: 6px 0;
+    }
+  </style>
+  <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TOUR KHÁM PHÁ PARIS HOA LỆ VÀ MIỀN NAM NƯỚC PHÁP
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="../../Images/du-lich-phap(1).jpg" class="tour-img" alt="Du lịch Pháp">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">
+              Du lịch Paris – Tháp Eiffel – Bảo tàng Louvre – Đại lộ Champs-Élysées – Nice – Monaco
+            </h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Mã tour:</b> 187670</li>
+              <li><b>Thời gian:</b> 7 ngày 6 đêm</li>
+              <li><b>Khởi hành:</b> 12/12/2025 & 01,02,03/01/2026</li>
+              <li><b>Vận chuyển:</b> Máy bay</li>
+              <li><b>Xuất phát:</b> từ Thành phố Hồ Chí Minh</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>58.000.000đ/người</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT TOUR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🗺️ Điểm nhấn hành trình</h4>
+      <p>
+        🇫🇷 Pháp – xứ sở của tình yêu, thời trang và nghệ thuật – luôn khiến du khách say đắm ngay từ khoảnh khắc đầu tiên. <br><br>
+        Paris hiện lên lộng lẫy và kiêu sa với dòng sông Seine uốn lượn, tháp Eiffel sừng sững giữa bầu trời và những con phố rợp bóng hoa. <br>
+        Buổi sáng, du khách dạo bước bên đại lộ Champs-Élysées – nơi hội tụ các thương hiệu thời trang danh tiếng. <br>
+        Khi dừng chân tại Khải Hoàn Môn, bạn sẽ cảm nhận được hơi thở lịch sử của nước Pháp hùng mạnh, đồng thời chiêm ngưỡng kiến trúc tinh xảo đến từng chi tiết. <br><br>
+        Buổi trưa, thưởng thức bữa ăn kiểu Pháp với bánh mì baguette giòn tan, phô mai béo ngậy và ly rượu vang đỏ nồng nàn. <br>
+        Buổi chiều, ghé thăm bảo tàng Louvre – nơi lưu giữ kiệt tác Mona Lisa bí ẩn, hay lang thang qua khu phố Montmartre lãng mạn với âm nhạc du dương và những quán cà phê nhỏ. <br>
+        Khi đêm xuống, tháp Eiffel bừng sáng – hàng nghìn ánh đèn lung linh soi chiếu cả bầu trời Paris, để lại trong lòng du khách một Paris vừa hoa lệ, vừa dịu dàng như giấc mơ.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌍 Trải nghiệm</h4>
+      <ul>
+        <li>🗼 Tham quan Tháp Eiffel, Khải Hoàn Môn, đại lộ Champs-Élysées.</li>
+        <li>🖼️ Khám phá Bảo tàng Louvre, chiêm ngưỡng kiệt tác Mona Lisa.</li>
+        <li>⛪ Tham quan Nhà thờ Đức Bà Paris và Cung điện Versailles tráng lệ.</li>
+        <li>🍷 Thưởng thức ẩm thực Pháp và rượu vang vùng Bordeaux.</li>
+        <li>🛍️ Mua sắm tại Galeries Lafayette – thiên đường thời trang châu Âu.</li>
+        <li>🚤 Du ngoạn sông Seine bằng du thuyền, ngắm nhìn Paris về đêm.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      alert('🇫🇷 Cảm ơn bạn đã chọn tour khám phá Paris – nước Pháp xinh đẹp! Nhân viên sẽ liên hệ tư vấn sớm nhất.');
+    });
+  </script>
+</body>
+</html>

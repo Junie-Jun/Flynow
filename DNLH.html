@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../DICH_VU_MO_RONG _CSS/chitietcombo.css">
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-title">COMBO ĐÀ NẴNG - LỄ HỘI PHÁO HOA QUỐC TẾ</div>
+    <div class="detail-top">
+      <img src="https://images.unsplash.com/photo-1682329403343-3f809cde9d79?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Combo Đà Nẵng">
+      <div class="detail-info">
+        <h3>Hành trình: Cầu Rồng – Cầu Tình Yêu – Biển Mỹ Khê – Bà Nà Hills – Cầu Vàng – Ngũ Hành Sơn – Chùa Linh Ứng – Phố đêm Bạch Đằng – Sông Hàn – Lễ hội Pháo hoa Quốc tế Đà Nẵng (DIFF).</h3>
+        <p><b>Thời gian:</b> 4 ngày 3 đêm</p>
+        <p><b>Di chuyển:</b> Máy bay</p>
+        <p><b>Xuất phát từ:</b> Hà Nội </p>
+        <p class="price">Giá từ: 4.990.000đ/người</p>
+        <button type="button" class="btn-dattour" id="openPopup">ĐẶT TOUR</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📌 Điểm nhấn hành trình</h3>
+      <ul>
+        <li>Tham gia Lễ hội Pháo hoa Quốc tế Đà Nẵng (DIFF) – sự kiện văn hoá – du lịch lớn nhất năm với màn trình diễn pháo hoa rực rỡ bên sông Hàn.</li>
+        <li>Tham quan các điểm nổi tiếng của Đà Nẵng: Cầu Rồng, Cầu Tình Yêu, Biển Mỹ Khê, Ngũ Hành Sơn.</li>
+        <li>Trải nghiệm Bà Nà Hills, check-in Cầu Vàng nổi tiếng thế giới.</li>
+        <li>Dạo Phố đêm Bạch Đằng, ngắm pháo hoa lung linh phản chiếu trên mặt sông.</li>
+        <li>Thưởng thức ẩm thực miền Trung đặc sắc: mì Quảng, bánh tráng cuốn thịt heo, hải sản tươi sống.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Trải nghiệm nổi bật</h3>
+      <ul>
+        <li>Ngắm pháo hoa quốc tế nở rộ trên bầu trời Đà Nẵng, tận hưởng không khí lễ hội sôi động.</li>
+        <li>Check-in Cầu Vàng – Bà Nà Hills, khám phá làng Pháp cổ và cáp treo đạt kỷ lục thế giới.</li>
+        <li>Tắm biển, ngắm bình minh và hoàng hôn trên bãi biển Mỹ Khê thơ mộng.</li>
+        <li>Tham quan chùa Linh Ứng – Sơn Trà, chiêm bái tượng Quan Âm cao 67m hướng ra biển Đông.</li>
+        <li>Tự do dạo phố, thưởng thức ẩm thực đường phố Đà Nẵng và mua quà lưu niệm tại chợ Hàn.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>ĐẶT TOUR</h2>
+      <form id="bookingForm">
+        <label>Họ và tên:</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+        <label>Số điện thoại:</label>
+        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+        <label>Ghi chú:</label>
+        <textarea id="note" placeholder="Yêu cầu thêm (nếu có)"></textarea>
+        <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  const popup = document.getElementById("popup");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.querySelector(".close-btn");
+  const form = document.getElementById("bookingForm");
+
+  openBtn.addEventListener("click", () => popup.style.display = "flex");
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", (e) => 
+  { 
+    if (e.target === popup) popup.style.display = "none"; 
+  });
+
+  form.addEventListener("submit", (e) => 
+  {
+    e.preventDefault();
+    alert(`Cảm ơn bạn ${document.getElementById("fullname").value}! Chúng tôi sẽ liên hệ sớm để xác nhận tour.`);
+    form.reset();
+    popup.style.display = "none";
+    window.location.href = "combo-du-lich.html";
+  });
+
+  window.addEventListener("pageshow", function() 
+  {
+    popup.style.display = "none";
+  });
+</script>
+</body>
+</html>
