@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khách sạn ở Biển Đảo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #eafaff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      background-color: #cfe2ff !important;
+    }
+    .navbar-brand {
+      color: #0d6efd !important;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    .navbar-brand:hover {
+      color: #084298 !important;
+    }
+
+    .btn-primary {
+      background-color: #0d6efd;
+      border: none;
+    }
+    .btn-outline-primary {
+      color: #0d6efd;
+      border-color: #0d6efd;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    .hero-img {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      color: #6c757d;
+    }
+  </style>
+</head> 
+
+<body>
+
+<header class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <h1 class="display-6 fw-semibold text-primary">Khách sạn ở Biển Đảo</h1>
+      <p class="text-muted">Chọn tỉnh/thành và loại chỗ ở để hiển thị danh sách lưu trú minh họa.</p>
+
+      <div class="card p-4 shadow-sm border-0">
+        <form id="searchForm" method="get">
+          <div class="mb-3">
+            <label class="form-label">Tỉnh / Thành</label>
+            <select id="regionSelect" name="region" class="form-select" onchange="gotoRegion(this)">
+              <option value="dao&bien" selected>Biển Đảo</option>
+              <option value="condao">Côn Đảo</option>
+              <option value="namdu">Nam Du</option>
+              <option value="lyson">Lý Sơn</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Loại chỗ ở</label>
+            <select name="type" class="form-select">
+              <option value="all">Tất cả</option>
+              <option value="hotel">Khách sạn</option>
+              <option value="guesthouse">Nhà nghỉ</option>
+              <option value="villa">Biệt thự</option>
+              <option value="apartment">Căn hộ</option>
+              <option value="hut">Nhà chòi</option>
+            </select>
+          </div>
+
+          <div class="row g-2 mb-3">
+            <div class="col">
+              <input name="minprice" type="number" class="form-control" placeholder="Giá từ (VNĐ)">
+            </div>
+            <div class="col">
+              <input name="maxprice" type="number" class="form-control" placeholder="Giá đến (VNĐ)">
+            </div>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary flex-grow-1">Tìm</button>
+            <button type="reset" class="btn btn-outline-primary">Xóa</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-lg-6 d-none d-lg-block">
+      <img src="../img/Bien.jpg" alt="Biển Đảo" class="img-fluid hero-img">
+    </div>
+  </div>
+</header>
+
+<footer class="text-center py-4">
+  © Flynow — Biển Đảo
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function gotoRegion(select) {
+    const region = select.value;
+    if (region === "condao") {
+      window.location.href = "condao.html";
+    } else if (region === "namdu") {
+      window.location.href = "namdu.html";
+    } else if (region === "lyson") {
+      window.location.href = "lyson.html";
+    }
+  }
+</script>
+
+</body>
+</html>

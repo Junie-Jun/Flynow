@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khách sạn ở Phú Yên</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css1/list.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-light-blue">
+
+<main class="container py-4">
+  <div class="row">
+    <aside class="col-lg-3 mb-4">
+      <div class="card p-3 sticky-top">
+        <h6 class="mb-3">Bộ lọc</h6>
+
+        <div class="mb-3">
+          <label class="form-label small">Loại chỗ ở</label>
+          <div class="form-check">
+            <input class="form-check-input filter-type" type="checkbox" value="hotel" id="f1" checked>
+            <label class="form-check-label" for="f1">Khách sạn</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input filter-type" type="checkbox" value="guesthouse" id="f2" checked>
+            <label class="form-check-label" for="f2">Nhà nghỉ</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input filter-type" type="checkbox" value="villa" id="f3" checked>
+            <label class="form-check-label" for="f3">Biệt thự</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input filter-type" type="checkbox" value="apartment" id="f4" checked>
+            <label class="form-check-label" for="f4">Căn hộ</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input filter-type" type="checkbox" value="hut" id="f5" checked>
+            <label class="form-check-label" for="f5">Nhà chòi</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label small">Xếp hạng sao</label>
+          <select id="starSelect" class="form-select form-select-sm">
+            <option value="all">Tất cả</option>
+            <option value="5">5 sao</option>
+            <option value="4">4 sao</option>
+            <option value="3">3 sao</option>
+            <option value="2">1-2 sao</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label small">Giá tối đa (VNĐ)</label>
+          <input id="priceMax" type="number" class="form-control form-control-sm" placeholder="ví dụ 3000000">
+        </div>
+
+        <div class="d-grid">
+          <button id="applyBtn" class="btn btn-primary btn-sm">Áp dụng</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="col-lg-9">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h5 class="mb-0" id="regionTitle">Khách sạn — Phú Yên</h5>
+        </div>
+        <div class="text-muted small">Kết quả: <span id="countItems">—</span></div>
+      </div>
+
+      <div id="items" class="row g-3">
+        <div class="col-12" data-type="hotel" data-star="3" data-price="1200000" data-region="phuyen">
+          <div class="card result-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../img/ReefHotelPhuYen.jpg" class="img-fluid rounded-start" alt="">
+              </div>
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h6 class="card-title">Reef Hotel Phu Yen</h6>
+                  <p class="text-muted small mb-1"><i class="fa fa-map-marker-alt"></i>Phú Yên</p>
+                  <p class="mb-1">
+                    <span class="stars text-warning">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </span>
+                  </p>
+                  <p class="mb-0 text-muted small">Tiện nghi: Bãi biển riêng • Nhà hàng cao cấp • Hồ bơi • Spa.</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card-body d-flex flex-column justify-content-between align-items-end">
+                  <div class="text-end">
+                    <div class="price-main">1.200.000 đ</div>
+                    <div class="text-muted small">/ đêm</div>
+                  </div>
+                  <a href="../LinkTN/PhuYen/ReefHotelPhuYen.html" class="btn btn-primary btn-sm mt-2">Xem phòng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12" data-type="hotel" data-star="4" data-price="2000000" data-region="phuyen">
+          <div class="card result-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../img/SeasideResortPhuYen.jpg" class="img-fluid rounded-start" alt="">
+              </div>
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h6 class="card-title">Seaside Resort Phu Yen</h6>
+                  <p class="text-muted small mb-1"><i class="fa fa-map-marker-alt"></i>Phú Yên</p>
+                  <p class="mb-1">
+                    <span class="stars text-warning">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </span>
+                  </p>
+                  <p class="mb-0 text-muted small">Tiện nghi: Wifi • Hồ bơi • Phòng gym • Nhà hàng</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card-body d-flex flex-column justify-content-between align-items-end">
+                  <div class="text-end">
+                    <div class="price-main">2.000.000 đ</div>
+                    <div class="text-muted small">/ đêm</div>
+                  </div>
+                  <a href="../LinkTN/PhuYen/SeasideResortPhuYen.html" class="btn btn-primary btn-sm mt-2">Xem phòng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12" data-type="guesthouse" data-star="2" data-price="400000" data-region="phuyen">
+          <div class="card result-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../img/TuyHoaGuesthouse.jpg" class="img-fluid rounded-start" alt="">
+              </div>
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h6 class="card-title">Tuy Hoa Guesthouse</h6>
+                  <p class="text-muted small mb-1"><i class="fa fa-map-marker-alt"></i>Phú Yên</p>
+                  <p class="mb-1">
+                    <span class="stars text-warning">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </span>
+                  </p>
+                  <p class="mb-0 text-muted small">Tiện nghi: Wifi • Bếp.</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card-body d-flex flex-column justify-content-between align-items-end">
+                  <div class="text-end">
+                    <div class="price-main">400.000 đ</div>
+                    <div class="text-muted small">/ đêm</div>
+                  </div>
+                  <a href="../LinkTN/PhuYen/TuyHoaGuesthouse.html" class="btn btn-primary btn-sm mt-2">Xem phòng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12" data-type="apartment" data-star="4" data-price="600000" data-region="phuyen">
+          <div class="card result-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../img/VillageVillasBungalows.jpg" class="img-fluid rounded-start" alt="">
+              </div>
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h6 class="card-title">Village Villas & Bungalows</h6>
+                  <p class="text-muted small mb-1"><i class="fa fa-map-marker-alt"></i>Phú Yên</p>
+                  <p class="mb-1">
+                    <span class="stars text-warning">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </span>
+                  </p>
+                  <p class="mb-0 text-muted small">Tiện nghi: Wifi • Yên tĩnh.</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card-body d-flex flex-column justify-content-between align-items-end">
+                  <div class="text-end">
+                    <div class="price-main">1.200.000 đ</div>
+                    <div class="text-muted small">/ đêm</div>
+                  </div>
+                  <a href="../LinkTN/PhuYen/VillageVillas.html" class="btn btn-primary btn-sm mt-2">Xem phòng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> 
+    </section>
+  </div>
+</main>
+
+<footer class="text-center py-3 text-muted">
+  © Flynow
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  (function(){
+    const items = Array.from(document.querySelectorAll('#items > [data-type]'));
+    const checkboxes = Array.from(document.querySelectorAll('.filter-type'));
+    const starSelect = document.getElementById('starSelect');
+    const priceMax = document.getElementById('priceMax');
+    const applyBtn = document.getElementById('applyBtn');
+    const countEl = document.getElementById('countItems');
+    const regionTitle = document.getElementById('regionTitle');
+
+    const params = new URLSearchParams(location.search);
+    const region = params.get('region') || 'mientrung';
+    const regionMap = {
+      mientrung: 'Miền Trung',
+      danang: 'Đà Nẵng',
+      hoian: 'Hội An',
+      hue: 'Huế',
+      quynhon: 'Quy Nhơn',
+      phuyen: 'Phú Yên',
+      quangbinh: 'Quảng Bình'
+    };
+    regionTitle.textContent = 'Khách sạn ở — ' + (regionMap[region]||regionMap['mientrung']);
+
+    function getCheckedTypes() {
+      return checkboxes.filter(c=>c.checked).map(c=>c.value);
+    }
+
+    function applyFilter() {
+      const types = getCheckedTypes();
+      const star = starSelect.value;
+      const pMax = Number(priceMax.value) || Infinity;
+      let visibleCount = 0;
+
+      items.forEach(it => {
+        const type = it.getAttribute('data-type');
+        const s = Number(it.getAttribute('data-star'));
+        const price = Number(it.getAttribute('data-price'));
+        const regionAttr = it.getAttribute('data-region');
+
+        let visible = types.includes(type);
+        if (region && region !== 'mientrung') {
+          visible = visible && (regionAttr === region);
+        }
+
+        if (star !== 'all') {
+          if (star === '2') {
+            visible = visible && (s <= 2);
+          } else {
+            visible = visible && (s === Number(star));
+          }
+        }
+        visible = visible && (price <= pMax);
+
+        it.style.display = visible ? '' : 'none';
+        if (visible) visibleCount++;
+      });
+
+      countEl.textContent = visibleCount;
+    }
+
+    const qType = params.get('type');
+    if (qType) {
+      checkboxes.forEach(cb => cb.checked = (qType === 'all' ? true : cb.value === qType));
+    }
+    applyFilter();
+
+    applyBtn.addEventListener('click', applyFilter);
+    checkboxes.forEach(cb=>cb.addEventListener('change', applyFilter));
+    starSelect.addEventListener('change', applyFilter);
+  })();
+</script>
+</body>
+</html>
