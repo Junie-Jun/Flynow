@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilltop Villa Sapa</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../maincss/main.css">
+</head>
+<body>
+  <script src="../js/bootstrap.js"></script>
+
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      HILLTOP VILLA SAPA
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/529001539.jpg?k=dde24049c85c62ae95407226163523be03ff3a3ee6b1bbadf978466e04f24291&o=&hp=1"
+             class="tour-img" alt="Hilltop Villa Sapa" style="width:100%; height:420px; object-fit:cover;">
+      </div>
+
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Hilltop Villa Sapa</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Hạng:</b> ⭐⭐⭐⭐</li>
+              <li><b>Địa điểm:</b> Đồi Mường Hoa, thị trấn Sa Pa, Lào Cai</li>
+              <li><b>Giá:</b> 1.800.000 đ/đêm</li>
+              <li><b>Tiện nghi chính:</b> View núi Fansipan, hồ bơi ngoài trời, nhà hàng, khu vườn, quầy bar</li>
+            </ul>
+          </div>
+
+          <div class="price-box">
+            <p>Giá từ: <span>1.800.000 đ/đêm</span></p>
+            <button class="btn-tour" id="bookHilltopVilla">ĐẶT NGAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🏔️ Giới thiệu</h4>
+      <p>
+        <b>Hilltop Villa Sapa</b> là khu nghỉ dưỡng lý tưởng tọa lạc trên đỉnh đồi cao, 
+        mang đến tầm nhìn toàn cảnh ra dãy Hoàng Liên Sơn và thung lũng Mường Hoa huyền ảo. 
+        Đây là nơi du khách có thể tận hưởng bầu không khí trong lành và yên tĩnh giữa thiên nhiên Tây Bắc hùng vĩ.
+      </p>
+      <p>
+        Các villa tại đây được thiết kế theo phong cách hiện đại pha lẫn nét rustic, 
+        với ban công riêng nhìn ra núi và vườn xanh. Không gian mở, ánh sáng tự nhiên cùng nội thất gỗ ấm cúng mang đến cảm giác thư giãn tuyệt đối.
+      </p>
+      <p>
+        Khu nghỉ còn có hồ bơi ngoài trời, quầy bar sang trọng và nhà hàng phục vụ ẩm thực địa phương tươi ngon. 
+        Hilltop Villa Sapa là lựa chọn hoàn hảo cho cặp đôi, gia đình hoặc nhóm bạn muốn trải nghiệm Sa Pa theo cách riêng biệt và thanh bình nhất.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">✨ TIỆN NGHI NỔI BẬT</h4>
+      <div class="facility-grid">
+        <div class="facility-item"><i class="bi bi-sun"></i><p>View núi Fansipan</p></div>
+        <div class="facility-item"><i class="bi bi-water"></i><p>Hồ bơi ngoài trời</p></div>
+        <div class="facility-item"><i class="bi bi-house-heart"></i><p>Villa riêng tư, yên tĩnh</p></div>
+        <div class="facility-item"><i class="bi bi-cup-hot"></i><p>Nhà hàng & quầy bar</p></div>
+        <div class="facility-item"><i class="bi bi-flower1"></i><p>Khu vườn xanh mát</p></div>
+        <div class="facility-item"><i class="bi bi-wifi"></i><p>Wifi miễn phí</p></div>
+        <div class="facility-item"><i class="bi bi-car-front"></i><p>Dịch vụ đưa đón</p></div>
+        <div class="facility-item"><i class="bi bi-heart"></i><p>Không gian lãng mạn</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("bookHilltopVilla").addEventListener("click", function() {
+      alert("🏔️ Bạn đã chọn Hilltop Villa Sapa! Tận hưởng kỳ nghỉ yên bình với tầm nhìn núi rừng tuyệt đẹp nhé!");
+    });
+  </script>
+</body>
+</html>

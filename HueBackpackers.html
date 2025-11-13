@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hue Backpackers</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../maincss/main.css">
+</head>
+<body>
+  <script src="../js/bootstrap.js"></script>
+
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      HUE BACKPACKERS
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/629369178.jpg?k=75f2d85b6ad097c0591b2cc6c7d18e9de46c8b81fb0c2aed984eecf6f87fa00f&o=&hp=1"
+             class="tour-img" alt="Hue Backpackers" style="width:100%; height:420px; object-fit:cover;">
+      </div>
+
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Hue Backpackers</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Hạng:</b> ⭐⭐</li>
+              <li><b>Địa điểm:</b> Trung tâm Huế</li>
+              <li><b>Giá:</b> 400.000 đ/đêm</li>
+              <li><b>Tiện nghi chính:</b> Phòng dorm & riêng, khu vực sinh hoạt chung, bar, wifi miễn phí, gần trung tâm và sông Hương</li>
+            </ul>
+          </div>
+
+          <div class="price-box">
+            <p>Giá từ: <span>400.000 đ/đêm</span></p>
+            <button class="btn-tour" id="bookHueBackpackers">ĐẶT NGAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🌿 Giới thiệu</h4>
+      <p>
+        <b>Hue Backpackers</b> là một lựa chọn lý tưởng cho những du khách trẻ hoặc nhóm bạn muốn khám phá Huế với ngân sách tiết kiệm. Hostel nằm tại trung tâm thành phố, thuận tiện di chuyển đến các địa điểm nổi tiếng và tham quan sông Hương.
+      </p>
+      <p>
+        Hostel cung cấp phòng dorm tập thể và phòng riêng tiện nghi, với không gian thoải mái, sạch sẽ. Du khách có thể sử dụng khu vực sinh hoạt chung để gặp gỡ, giao lưu với các khách du lịch khác, hoặc thư giãn tại quầy bar.
+      </p>
+      <p>
+        Hue Backpackers mang đến trải nghiệm gần gũi, năng động và thân thiện, đồng thời vẫn đảm bảo tiện nghi cơ bản như wifi miễn phí, dịch vụ đặt tour và hỗ trợ thông tin du lịch. Đây là điểm dừng chân phù hợp cho những ai muốn tận hưởng Huế một cách đơn giản, tiết kiệm và tiện lợi.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">✨ TIỆN NGHI NỔI BẬT</h4>
+      <div class="facility-grid">
+        <div class="facility-item"><i class="bi bi-house-door"></i><p>Phòng dorm & riêng</p></div>
+        <div class="facility-item"><i class="bi bi-people"></i><p>Khu vực sinh hoạt chung</p></div>
+        <div class="facility-item"><i class="bi bi-cup-hot"></i><p>Bar & giải trí</p></div>
+        <div class="facility-item"><i class="bi bi-geo-alt"></i><p>Gần trung tâm & sông Hương</p></div>
+        <div class="facility-item"><i class="bi bi-wifi"></i><p>Wifi miễn phí</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("bookHueBackpackers").addEventListener("click", function() {
+      alert("🌿 Bạn đã chọn Hue Backpackers! Trải nghiệm không gian năng động, gần trung tâm Huế nhé!");
+    });
+  </script>
+</body>
+</html>
