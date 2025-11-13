@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toronto Backpackers</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../maincss/main.css">
+</head>
+<body>
+  <script src="../js/bootstrap.js"></script>
+
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TORONTO BACKPACKERS
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfA54fj0Gk3NoRPgaPkUXnaqGkRNbZabjqe3wXHZyjSP1bllCUPVRpD4WxQNzRGAcHtWY&usqp=CAU" class="tour-img" alt="Toronto Backpackers">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Toronto Backpackers</h5>
+            <ul class="list-unstyled mb-3">
+              <li>Hạng: ⭐⭐</li>
+              <li>Địa điểm: Toronto, Canada</li>
+              <li>Giá: 900.000 đ/đêm</li>
+              <li>Tiện nghi chính: Dorm, wifi, khu sinh hoạt chung</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>900.000 đ/đêm</span></p>
+            <button class="btn-tour" id="bookToronto">ĐẶT NGAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🎒 Giới thiệu</h4>
+      <p>
+        Toronto Backpackers là nhà nghỉ thân thiện và sôi động, nằm ngay trung tâm thành phố Toronto – địa điểm lý tưởng cho những ai yêu thích khám phá văn hóa và nhịp sống hiện đại của Canada. 
+        Với vị trí thuận lợi gần ga Union, bạn có thể dễ dàng di chuyển đến tháp CN Tower, khu mua sắm Eaton Centre và khu phố nghệ thuật Queen Street.
+      </p>
+      <p>
+        Không gian trong nhà nghỉ được thiết kế ấm cúng, trẻ trung và gần gũi. 
+        Phòng dorm sạch sẽ, giường tầng chắc chắn, có rèm riêng và tủ khóa an toàn. 
+        Khu vực sinh hoạt chung là nơi du khách từ khắp nơi trên thế giới gặp gỡ, chia sẻ câu chuyện hành trình và cùng thưởng thức cà phê sáng.
+      </p>
+      <p>
+        Với mức giá hợp lý, dịch vụ thân thiện và không khí năng động, Toronto Backpackers mang đến trải nghiệm đáng nhớ cho du khách muốn tận hưởng tinh thần du lịch tự do ngay giữa lòng Toronto sôi động.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">✨ TIỆN NGHI NỔI BẬT</h4>
+      <div class="facility-grid">
+        <div class="facility-item"><i class="bi bi-wifi"></i><p>Wifi miễn phí</p></div>
+        <div class="facility-item"><i class="bi bi-cup-hot"></i><p>Khu vực cà phê & trà</p></div>
+        <div class="facility-item"><i class="bi bi-people"></i><p>Không gian sinh hoạt chung</p></div>
+        <div class="facility-item"><i class="bi bi-door-open"></i><p>Phòng dorm sạch sẽ</p></div>
+        <div class="facility-item"><i class="bi bi-lock"></i><p>Tủ đồ cá nhân an toàn</p></div>
+        <div class="facility-item"><i class="bi bi-tv"></i><p>Khu xem TV & thư giãn</p></div>
+        <div class="facility-item"><i class="bi bi-geo-alt"></i><p>Gần trung tâm thành phố</p></div>
+        <div class="facility-item"><i class="bi bi-train-front"></i><p>Gần ga tàu & phương tiện công cộng</p></div>
+        <div class="facility-item"><i class="bi bi-chat-dots"></i><p>Môi trường thân thiện, dễ kết bạn</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("bookToronto").addEventListener("click", function() {
+      alert("🎒 Cảm ơn bạn đã chọn Toronto Backpackers! Hẹn gặp bạn trong hành trình khám phá Canada sắp tới!");
+    });
+  </script>
+</body>
+</html>

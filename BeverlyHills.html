@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beverly Hills Hotel</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../maincss/main.css">
+</head>
+<body>
+  <script src="../js/bootstrap.js"></script>
+
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">BEVERLY HILLS HOTEL</h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/204088588.jpg?k=478e4404a51513b40fba5b0dac2ab091899e602ad339dea682c21a8426cb1f0f&o=&hp=1" class="tour-img" alt="Beverly Hills Hotel">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5>Beverly Hills Hotel</h5>
+            <ul class="list-unstyled mb-3">
+              <li>Hạng: ⭐⭐⭐⭐⭐</li>
+              <li>Địa điểm: Los Angeles, Mỹ</li>
+              <li>Giá: 10.000.000 đ/đêm</li>
+              <li>Tiện nghi chính: Hồ bơi, spa, nhà hàng</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>10.000.000 đ/đêm</span></p>
+            <button class="btn-tour" id="bookBeverly">ĐẶT NGAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🌴 Giới thiệu</h4>
+      <p>
+        Beverly Hills Hotel, được mệnh danh là “Cung điện hồng” của Los Angeles, là điểm đến yêu thích của các ngôi sao điện ảnh và giới siêu giàu. 
+        Khách sạn nằm giữa khu Beverly Hills sang trọng, bao quanh bởi vườn cọ xanh mướt và bầu không khí thư giãn.
+      </p>
+      <p>
+        Các phòng được trang trí theo phong cách Hollywood cổ điển với màu sắc trang nhã và nội thất tinh xảo. 
+        Hồ bơi ngoài trời cùng dịch vụ spa đẳng cấp thế giới mang đến những giờ phút nghỉ dưỡng tuyệt đối.
+      </p>
+      <p>
+        Bên cạnh đó, nhà hàng Polo Lounge của khách sạn là nơi tụ họp của nhiều nhân vật nổi tiếng, nơi bạn có thể thưởng thức các món ăn quốc tế tinh tế trong không gian sang trọng nhưng ấm cúng.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌸 TIỆN NGHI NỔI BẬT</h4>
+      <div class="facility-grid">
+        <div class="facility-item"><i class="bi bi-water"></i><p>Hồ bơi sang trọng</p></div>
+        <div class="facility-item"><i class="bi bi-spa"></i><p>Spa thư giãn</p></div>
+        <div class="facility-item"><i class="bi bi-cup-straw"></i><p>Nhà hàng Polo Lounge</p></div>
+        <div class="facility-item"><i class="bi bi-camera"></i><p>Phong cách Hollywood</p></div>
+        <div class="facility-item"><i class="bi bi-tree"></i><p>Vườn cọ nhiệt đới</p></div>
+        <div class="facility-item"><i class="bi bi-heart"></i><p>Dịch vụ cao cấp</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("bookBeverly").addEventListener("click", function() {
+      alert("🌸 Bạn đã chọn Beverly Hills Hotel – tận hưởng phong cách Hollywood sang trọng!");
+    });
+  </script>
+</body>
+</html>

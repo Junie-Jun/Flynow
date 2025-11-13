@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../maincss/main.css">
+</head>
+<body>
+  <script src="../js/bootstrap.js"></script>
+
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      TAIPEI BACKPACKERS
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/79/f7/38/caption.jpg?w=900&h=500&s=1 " class="tour-img" alt="Taipei Backpackers">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Taipei Backpackers</h5>
+            <ul class="list-unstyled mb-3">
+              <li>Hạng: ⭐⭐</li>
+              <li>Địa điểm: Taipei, Đài Loan</li>
+              <li>Giá: 600.000 đ/đêm</li>
+              <li>Tiện nghi chính: Dorm, wifi miễn phí</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>600.000 đ/đêm</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT NGAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🏨 Giới thiệu</h4>
+      <p>
+        Taipei Backpackers là lựa chọn hoàn hảo cho du khách trẻ yêu thích du lịch tiết kiệm và năng động. 
+        Tọa lạc ngay trung tâm thành phố, nơi đây dễ dàng kết nối đến các khu mua sắm, nhà hàng và ga tàu điện.
+      </p>
+      <p>
+        Không gian trong hostel được thiết kế hiện đại và thân thiện, 
+        với khu vực sinh hoạt chung ấm cúng và nhiều góc check-in sáng tạo. 
+        Các phòng dorm sạch sẽ, tiện nghi, có tủ đồ cá nhân và giường được ngăn riêng mang lại sự thoải mái.
+      </p>
+      <p>
+        Hostel cũng có khu bếp chung và khu giặt là, phù hợp cho khách ở dài ngày hoặc du lịch nhóm. 
+        Đội ngũ nhân viên thân thiện luôn sẵn sàng hỗ trợ khách hàng bằng nhiều ngôn ngữ.
+      </p>
+      <p>
+        Với vị trí trung tâm, giá cả hợp lý và bầu không khí vui vẻ, Taipei Backpackers là điểm dừng chân lý tưởng 
+        cho những ai muốn khám phá Đài Bắc theo cách trẻ trung và tự do.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">🌟 TIỆN NGHI NỔI BẬT</h4>
+      <div class="facility-grid">
+        <div class="facility-item"><i class="bi bi-wifi"></i><p>Wifi miễn phí</p></div>
+        <div class="facility-item"><i class="bi bi-people"></i><p>Khu sinh hoạt chung</p></div>
+        <div class="facility-item"><i class="bi bi-cup-hot"></i><p>Bếp dùng chung</p></div>
+        <div class="facility-item"><i class="bi bi-door-open"></i><p>Phòng dorm thoáng mát</p></div>
+        <div class="facility-item"><i class="bi bi-luggage"></i><p>Tủ khóa cá nhân</p></div>
+        <div class="facility-item"><i class="bi bi-geo-alt"></i><p>Vị trí trung tâm Taipei</p></div>
+        <div class="facility-item"><i class="bi bi-washing-machine"></i><p>Máy giặt tự phục vụ</p></div>
+        <div class="facility-item"><i class="bi bi-emoji-smile"></i><p>Không khí thân thiện</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("bookBtn").addEventListener("click", function() {
+      alert("🎒 Cảm ơn bạn đã chọn Taipei Backpackers! Hẹn gặp bạn tại Đài Bắc vui tươi!");
+    });
+  </script>
+</body>
+</html>

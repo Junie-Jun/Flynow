@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../maincss/main.css">
+</head>
+<body>
+  <script src="../js/bootstrap.js"></script>
+
+  <div class="text-center py-3">
+    <h2 class="text-primary fw-bold" style="text-transform: uppercase;">
+      PARK HYATT TOKYO
+    </h2>
+  </div>
+
+  <div class="container tour-container">
+    <div class="row g-3 p-3 align-items-stretch">
+      <div class="col-md-8">
+        <img src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2025/08/22/0556/TYOPH-P0658-Deluxe-Room.jpg/TYOPH-P0658-Deluxe-Room.4x3.jpg" class="tour-img" alt="Park Hyatt Tokyo">
+      </div>
+      <div class="col-md-4">
+        <div class="tour-info h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 style="text-transform: uppercase;">Park Hyatt Tokyo</h5>
+            <ul class="list-unstyled mb-3">
+              <li><b>Hạng:</b> ⭐⭐⭐⭐⭐</li>
+              <li><b>Địa điểm:</b> Tokyo, Nhật Bản</li>
+              <li><b>Giá:</b> 8.000.000 đ/đêm</li>
+              <li><b>Tiện nghi chính:</b> Spa, hồ bơi trong nhà, view toàn cảnh Tokyo</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <p>Giá từ: <span>8.000.000 đ/đêm</span></p>
+            <button class="btn-tour" id="bookBtn">ĐẶT NGAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-desc">
+      <h4 class="section-title">🏙️ Giới thiệu</h4>
+      <p>
+        <b>Park Hyatt Tokyo</b> là biểu tượng của sự sang trọng tinh tế giữa lòng thành phố Tokyo. 
+        Tọa lạc trên các tầng cao của tòa nhà Shinjuku Park Tower, khách sạn mang đến tầm nhìn toàn cảnh tuyệt đẹp ra núi Phú Sĩ và quang cảnh thành phố rực rỡ về đêm.
+      </p>
+      <p>
+        Các phòng nghỉ rộng rãi, được thiết kế theo phong cách hiện đại pha lẫn tối giản Nhật Bản, 
+        trang bị đầy đủ tiện nghi cao cấp và cửa sổ kính lớn hướng ra khung cảnh đô thị.
+      </p>
+      <p>
+        Ngoài hồ bơi trong nhà trên tầng cao, khách sạn còn có trung tâm spa, phòng tập thể hình, 
+        cùng hệ thống nhà hàng đạt chuẩn Michelin, mang đến trải nghiệm nghỉ dưỡng đẳng cấp 5 sao thực thụ.
+      </p>
+    </div>
+
+    <div class="tour-experience">
+      <h4 class="section-title">✨ TIỆN NGHI NỔI BẬT</h4>
+      <div class="facility-grid">
+        <div class="facility-item"><i class="bi bi-water"></i><p>Hồ bơi trong nhà</p></div>
+        <div class="facility-item"><i class="bi bi-heart"></i><p>Spa & Massage</p></div>
+        <div class="facility-item"><i class="bi bi-buildings"></i><p>View toàn cảnh Tokyo</p></div>
+        <div class="facility-item"><i class="bi bi-cup-hot"></i><p>Nhà hàng sang trọng</p></div>
+        <div class="facility-item"><i class="bi bi-tv"></i><p>TV màn hình phẳng</p></div>
+        <div class="facility-item"><i class="bi bi-wifi"></i><p>Wifi tốc độ cao</p></div>
+        <div class="facility-item"><i class="bi bi-bicycle"></i><p>Phòng gym hiện đại</p></div>
+        <div class="facility-item"><i class="bi bi-cloud-sun"></i><p>Ngắm núi Phú Sĩ</p></div>
+        <div class="facility-item"><i class="bi bi-shield-check"></i><p>Bảo mật & riêng tư</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("bookBtn").addEventListener("click", function() {
+      alert("🏙️ Cảm ơn bạn đã chọn Park Hyatt Tokyo! Bộ phận đặt phòng sẽ liên hệ sớm nhất.");
+    });
+  </script>
+</body>
+</html>
