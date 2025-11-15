@@ -1,0 +1,108 @@
+body {
+  background-color: #dde7ea;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tour-container {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.tour-img {
+  width: 100%;
+  height: 380px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.tour-info {
+  background: #e3f2fd;
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-info h5 {
+  color: #04529c;
+  font-weight: 700;
+}
+
+.price-box {
+  background: #cfe8ff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.price-box span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-tour {
+  margin-top: 12px;
+  background: #36b8ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-tour:hover {
+  background: #1ad1ff;
+  transform: scale(1.05);
+}
+
+.section-title {
+  color: #04529c;
+  font-weight: 800;
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+.tour-desc {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.facility-item {
+  background: #f8fbff;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.facility-item:hover {
+  transform: translateY(-3px);
+}
+
+.facility-item i {
+  font-size: 26px;
+  color: #007bff;
+}
+
+.facility-item p {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #334;
+}
