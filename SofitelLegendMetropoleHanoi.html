@@ -6,83 +6,123 @@
   <link rel="stylesheet" href="bootstrap.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    
-    body {
-      background-color: #dde7ea;
-    }
-    .tour-container {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      margin: 20px auto;
-      max-width: 1200px;
-    }
-    .tour-img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .tour-info {
-      background: #dceefc;
-      border-radius: 10px;
-      padding: 20px;
-    }
-    .tour-info h5 {
-      color: #01499b;
-      font-weight: 600;
-    }
-    .price-box {
-      background: #bde0fe;
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center;
-      margin-top: 10px;
-    }
-    .price-box span {
-      font-size: 20px;
-      font-weight: bold;
-      color: #000;
-    }
-    .btn-tour {
-      background-color: #3ac4ea;
-      border: none;
-      color: white;
-      padding: 8px 18px;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    .btn-tour:hover {
-      background-color: #31e1f8;
-      transform: scale(1.05);
-    }
-    .section-title {
-      color: #01499b;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    .tour-desc, .tour-experience {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 10px;
-    }
-    .tour-experience ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .tour-experience li {
-      margin: 6px 0;
-    }
-      .menubot a:last-child {
-      border-bottom: none;
-    }
-    .menubot a:hover {
-      background-color: #e9f2ff;
-      color: #0d6efd;
-      padding-left: 25px;
-    }
+   /* NỀN CHUNG */
+body {
+  background-color: #dde7ea;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* KHUNG CHÍNH */
+.tour-container {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* ẢNH */
+.tour-img {
+  width: 100%;
+  height: 380px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* HỘP THÔNG TIN BÊN PHẢI */
+.tour-info {
+  background: #e3f2fd;
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-info h5 {
+  color: #04529c;
+  font-weight: 700;
+}
+
+/* GIÁ */
+.price-box {
+  background: #cfe8ff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.price-box span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* NÚT */
+.btn-tour {
+  margin-top: 12px;
+  background: #36b8ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-tour:hover {
+  background: #1ad1ff;
+  transform: scale(1.05);
+}
+
+/* PHẦN GIỚI THIỆU */
+.section-title {
+  color: #04529c;
+  font-weight: 800;
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+.tour-desc {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+/* TIỆN NGHI */
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.facility-item {
+  background: #f8fbff;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.facility-item:hover {
+  transform: translateY(-3px);
+}
+
+.facility-item i {
+  font-size: 26px;
+  color: #007bff;
+}
+
+.facility-item p {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #334;
+}
+
   </style>
 </head>
 <body>
@@ -156,6 +196,7 @@
 </body>
 
 </html>
+
 
 
 
